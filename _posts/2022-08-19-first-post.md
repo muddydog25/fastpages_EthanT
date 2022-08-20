@@ -5,4 +5,4 @@ categories: [markdown]
 title: First Markdown Post
 ---
 
-Cats eating many tacos. Rocket ship flying in the air. 
+Hello, my name is Ethan Tran and this is my first markdown post. I am really excited to start AP CSP this year. I hope to improve my skills with Python and get adjusted to IDEs such as VS Studio. Cheers! 
