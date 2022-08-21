@@ -5,7 +5,7 @@ categories: [markdown]
 title: First Markdown Post
 ---
 
-<p style = "color: #FFFF;"> Hello, my name is Ethan Tran and this is my first markdown post. </h1>
+Hello, my name is Ethan Tran and this is my first markdown post. 
  
  <html>
  <head></head>
@@ -14,7 +14,7 @@ title: First Markdown Post
         <p id ="test">Click this! ↑</p>
         <script>
             function aboutMe(){
-                document.getElementById("test").innerHTML = "I was born and raised in San Diego, in my spare time I like to watch videos on various topics such as finance, cars, and history. I also enjoy going to the beach as well as spending time with my family and friends."; 
+                document.getElementById("test").innerHTML = "I was born and raised in San Diego. In my spare time I like to watch videos on various topics such as finance, cars, and history. I also enjoy going to the beach as well as spending time with my family and friends."; 
             } 
         </script>
             </body>
