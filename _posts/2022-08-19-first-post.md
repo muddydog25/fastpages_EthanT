@@ -10,18 +10,20 @@ Hello, my name is Ethan Tran and this is my first markdown post.
  <!DOCTYPE html>
  
  <html>
- <head></head>
+ <head>
  <body>
-        <button onclick = "aboutMe()" style = "background-color: #89CFF0; color: #FFFF; border-color: #79F6FC; font-size: 1.5em" > About Me </button>
+        <button id ="text change"; style = "background-color: #89CFF0; color: #FFFF; border-color: #79F6FC; font-size: 1.5em" > About Me </button>
         <p id ="test">Click this! ^</p>
         <script>
             function aboutMe(){
-                document.getElementById("test").innerHTML = "Test"; 
+                document.getElementById("test").innerHTML = "I am born and raised in San Diego, and in my spare time like to watch videos on various topics such as finance, cars, and history. I also enjoy going to the beach as well as spending time with my family and friends."; 
             } 
+        </head>
         </script>
             </body>
             </html>
 
 ![](../../../../Downloads/IMG_0439.JPG)
+
 ### Closing statement
 I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! 
