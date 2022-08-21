@@ -7,8 +7,6 @@ title: First Markdown Post
 
 Hello, my name is Ethan Tran and this is my first markdown post. 
  
-  <!DOCTYPE html>
- 
  <html>
  <head></head>
  <body>
@@ -16,7 +14,7 @@ Hello, my name is Ethan Tran and this is my first markdown post.
         <p id ="test">Click this! ^</p>
         <script>
             function aboutMe(){
-                document.getElementById("test").innerHTML = "Test"; 
+                document.getElementById("test").innerHTML = "BYEBYE"; 
             } 
         </script>
             </body>
