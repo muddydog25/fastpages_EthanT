@@ -2,19 +2,8 @@
   
     
         "post0": {
-            "title": "Test",
-            "content": "&lt;!DOCTYPE html&gt; . My first website . click me! Hello . .",
-            "url": "https://muddydog25.github.io/fastpages_EthanT/2022/08/20/test.html",
-            "relUrl": "/2022/08/20/test.html",
-            "date": " • Aug 20, 2022"
-        }
-        
-    
-  
-    
-        ,"post1": {
             "title": "First Markdown Post",
-            "content": "Hello, my name is Ethan Tran and this is my first markdown post. . &lt;!DOCTYPE html&gt; . . About Me Click this! ^ . . . Closing statement . I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! .",
+            "content": "Hello, my name is Ethan Tran and this is my first markdown post. . &lt;!DOCTYPE html&gt; . &lt;button id =&quot;text change&quot;; style = &quot;background-color: #89CFF0; color: #FFFF; border-color: #79F6FC; font-size: 1.5em&quot; &gt; About Me &lt;/button&gt; Click this! ^ . &lt;/html&gt; ![](../../../../Downloads/IMG_0439.JPG) ### Closing statement I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/markdown/2022/08/19/first-post.html",
             "relUrl": "/markdown/2022/08/19/first-post.html",
             "date": " • Aug 19, 2022"
@@ -23,7 +12,7 @@
     
   
     
-        ,"post2": {
+        ,"post1": {
             "title": "Ethan's First Notebook",
             "content": "print(&quot;Hello&quot;) . Hello .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/fastpages/jupyter/2022/08/19/first-notebook.html",
