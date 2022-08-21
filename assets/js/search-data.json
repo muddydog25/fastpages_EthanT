@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "First Markdown Post",
-            "content": "Hello, my name is Ethan Tran and this is my first markdown post. . &lt;button id =&quot;text change&quot;; style = &quot;background-color: #89CFF0; color: #FFFF; border-color: #79F6FC; font-size: 1.5em&quot; &gt; About Me &lt;/button&gt; Click this! ↑ . &lt;/html&gt; ![](../../../../Downloads/IMG_0439.JPG) ### Closing statement I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! .",
+            "content": "Hello, my name is Ethan Tran and this is my first markdown post. . &lt;button onclick = aboutMe(); style = &quot;background-color: #89CFF0; color: #FFFF; border-color: #79F6FC; font-size: 1.5em&quot; &gt; About Me &lt;/button&gt; Click this! ↑ . &lt;/html&gt; ![](../../../../Downloads/IMG_0439.JPG) ### Closing statement I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/markdown/2022/08/19/first-post.html",
             "relUrl": "/markdown/2022/08/19/first-post.html",
             "date": " • Aug 19, 2022"
