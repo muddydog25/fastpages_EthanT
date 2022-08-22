@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "First Markdown Post",
-            "content": "Hello, my name is Ethan Tran and this is my first markdown post. . . About Me Click this! ↑ . . Closing statement . I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! .",
+            "content": "Hello, my name is Ethan Tran and this is my first markdown post. . . About Me Click this! ↑ . . Closing statement . I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! . .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/markdown/2022/08/19/first-post.html",
             "relUrl": "/markdown/2022/08/19/first-post.html",
             "date": " • Aug 19, 2022"
@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Ethan's First Notebook",
-            "content": "print(&quot;Hello&quot;) . Hello .",
+            "content": "print(&quot;Hello&quot;) . Hello . print(&quot;Lets calculate your time value of money after one year!&quot;) print(&quot;How much money are you investing?&quot;) Money = float(input(&quot;Amount of money: &quot;)) print(&quot;$&quot; + &quot;{:.2f}&quot;.format(Money)) print(&quot;What is the interest rate of your investment?&quot;) r = float(input(&quot;Interest rate: &quot;)) print(r) final_amount = 0 final_amount = (Money * (1 + r)) print(&#39;This will be your amount of money after one year.&#39;) print(&quot;$&quot; + &quot;{:.2f}&quot;.format(final_amount)) . Lets calculate your time value of money after one year? How much money are you investing? $1000.00 What is the interest rate of your investment? 0.25 This will be your amount of money after one year. $1250.00 .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/fastpages/jupyter/2022/08/19/first-notebook.html",
             "relUrl": "/fastpages/jupyter/2022/08/19/first-notebook.html",
             "date": " • Aug 19, 2022"
