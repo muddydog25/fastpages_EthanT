@@ -24,3 +24,4 @@ Hello, my name is Ethan Tran and this is my first markdown post.
 ### Closing statement
 I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! 
 
+![](IMG_0439.JPG)
