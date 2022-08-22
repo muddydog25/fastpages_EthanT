@@ -177,7 +177,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Calculator-to-calculate-the-time-value-of-an-investment-after-one-year!">Calculator to calculate the time value of an investment after one year!<a class="anchor-link" href="#Calculator-to-calculate-the-time-value-of-an-investment-after-one-year!"> </a></h2><p>With this calculator that I made, you can insert any initial amount of money and any interest rate. In this example, I started with $1000 and used an interest rate of 0.15.</p>
+<h2 id="Time-value-of-money-after-one-year-calculator!">Time value of money after one year calculator!<a class="anchor-link" href="#Time-value-of-money-after-one-year-calculator!"> </a></h2><p>With this calculator that I made, you can insert any initial amount of money and any interest rate. In this demo, I started with $1000 and used an interest rate of 0.1563.</p>
 
 </div>
 </div>
@@ -201,8 +201,9 @@ window.onload = wrap_img;
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What is the interest rate of your investment?&quot;</span><span class="p">)</span>
 
 <span class="n">r</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Interest rate: &quot;</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+<span class="c1"># Interest rate shown as a percentage</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
 
 <span class="c1"># Calculation of the final amount of money </span>
 <span class="n">final_amount</span> <span class="o">=</span> <span class="p">(</span><span class="n">Money</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">r</span><span class="p">))</span>
@@ -225,9 +226,9 @@ window.onload = wrap_img;
 How much money are you investing?
 $1000.00
 What is the interest rate of your investment?
-0.15
+15.63%
 This will be your amount of money after one year.
-$1150.00
+$1156.30
 </pre>
 </div>
 </div>
