@@ -20,8 +20,9 @@ Hello, my name is Ethan Tran and this is my first markdown post.
             </body>
             </html>            
 
+## "About me" button code
+![](../../../../Pictures/Screenshot%202022-08-22%20130426.png)
 
 ### Closing statement
 I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! 
 
-![](IMG_0439.JPG)
