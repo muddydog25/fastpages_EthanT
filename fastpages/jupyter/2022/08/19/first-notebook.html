@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      1 min read
     
 </span></p>
 
@@ -231,130 +231,6 @@ What is the interest rate of your investment?
 This will be your amount of money after one year.
 $57.50
 </pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">YesNo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are about to take an awesome quiz. Ready? (Yes or No)&quot;</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">q_and_a</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span><span class="p">)</span>
-    <span class="n">student</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Answer: &quot;</span><span class="p">)</span>
-
-    <span class="n">q_and_a</span><span class="p">(</span><span class="s2">&quot;test yes or no?&quot;</span><span class="p">)</span>
-    <span class="n">q_and_a</span><span class="p">(</span><span class="s2">&quot;What is 8 x 5?&quot;</span><span class="p">)</span>
-    <span class="n">q_and_a</span><span class="p">(</span><span class="s2">&quot;What is 50 / 5?&quot;</span><span class="p">)</span>
-
-
-
-<span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">tkinter.messagebox</span> <span class="kn">import</span> <span class="n">YES</span>
-
-<span class="k">def</span> <span class="nf">q_and_a</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">msg</span>
-
-<span class="n">questions</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span> 
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Greetings, &#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; running &quot;</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There will be &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; questions asked.&quot;</span><span class="p">)</span>   
-
-<span class="n">rsp</span> <span class="o">=</span> <span class="n">q_and_a</span><span class="p">(</span><span class="n">YesNo</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;Yes&quot;</span><span class="p">:</span>  
-    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot;Lets go!&quot;</span><span class="p">)</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-    
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">exit</span><span class="p">()</span>
-
-<span class="n">rsp</span> <span class="o">=</span> <span class="n">q_and_a</span><span class="p">(</span><span class="s2">&quot;How many states are in the United States of America?&quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;50&quot;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; correct! &quot;</span><span class="p">)</span>
-        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="k">else</span><span class="p">:</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; incorrect :(&quot;</span><span class="p">)</span>
-
-<span class="n">rsp</span> <span class="o">=</span> <span class="n">q_and_a</span><span class="p">(</span><span class="s2">&quot;What is 8 x 5?&quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;40&quot;</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; correct! &quot;</span><span class="p">)</span>
-        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="k">else</span><span class="p">:</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; incorrect :(&quot;</span><span class="p">)</span>
-
-<span class="n">rsp</span> <span class="o">=</span> <span class="n">q_and_a</span><span class="p">(</span><span class="s2">&quot;Which was the first dynasty to rule Imperial China?&quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;Qin Dynasty&quot;</span><span class="p">:</span>
-    
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; correct! &quot;</span><span class="p">)</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="k">elif</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;The Qin Dynasty&quot;</span><span class="p">:</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="k">elif</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;Qin&quot;</span><span class="p">:</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; incorrect :( &quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">correct</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congrats! &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; You got &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)))</span>
-
-<span class="k">elif</span> <span class="n">correct</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not bad, keep working! &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; You got &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)))</span>
-
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">((</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; You got &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; Its okay, better luck next time! &quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>You are about to take an awesome quiz. Ready? (Yes or No)
-Greetings, etran running c:\Users\etran\AppData\Local\Programs\Python\Python310\python.exe
-There will be 3 questions asked.
-Question: Yes
-Question: How many states are in the United States of America?
-50 correct! 
-Question: What is 8 x 5?
-40 correct! 
-Question: Which was the first dynasty to rule Imperial China?
-Congrats! etran You got 3/3
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-The Kernel crashed while executing code in the the current cell or a previous cell. Please review the code in the cell(s) to identify a possible cause of the failure. Click &lt;a href=&#39;https://aka.ms/vscodeJupyterKernelCrash&#39;&gt;here&lt;/a&gt; for more info. View Jupyter &lt;a href=&#39;command:jupyter.viewOutput&#39;&gt;log&lt;/a&gt; for further details.</pre>
 </div>
 </div>
 
