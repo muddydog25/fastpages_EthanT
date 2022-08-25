@@ -23,7 +23,7 @@ questions = 3
 correct = 0 
 
 print('Greetings, ' + getpass.getuser() + " running " + sys.executable)
-print("There will be " + str(questions) + " questions asked.")   
+print("There will be " + str(questions) + " questions asked. (enter to continue) ")   
 
 rsp = q_and_a(YesNo)
 if rsp == "Yes":  
