@@ -1,4 +1,16 @@
+import getpass, sys
+from tkinter.messagebox import YES
+
 YesNo = input(print("You are about to take an awesome quiz. Ready? (Yes or No)"))
+Percent = 
+
+if YesNo == "Yes":  
+    print("Lets go!")
+    
+    
+else:
+    sys.exit()
+
 
 def q_and_a(prompt):
     print("Question: ")
@@ -10,10 +22,6 @@ def q_and_a(prompt):
     q_and_a("What is 50 / 5?")
 
 
-
-import getpass, sys
-from tkinter.messagebox import YES
-
 def q_and_a(prompt):
     print("Question: " + prompt)
     msg = input()
@@ -23,15 +31,7 @@ questions = 3
 correct = 0 
 
 print('Greetings, ' + getpass.getuser() + " running " + sys.executable)
-print("There will be " + str(questions) + " questions asked. (enter to continue) ")   
-
-rsp = q_and_a(YesNo)
-if rsp == "Yes":  
-    print(rsp + "Lets go!")
-    correct += 0
-    
-else:
-    exit()
+print("There will be " + str(questions) + " questions asked.")   
 
 rsp = q_and_a("How many states are in the United States of America?")
 
@@ -68,7 +68,7 @@ else:
         print(rsp + " incorrect :( ")
 
 if correct == 3:
-    print("Congrats! " + (getpass.getuser() + " You got " + str(correct) +"/" + str(questions)))
+    print("Congrats! " + (getpass.getuser() + " You got " + str(correct) +"/" + str(questions) + (percent)))
 
 elif correct == 2:
     print("Not bad, keep working! " + (getpass.getuser() + " You got " + str(correct) +"/" + str(questions)))
