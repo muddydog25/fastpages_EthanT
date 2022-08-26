@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Bash Jupyter Notebookk",
-            "content": "echo &quot;Using conditional statement to create a project directory and project&quot; # Variable section export project_dir=$HOME/vscode # change vscode to different name to test git clone export project=$project_dir/APCSP # change APCSP to name of project from git clone export project_repo=&quot;https://github.com/nighthawkcoders/APCSP.git&quot; # change to project of choice cd ~ # start in home directory # Conditional block to make a project directory if [ ! -d $project_dir ] then echo &quot;Directory $project_dir does not exists... makinng directory $project_dir&quot; mkdir -p $project_dir fi echo &quot;Directory $project_dir exists.&quot; # Conditional block to git clone a project from project_repo if [ ! -d $project ] then echo &quot;Directory $project does not exists... cloning $project_repo&quot; cd $project_dir git clone $project_repo cd ~ fi echo &quot;Directory $project exists.&quot; .",
-            "url": "https://muddydog25.github.io/fastpages_EthanT/jupyter/2022/08/25/bash.html",
-            "relUrl": "/jupyter/2022/08/25/bash.html",
+            "title": "Bash Jupyter Notebook",
+            "content": "echo &quot;Using conditional statement to create a project directory and project&quot; # Variable section export project_dir=$HOME/vscode4 # change vscode to different name to test git clone export project=$project_dir/APCSP # change APCSP to name of project from git clone export project_repo=&quot;https://github.com/nighthawkcoders/APCSP.git&quot; # change to project of choice cd ~ # start in home directory # Conditional block to make a project directory if [ ! -d $project_dir ] then echo &quot;Directory $project_dir does not exists... makinng directory $project_dir&quot; mkdir -p $project_dir fi echo &quot;Directory $project_dir exists.&quot; # Conditional block to git clone a project from project_repo if [ ! -d $project ] then echo &quot;Directory $project does not exists... cloning $project_repo&quot; cd $project_dir git clone $project_repo cd ~ fi echo &quot;Directory $project exists.&quot; . Failed to start the Kernel. AttributeError: module &#39;pexpect&#39; has no attribute &#39;spawn&#39;. View Jupyter &lt;a href=&#39;command:jupyter.viewOutput&#39;&gt;log&lt;/a&gt; for further details. . echo &quot;Navigate to project, then navigate to area wwhere files were cloned&quot; cd $project pwd echo &quot;&quot; echo &quot;list top level or root of files with project pulled from github&quot; ls echo &quot;&quot; echo &quot;list again with hidden files pulled from github&quot; ls -a # hidden files flag, many shell commands have flags echo &quot;&quot; echo &quot;list all files in long format&quot; ls -al . Failed to start the Kernel. AttributeError: module &#39;pexpect&#39; has no attribute &#39;spawn&#39;. View Jupyter &lt;a href=&#39;command:jupyter.viewOutput&#39;&gt;log&lt;/a&gt; for further details. . echo &quot;Look for posts&quot; export posts=$project/_posts # _posts inside project cd $posts # this should exist per fastpages pwd # present working directory ls -l . Failed to start the Kernel. AttributeError: module &#39;pexpect&#39; has no attribute &#39;spawn&#39;. View Jupyter &lt;a href=&#39;command:jupyter.viewOutput&#39;&gt;log&lt;/a&gt; for further details. .",
+            "url": "https://muddydog25.github.io/fastpages_EthanT/fastpages/jupyter/2022/08/25/bash.html",
+            "relUrl": "/fastpages/jupyter/2022/08/25/bash.html",
             "date": " • Aug 25, 2022"
         }
         
@@ -39,6 +39,28 @@
 
   
       ,"page1": {
+          "title": "Class notes",
+          "content": "Test .",
+          "url": "https://muddydog25.github.io/fastpages_EthanT/classnotes/",
+          "relUrl": "/classnotes/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
+          "title": "Class notes",
+          "content": "Test .",
+          "url": "https://muddydog25.github.io/fastpages_EthanT/classnotes/",
+          "relUrl": "/classnotes/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page3": {
           "title": "About Me",
           "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://muddydog25.github.io/fastpages_EthanT/about/",
@@ -70,7 +92,7 @@
   
 
   
-      ,"page10": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://muddydog25.github.io/fastpages_EthanT/robots.txt",
