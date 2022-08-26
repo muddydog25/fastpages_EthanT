@@ -39,24 +39,15 @@
 
   
       ,"page1": {
-          "title": "Class notes",
-          "content": "Test .",
-          "url": "https://muddydog25.github.io/fastpages_EthanT/classnotes/",
-          "relUrl": "/classnotes/",
+          "title": "About Me",
+          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "url": "https://muddydog25.github.io/fastpages_EthanT/about/",
+          "relUrl": "/about/",
           "date": ""
       }
       
   
 
-  
-      ,"page2": {
-          "title": "Class notes",
-          "content": "Test .",
-          "url": "https://muddydog25.github.io/fastpages_EthanT/classnotes/",
-          "relUrl": "/classnotes/",
-          "date": ""
-      }
-      
   
 
   
@@ -71,8 +62,6 @@
   
 
   
-
-  
   
 
   
@@ -80,6 +69,17 @@
   
   
 
+  
+
+  
+      ,"page8": {
+          "title": "About Me",
+          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "url": "https://muddydog25.github.io/fastpages_EthanT/about/",
+          "relUrl": "/about/",
+          "date": ""
+      }
+      
   
 
   
