@@ -2,8 +2,19 @@
   
     
         "post0": {
+            "title": "Title",
+            "content": "import getpass, sys from tkinter.messagebox import QUESTION, YES def question (question, answer): ans = input(question) if ans == answer: print(&quot;Correct!&quot;) elif ans == &quot;No&quot;: sys.exit() else: print(&quot;Wrong&quot;) def question (question, answer): ans = input(question) question(&quot;You are about to take an awesome short quiz. Ready? (Yes or No)&quot; , &quot;Yes&quot;) question(&quot;What is 5 x 8?&quot; , &quot;40&quot;) question(&quot;How many states are there in the United States of America?&quot; , &quot;50&quot;) # if points == 3: # print(&quot;Congrats! &quot;) # elif points == 2: # print(&quot;Not bad, keep working! &quot; ) # else: # print(&quot;Its okay, better luck next time!&quot;) .",
+            "url": "https://muddydog25.github.io/fastpages_EthanT/2022/08/26/quiz.html",
+            "relUrl": "/2022/08/26/quiz.html",
+            "date": " • Aug 26, 2022"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "Bash Jupyter Notebook",
-            "content": "echo &quot;Using conditional statement to create a project directory and project&quot; # Variable section export project_dir=$HOME/vscode4 # change vscode to different name to test git clone export project=$project_dir/APCSP # change APCSP to name of project from git clone export project_repo=&quot;https://github.com/nighthawkcoders/APCSP.git&quot; # change to project of choice cd ~ # start in home directory # Conditional block to make a project directory if [ ! -d $project_dir ] then echo &quot;Directory $project_dir does not exists... makinng directory $project_dir&quot; mkdir -p $project_dir fi echo &quot;Directory $project_dir exists.&quot; # Conditional block to git clone a project from project_repo if [ ! -d $project ] then echo &quot;Directory $project does not exists... cloning $project_repo&quot; cd $project_dir git clone $project_repo cd ~ fi echo &quot;Directory $project exists.&quot; . Failed to start the Kernel. AttributeError: module &#39;pexpect&#39; has no attribute &#39;spawn&#39;. View Jupyter &lt;a href=&#39;command:jupyter.viewOutput&#39;&gt;log&lt;/a&gt; for further details. . echo &quot;Navigate to project, then navigate to area wwhere files were cloned&quot; cd $project pwd echo &quot;&quot; echo &quot;list top level or root of files with project pulled from github&quot; ls echo &quot;&quot; echo &quot;list again with hidden files pulled from github&quot; ls -a # hidden files flag, many shell commands have flags echo &quot;&quot; echo &quot;list all files in long format&quot; ls -al . Failed to start the Kernel. AttributeError: module &#39;pexpect&#39; has no attribute &#39;spawn&#39;. View Jupyter &lt;a href=&#39;command:jupyter.viewOutput&#39;&gt;log&lt;/a&gt; for further details. . echo &quot;Look for posts&quot; export posts=$project/_posts # _posts inside project cd $posts # this should exist per fastpages pwd # present working directory ls -l . Failed to start the Kernel. AttributeError: module &#39;pexpect&#39; has no attribute &#39;spawn&#39;. View Jupyter &lt;a href=&#39;command:jupyter.viewOutput&#39;&gt;log&lt;/a&gt; for further details. .",
+            "content": "echo &quot;Using conditional statement to create a project directory and project&quot; # Variable section export project_dir=$HOME/vscode4 # change vscode to different name to test git clone export project=$project_dir/APCSP # change APCSP to name of project from git clone export project_repo=&quot;https://github.com/nighthawkcoders/APCSP.git&quot; # change to project of choice cd ~ # start in home directory # Conditional block to make a project directory if [ ! -d $project_dir ] then echo &quot;Directory $project_dir does not exists... makinng directory $project_dir&quot; mkdir -p $project_dir fi echo &quot;Directory $project_dir exists.&quot; # Conditional block to git clone a project from project_repo if [ ! -d $project ] then echo &quot;Directory $project does not exists... cloning $project_repo&quot; cd $project_dir git clone $project_repo cd ~ fi echo &quot;Directory $project exists.&quot; . Input In [1] echo &#34;Using conditional statement to create a project directory and project&#34; ^ SyntaxError: invalid syntax . echo &quot;Navigate to project, then navigate to area wwhere files were cloned&quot; cd $project pwd echo &quot;&quot; echo &quot;list top level or root of files with project pulled from github&quot; ls echo &quot;&quot; echo &quot;list again with hidden files pulled from github&quot; ls -a # hidden files flag, many shell commands have flags echo &quot;&quot; echo &quot;list all files in long format&quot; ls -al . echo &quot;Look for posts&quot; export posts=$project/_posts # _posts inside project cd $posts # this should exist per fastpages pwd # present working directory ls -l .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/fastpages/jupyter/2022/08/25/bash.html",
             "relUrl": "/fastpages/jupyter/2022/08/25/bash.html",
             "date": " • Aug 25, 2022"
@@ -12,7 +23,7 @@
     
   
     
-        ,"post1": {
+        ,"post2": {
             "title": "First Markdown Post",
             "content": "Hello, my name is Ethan Tran and this is my first markdown post. . . About Me Click this! ↑ . . Closing statement . I hope to improve my skills with Python and get adjusted to IDEs such as Visual Studio. Cheers! .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/markdown/2022/08/19/first-post.html",
@@ -23,7 +34,7 @@
     
   
     
-        ,"post2": {
+        ,"post3": {
             "title": "Ethan's First Notebook",
             "content": "Printing &quot;Hello&quot; . print(&quot;Hello&quot;) . Hello . Time value of money after one year calculator! . With this calculator that I made, you can insert any initial amount of money and any interest rate. In this demo, I started with $1000 and used an interest rate of 0.1563. . print(&quot;Lets calculate your time value of money after one year!&quot;) print(&quot;How much money are you investing?&quot;) # Input the initial amount of money Money = float(input(&quot;Amount of money: &quot;)) print(&quot;$&quot; + &quot;{:.2f}&quot;.format(Money)) # Input interest rate print(&quot;What is the interest rate of your investment?&quot;) r = float(input(&quot;Interest rate: &quot;)) percent = (r * 100) # Interest rate shown as a percentage print(&quot;{:.2f}&quot;.format(percent) + &quot;%&quot;) # Calculation of the final amount of money final_amount = (Money * (1 + r)) print(&#39;This will be your amount of money after one year.&#39;) print(&quot;$&quot; + &quot;{:.2f}&quot;.format(final_amount)) . Lets calculate your time value of money after one year! How much money are you investing? $50.00 What is the interest rate of your investment? 15.00% This will be your amount of money after one year. $57.50 .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/fastpages/jupyter/2022/08/19/first-notebook.html",
@@ -52,10 +63,10 @@
 
   
       ,"page3": {
-          "title": "About Me",
-          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
-          "url": "https://muddydog25.github.io/fastpages_EthanT/about/",
-          "relUrl": "/about/",
+          "title": "Class Notes",
+          "content": "My Classes",
+          "url": "https://muddydog25.github.io/fastpages_EthanT/Classes/",
+          "relUrl": "/Classes/",
           "date": ""
       }
       
@@ -73,10 +84,10 @@
 
   
       ,"page8": {
-          "title": "About Me",
-          "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
-          "url": "https://muddydog25.github.io/fastpages_EthanT/about/",
-          "relUrl": "/about/",
+          "title": "Vocabulary",
+          "content": "",
+          "url": "https://muddydog25.github.io/fastpages_EthanT/Vocabulary/",
+          "relUrl": "/Vocabulary/",
           "date": ""
       }
       
