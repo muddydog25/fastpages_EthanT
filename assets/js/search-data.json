@@ -140,7 +140,7 @@
   
       ,"page8": {
           "title": "Vocabulary",
-          "content": "Word Definition . Sequence | Two or more lines of code | . Key | A mix of fields used to take and sort rows from a given criteria | Value | Representation of an entity that can be changed by a given program | .",
+          "content": "Word Definition . Sequence | Two or more lines of code | . Key | A mix of fields used to take and sort rows from a given criteria | . Value | Representation of an entity that can be changed by a given program | . Import | A command that is used to add additional functions that have been previously developed | . If | A command that is used to determine whether a response is correct or incorrect based on previously set expressions/conditions | . Expression | Used in an if statement to determine whether a given command is right or wrong | .",
           "url": "https://muddydog25.github.io/fastpages_EthanT/Vocabulary/",
           "relUrl": "/Vocabulary/",
           "date": ""
