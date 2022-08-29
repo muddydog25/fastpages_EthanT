@@ -146,29 +146,32 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
-<span class="kn">from</span> <span class="nn">multiprocessing.connection</span> <span class="kn">import</span> <span class="n">answer_challenge</span>
-<span class="kn">from</span> <span class="nn">tkinter.messagebox</span> <span class="kn">import</span> <span class="n">QUESTION</span><span class="p">,</span> <span class="n">YES</span>
+<span class="kn">import</span> <span class="nn">random</span>
 
-<span class="n">question_list</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="s2">&quot;Who was the first emperor of Imperial China?&quot;</span> <span class="p">,</span> <span class="s2">&quot;What is 5 x 8?&quot;</span> <span class="p">,</span> <span class="s2">&quot;How many states are there in the United States of America?&quot;</span><span class="p">)</span>
-<span class="n">answer_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;40&quot;</span><span class="p">,</span> <span class="s2">&quot;50&quot;</span><span class="p">,</span> <span class="s2">&quot;Qin&quot;</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">question_list</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">question</span> <span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">ask_question</span> <span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
     <span class="n">ans</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
-    <span class="n">points</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">ans</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correct!&quot;</span><span class="p">)</span>
-        <span class="n">points</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="mi">1</span>
 
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
 
+<span class="n">question_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Who was the first emperor of Imperial China?&quot;</span> <span class="p">,</span> <span class="s2">&quot;What is 5 x 8?&quot;</span> <span class="p">,</span> <span class="s2">&quot;How many states are there in the United States of America?&quot;</span><span class="p">]</span>
+<span class="n">answer_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Qin&quot;</span><span class="p">,</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span> <span class="s2">&quot;50&quot;</span><span class="p">]</span>
 
+<span class="n">points</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">question_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">question_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">points</span> <span class="o">=</span> <span class="n">points</span> <span class="o">+</span> <span class="n">ask_question</span><span class="p">(</span><span class="n">question_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">answer_list</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+    
+    <span class="k">del</span> <span class="n">question_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="k">del</span> <span class="n">answer_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">points</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
          <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total score is: &quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="s2">&quot;/3 Congrats!&quot;</span><span class="p">)</span>
 
@@ -188,17 +191,15 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\etran\OneDrive\Documents\GitHub\fastpages_EthanT\_notebooks\2022-08-26-quiz.ipynb Cell 1</span> in <span class="ansi-cyan-fg">&lt;cell line: 6&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-fg">      &lt;a href=&#39;vscode-notebook-cell:/c%3A/Users/etran/OneDrive/Documents/GitHub/fastpages_EthanT/_notebooks/2022-08-26-quiz.ipynb#W0sZmlsZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span> from multiprocessing.connection import answer_challenge
-<span class="ansi-green-fg">      &lt;a href=&#39;vscode-notebook-cell:/c%3A/Users/etran/OneDrive/Documents/GitHub/fastpages_EthanT/_notebooks/2022-08-26-quiz.ipynb#W0sZmlsZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span> from tkinter.messagebox import QUESTION, YES
-<span class="ansi-green-intense-fg ansi-bold">----&gt; &lt;a href=&#39;vscode-notebook-cell:/c%3A/Users/etran/OneDrive/Documents/GitHub/fastpages_EthanT/_notebooks/2022-08-26-quiz.ipynb#W0sZmlsZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span> question_list = random(&#34;Who was the first emperor of Imperial China?&#34; , &#34;What is 5 x 8?&#34; , &#34;How many states are there in the United States of America?&#34;)
-<span class="ansi-green-fg">      &lt;a href=&#39;vscode-notebook-cell:/c%3A/Users/etran/OneDrive/Documents/GitHub/fastpages_EthanT/_notebooks/2022-08-26-quiz.ipynb#W0sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> print(question_list)
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: Random.random() takes no arguments (3 given)</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a
+Wrong
+50
+Correct!
+qin
+Wrong
+Its okay, better luck next time!
+</pre>
 </div>
 </div>
 
