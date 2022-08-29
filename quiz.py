@@ -47,7 +47,7 @@ percent = (score * 100)
 print("{:.2f}".format(percent) + "%")
 
 # Adding final remarks based upon the users given scores
-if points <= 5:
+if points >= 5:
          print("Your total score is: ", points, "out of 6. Congratulations!")
 
 elif points == 4:
