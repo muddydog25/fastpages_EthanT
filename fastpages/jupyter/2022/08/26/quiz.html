@@ -172,14 +172,18 @@ window.onload = wrap_img;
     <span class="k">del</span> <span class="n">question_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
     <span class="k">del</span> <span class="n">answer_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
 
+<span class="n">score</span> <span class="o">=</span> <span class="p">(</span><span class="n">points</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">score</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+
 <span class="k">if</span> <span class="n">points</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
-         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total score is: &quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="s2">&quot;/3 Congrats!&quot;</span><span class="p">)</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total score is: &quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="s2">&quot;out of 3. Congratulations!&quot;</span><span class="p">)</span>
 
 <span class="k">elif</span> <span class="n">points</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Not bad, keep working! &quot;</span> <span class="p">)</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total score is: &quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="s2">&quot;out of 3. Not bad, keep working! &quot;</span> <span class="p">)</span>
 
 <span class="k">else</span><span class="p">:</span>
-         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Its okay, better luck next time!&quot;</span><span class="p">)</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total score is: &quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="s2">&quot;out of 3. Its okay, better luck next time!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -192,13 +196,14 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>a
-Wrong
+<pre>40
+Correct!
+Qin
+Correct!
 50
 Correct!
-qin
-Wrong
-Its okay, better luck next time!
+100.00%
+Your total score is:  3 out of 3. Congrats!
 </pre>
 </div>
 </div>

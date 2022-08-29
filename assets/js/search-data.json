@@ -36,7 +36,7 @@
     
         ,"post3": {
             "title": "My Quiz",
-            "content": "import getpass, sys import random def ask_question (question, answer): ans = input(question) print(ans) if ans == answer: print(&quot;Correct!&quot;) return 1 else: print(&quot;Wrong&quot;) return 0 question_list = [&quot;Who was the first emperor of Imperial China?&quot; , &quot;What is 5 x 8?&quot; , &quot;How many states are there in the United States of America?&quot;] answer_list = [&quot;Qin&quot;, &quot;40&quot;, &quot;50&quot;] points = 0 while len(question_list) &gt; 0: index = random.randint(0, len(question_list) - 1) points = points + ask_question(question_list[index], answer_list[index]) del question_list[index] del answer_list[index] if points == 3: print(&quot;Your total score is: &quot;, points, &quot;/3 Congrats!&quot;) elif points == 2: print(&quot;Not bad, keep working! &quot; ) else: print(&quot;Its okay, better luck next time!&quot;) . a Wrong 50 Correct! qin Wrong Its okay, better luck next time! .",
+            "content": "import getpass, sys import random def ask_question (question, answer): ans = input(question) print(ans) if ans == answer: print(&quot;Correct!&quot;) return 1 else: print(&quot;Wrong&quot;) return 0 question_list = [&quot;Who was the first emperor of Imperial China?&quot; , &quot;What is 5 x 8?&quot; , &quot;How many states are there in the United States of America?&quot;] answer_list = [&quot;Qin&quot;, &quot;40&quot;, &quot;50&quot;] points = 0 while len(question_list) &gt; 0: index = random.randint(0, len(question_list) - 1) points = points + ask_question(question_list[index], answer_list[index]) del question_list[index] del answer_list[index] score = (points / 3) percent = (score * 100) print(&quot;{:.2f}&quot;.format(percent) + &quot;%&quot;) if points == 3: print(&quot;Your total score is: &quot;, points, &quot;out of 3. Congratulations!&quot;) elif points == 2: print(&quot;Your total score is: &quot;, points, &quot;out of 3. Not bad, keep working! &quot; ) else: print(&quot;Your total score is: &quot;, points, &quot;out of 3. Its okay, better luck next time!&quot;) . 40 Correct! Qin Correct! 50 Correct! 100.00% Your total score is: 3 out of 3. Congrats! .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/fastpages/jupyter/2022/08/26/quiz.html",
             "relUrl": "/fastpages/jupyter/2022/08/26/quiz.html",
             "date": " • Aug 26, 2022"
@@ -46,10 +46,10 @@
   
     
         ,"post4": {
-            "title": "Apcsp",
+            "title": "First Markdown Post",
             "content": "",
-            "url": "https://muddydog25.github.io/fastpages_EthanT/2022/08/26/APCSP.html",
-            "relUrl": "/2022/08/26/APCSP.html",
+            "url": "https://muddydog25.github.io/fastpages_EthanT/markdown/2022/08/26/APCSP.html",
+            "relUrl": "/markdown/2022/08/26/APCSP.html",
             "date": " • Aug 26, 2022"
         }
         
