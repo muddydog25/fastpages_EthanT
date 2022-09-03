@@ -11,11 +11,11 @@ permalink: /Class Periods/
     </tr>
 
     {% assign length = (site.class_periods.size) %}
-    {% for i in (1..length) %}
+    {% for i in (1..5) %}
     
     <tr>
         <td> {{ i }}</td>
-        <td> {{ site.class_periods[i + 1] }}</td>
+        <td> {{ site.class_periods[i] }}</td>
     </tr>
 
     {% endfor %}
