@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Title",
-            "content": "Dictionary data set using &quot;input&quot; . Vocabulary = {} for i in range(6): Word = input(&quot; &quot;) Definition = input(&quot; &quot;) Vocabulary[Word] = Definition print(Vocabulary) . {&#39;Sequence&#39;: &#39;Two or more lines of code&#39;, &#39;Key&#39;: &#39;A mix of fields used to take and sort rows from a given criteria&#39;, &#39;Value&#39;: &#39;Representation of an entity that can be changed by a given program&#39;, &#39;Import&#39;: &#39;A command that is used to add additional functions that have been previously developed&#39;, &#39;If&#39;: &#39;A command that is used to determine whether a response is correct or incorrect based on previously set expressions/conditions&#39;, &#39;Expression&#39;: &#39;Uses in an if statement to determine whether a given command is right or wrong&#39;} . &lt;table&gt; &lt;tr&gt; &lt;th&gt;Word&lt;/th&gt; &lt;th&gt;Definition&lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Sequence&lt;/td&gt; &lt;td&gt;Two or more lines of code&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Key&lt;/td&gt; &lt;td&gt;A mix of fields used to take and sort rows from a given criteria&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Value&lt;/td&gt; &lt;td&gt;Representation of an entity that can be changed by a given program&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Import&lt;/td&gt; &lt;td&gt;A command that is used to add additional functions that have been previously developed&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;If&lt;/td&gt; &lt;td&gt;A command that is used to determine whether a response is correct or incorrect based on previously set expressions/conditions&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Expression&lt;/td&gt; &lt;td&gt;Uses in an if statement to determine whether a given command is right or wrong&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; .",
+            "content": "Dictionary data set using &quot;input&quot; . Vocabulary = [] for i in range(6): Word = input(&quot; &quot;) Definition = input(&quot; &quot;) Vocabulary[Word] = Definition print(Vocabulary) . {&#39;Sequence&#39;: &#39;Two or more lines of code&#39;, &#39;&#39;: &#39;&#39;} . InfoDb = [] # InfoDB is a data structure with expected Keys and Values # Append to List a Dictionary of key/values related to a person and cars InfoDb.append({ &quot;FirstName&quot;: &quot;Ethan&quot;, &quot;LastName&quot;: &quot;Tran&quot;, &quot;Birth_Month&quot;: &quot;May&quot;, &quot;Sports&quot;: [&quot;Basketball&quot; , &quot;Track&quot;] }) # Append to List a 2nd Dictionary of key/values InfoDb.append({ &quot;FirstName&quot;: &quot;Sean&quot;, &quot;LastName&quot;: &quot;Tran&quot;, &quot;Birth_Month&quot;: &quot;December&quot;, &quot;Sports&quot; : [&quot;Basketball&quot; , &quot;Track&quot; , &quot;Volleyball&quot;] }) # Print the data structure def print_data(person): print(&quot;Name &quot; + person[&quot;FirstName&quot;] + person[&quot;LastName&quot;]) print(person[&quot;Birth_Month&quot;] + person[&quot;Sports&quot;]) print(InfoDb) . [{&#39;FirstName&#39;: &#39;Ethan&#39;, &#39;LastName&#39;: &#39;Tran&#39;, &#39;Birth_Month&#39;: &#39;May&#39;, &#39;Sports&#39;: [&#39;Basketball&#39;, &#39;Track&#39;]}, {&#39;FirstName&#39;: &#39;Sean&#39;, &#39;LastName&#39;: &#39;Tran&#39;, &#39;Birth_Month&#39;: &#39;December&#39;, &#39;Sports&#39;: [&#39;Basketball&#39;, &#39;Track&#39;, &#39;Volleyball&#39;]}] .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/2022/09/02/dictionary.html",
             "relUrl": "/2022/09/02/dictionary.html",
             "date": " • Sep 2, 2022"
@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "Title",
             "content": "print(&quot;What is the variable name/key?&quot;, &quot;value?&quot;, &quot;type?&quot;, &quot;primitive or collection, why?&quot;) name = &quot;Ethan Tran&quot; print(&quot;name&quot;, name, type(name)) print() # variable of type integer print(&quot;What is the variable name/key?&quot;, &quot;value?&quot;, &quot;type?&quot;, &quot;primitive or collection, why?&quot;) age = 15 print(&quot;age&quot;, age, type(age)) print() # variable of type float print(&quot;What is the variable name/key?&quot;, &quot;value?&quot;, &quot;type?&quot;, &quot;primitive or collection, why?&quot;) score = 100.0 print(&quot;score&quot;, score, type(score)) print() # variable of type list (many values in one variable) print(&quot;What is variable name/key?&quot;, &quot;value?&quot;, &quot;type?&quot;, &quot;primitive or collection?&quot;) print(&quot;What is different about the list output?&quot;) langs = [&quot;Python&quot;, &quot;JavaScript&quot;, &quot;Java&quot; , &quot;Bash&quot; , &quot;C&quot; , &quot;R&quot;] print(&quot;langs&quot;, langs, type(langs), &quot;length&quot;, len(langs)) print(&quot;- langs[0]&quot;, langs[0], type(langs[0])) print() # variable of type dictionary (a group of keys and values) print(&quot;What is the variable name/key?&quot;, &quot;value?&quot;, &quot;type?&quot;, &quot;primitive or collection, why?&quot;) print(&quot;What is different about the dictionary output?&quot;) person = { &quot;name&quot;: name, &quot;age&quot;: age, &quot;score&quot;: score, &quot;langs&quot;: langs, } print(&quot;person&quot;, person, type(person), &quot;length&quot;, len(person)) print(&#39;- person[&quot;name&quot;]&#39;, person[&quot;name&quot;], type(person[&quot;name&quot;])) . What is the variable name/key? value? type? primitive or collection, why? name Ethan Tran &lt;class &#39;str&#39;&gt; What is the variable name/key? value? type? primitive or collection, why? age 15 &lt;class &#39;int&#39;&gt; What is the variable name/key? value? type? primitive or collection, why? score 100.0 &lt;class &#39;float&#39;&gt; What is variable name/key? value? type? primitive or collection? What is different about the list output? langs [&#39;Python&#39;, &#39;JavaScript&#39;, &#39;Java&#39;, &#39;Bash&#39;, &#39;C&#39;, &#39;R&#39;] &lt;class &#39;list&#39;&gt; length 6 - langs[0] Python &lt;class &#39;str&#39;&gt; What is the variable name/key? value? type? primitive or collection, why? What is different about the dictionary output? person {&#39;name&#39;: &#39;Ethan Tran&#39;, &#39;age&#39;: 15, &#39;score&#39;: 100.0, &#39;langs&#39;: [&#39;Python&#39;, &#39;JavaScript&#39;, &#39;Java&#39;, &#39;Bash&#39;, &#39;C&#39;, &#39;R&#39;]} &lt;class &#39;dict&#39;&gt; length 4 - person[&#34;name&#34;] Ethan Tran &lt;class &#39;str&#39;&gt; . Color = &quot;Red&quot; ; &quot;Blue&quot; ; &quot;Green&quot; ; &quot;Yellow&quot; ; &quot;Purple&quot; name = &quot;Ethan&quot; ; &quot;John&quot; ; &quot;Jane&quot; age = &quot;15&quot; ; &quot;17&quot; ; &quot;20&quot; print(&quot;/&quot; , Color) print(&quot;//&quot; , name) print(&quot;///&quot; , age) Person = { &quot;Color&quot;: Color, &quot;name&quot;: name, &quot;age&quot;: age } print(Person) . / Red // Ethan /// 15 {&#39;Color&#39;: &#39;Red&#39;, &#39;name&#39;: &#39;Ethan&#39;, &#39;age&#39;: &#39;15&#39;} .",
-            "url": "https://muddydog25.github.io/fastpages_EthanT/2022/09/01/dictionaries-lists.html",
-            "relUrl": "/2022/09/01/dictionaries-lists.html",
-            "date": " • Sep 1, 2022"
+            "url": "https://muddydog25.github.io/fastpages_EthanT/2022/09/02/dictionaries-lists.html",
+            "relUrl": "/2022/09/02/dictionaries-lists.html",
+            "date": " • Sep 2, 2022"
         }
         
     
@@ -148,9 +148,7 @@
   
 
   
-
-  
-      ,"page3": {
+      ,"page2": {
           "title": "Class Notes",
           "content": "My Classes . AP Biology | . Honors Humanities | &lt;/td&gt; &lt;/tr&gt; AP Computer Science Principles | &lt;/td&gt;",
           "url": "https://muddydog25.github.io/fastpages_EthanT/Classes/",
@@ -161,17 +159,7 @@
   
 
   
-  
-
-  
-
-  
-  
-
-  
-
-  
-      ,"page8": {
+      ,"page3": {
           "title": "Vocabulary",
           "content": "Word Definition . Sequence | Two or more lines of code | . Key | A mix of fields used to take and sort rows from a given criteria | . Value | Representation of an entity that can be changed by a given program | . Import | A command that is used to add additional functions that have been previously developed | . If | A command that is used to determine whether a response is correct or incorrect based on previously set expressions/conditions | . Expression | Used in an if statement to determine whether a given command is right or wrong | .",
           "url": "https://muddydog25.github.io/fastpages_EthanT/Vocabulary/",
@@ -179,6 +167,18 @@
           "date": ""
       }
       
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
   
 
   

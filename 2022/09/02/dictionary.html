@@ -65,7 +65,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/fastpages_EthanT/about/">About Me</a><a class="page-link" href="/fastpages_EthanT/Classes/">Class Notes</a><a class="page-link" href="/fastpages_EthanT/search/">Search</a><a class="page-link" href="/fastpages_EthanT/categories/">Tags</a><a class="page-link" href="/fastpages_EthanT/Vocabulary/">Vocabulary</a></div>
+        <div class="trigger"><a class="page-link" href="/fastpages_EthanT/about/">About Me</a><a class="page-link" href="/fastpages_EthanT/Classes/">Class Notes</a><a class="page-link" href="/fastpages_EthanT/Vocabulary/">Vocabulary</a><a class="page-link" href="/fastpages_EthanT/search/">Search</a><a class="page-link" href="/fastpages_EthanT/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -138,7 +138,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Vocabulary</span> <span class="o">=</span> <span class="p">{}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Vocabulary</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
     <span class="n">Word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
@@ -160,7 +160,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Sequence&#39;: &#39;Two or more lines of code&#39;, &#39;Key&#39;: &#39;A mix of fields used to take and sort rows from a given criteria&#39;, &#39;Value&#39;: &#39;Representation of an entity that can be changed by a given program&#39;, &#39;Import&#39;: &#39;A command that is used to add additional functions that have been previously developed&#39;, &#39;If&#39;: &#39;A command that is used to determine whether a response is correct or incorrect based on previously set expressions/conditions&#39;, &#39;Expression&#39;: &#39;Uses in an if statement to determine whether a given command is right or wrong&#39;}
+<pre>{&#39;Sequence&#39;: &#39;Two or more lines of code&#39;, &#39;&#39;: &#39;&#39;}
 </pre>
 </div>
 </div>
@@ -178,39 +178,48 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Word</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">th</span><span class="o">&gt;</span><span class="n">Definition</span><span class="o">&lt;/</span><span class="n">th</span><span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Sequence</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Two</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">lines</span> <span class="n">of</span> <span class="n">code</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Key</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">A</span> <span class="n">mix</span> <span class="n">of</span> <span class="n">fields</span> <span class="n">used</span> <span class="n">to</span> <span class="n">take</span> <span class="ow">and</span> <span class="n">sort</span> <span class="n">rows</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">given</span> <span class="n">criteria</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Value</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Representation</span> <span class="n">of</span> <span class="n">an</span> <span class="n">entity</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">changed</span> <span class="n">by</span> <span class="n">a</span> <span class="n">given</span> <span class="n">program</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Import</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">A</span> <span class="n">command</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">add</span> <span class="n">additional</span> <span class="n">functions</span> <span class="n">that</span> <span class="n">have</span> <span class="n">been</span> <span class="n">previously</span> <span class="n">developed</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">If</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">A</span> <span class="n">command</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">determine</span> <span class="n">whether</span> <span class="n">a</span> <span class="n">response</span> <span class="ow">is</span> <span class="n">correct</span> <span class="ow">or</span> <span class="n">incorrect</span> <span class="n">based</span> <span class="n">on</span> <span class="n">previously</span> <span class="nb">set</span> <span class="n">expressions</span><span class="o">/</span><span class="n">conditions</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="n">tr</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Expression</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="n">td</span><span class="o">&gt;</span><span class="n">Uses</span> <span class="ow">in</span> <span class="n">an</span> <span class="k">if</span> <span class="n">statement</span> <span class="n">to</span> <span class="n">determine</span> <span class="n">whether</span> <span class="n">a</span> <span class="n">given</span> <span class="n">command</span> <span class="ow">is</span> <span class="n">right</span> <span class="ow">or</span> <span class="n">wrong</span><span class="o">&lt;/</span><span class="n">td</span><span class="o">&gt;</span>
-      <span class="o">&lt;/</span><span class="n">tr</span><span class="o">&gt;</span>
-    <span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># InfoDB is a data structure with expected Keys and Values</span>
+
+<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Ethan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Tran&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Birth_Month&quot;</span><span class="p">:</span> <span class="s2">&quot;May&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Sports&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Basketball&quot;</span> <span class="p">,</span> <span class="s2">&quot;Track&quot;</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">&quot;FirstName&quot;</span><span class="p">:</span> <span class="s2">&quot;Sean&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;LastName&quot;</span><span class="p">:</span> <span class="s2">&quot;Tran&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Birth_Month&quot;</span><span class="p">:</span> <span class="s2">&quot;December&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Sports&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Basketball&quot;</span> <span class="p">,</span> <span class="s2">&quot;Track&quot;</span> <span class="p">,</span> <span class="s2">&quot;Volleyball&quot;</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Print the data structure</span>
+<span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">person</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name &quot;</span> <span class="o">+</span> <span class="n">person</span><span class="p">[</span><span class="s2">&quot;FirstName&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">person</span><span class="p">[</span><span class="s2">&quot;LastName&quot;</span><span class="p">])</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">&quot;Birth_Month&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">person</span><span class="p">[</span><span class="s2">&quot;Sports&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;FirstName&#39;: &#39;Ethan&#39;, &#39;LastName&#39;: &#39;Tran&#39;, &#39;Birth_Month&#39;: &#39;May&#39;, &#39;Sports&#39;: [&#39;Basketball&#39;, &#39;Track&#39;]}, {&#39;FirstName&#39;: &#39;Sean&#39;, &#39;LastName&#39;: &#39;Tran&#39;, &#39;Birth_Month&#39;: &#39;December&#39;, &#39;Sports&#39;: [&#39;Basketball&#39;, &#39;Track&#39;, &#39;Volleyball&#39;]}]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
