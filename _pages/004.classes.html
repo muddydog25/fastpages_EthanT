@@ -1,0 +1,23 @@
+---
+layout: page
+title: Classes
+permalink: /Classes/
+---
+
+<table>
+    <tr>
+        <th>Period</th>
+        <th>Class</th>
+    </tr>
+
+    {% assign length = (site.class_periods.size -1) %}
+    {% for i in (0.length) %}
+    
+    <tr>
+        <td> {{ i }}</td>
+        <td> {{ site.class_periods[i] }}</td>
+    </tr>
+
+    % endfor %
+
+</table>
