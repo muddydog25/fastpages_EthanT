@@ -203,6 +203,24 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name &quot;</span> <span class="o">+</span> <span class="n">person</span><span class="p">[</span><span class="s2">&quot;FirstName&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">person</span><span class="p">[</span><span class="s2">&quot;LastName&quot;</span><span class="p">])</span> 
     <span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">&quot;Birth_Month&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">person</span><span class="p">[</span><span class="s2">&quot;Sports&quot;</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">for_loop</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">InfoDB</span><span class="p">:</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">while_loop</span><span class="p">():</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">):</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">recursive</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">):</span>
+        <span class="k">return</span>
+
+    <span class="n">print_data</span><span class="p">(</span><span class="n">InfoDB</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">recursive</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
