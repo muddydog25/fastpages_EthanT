@@ -138,6 +138,17 @@
 
   
       ,"page1": {
+          "title": "Classes",
+          "content": "Period Class . 0 | AP Biology | . 1 | Honors Humanities | . 2 | Spanish | . 3 | AP CSP | . 4 | Math | . 5 | | .",
+          "url": "https://muddydog25.github.io/fastpages_EthanT/Classes/",
+          "relUrl": "/Classes/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://muddydog25.github.io/fastpages_EthanT/about/",
@@ -148,7 +159,7 @@
   
 
   
-      ,"page2": {
+      ,"page3": {
           "title": "Class Notes",
           "content": "My Classes . AP Biology | . Honors Humanities | &lt;/td&gt; &lt;/tr&gt; AP Computer Science Principles | &lt;/td&gt;",
           "url": "https://muddydog25.github.io/fastpages_EthanT/Classes/",
@@ -159,7 +170,7 @@
   
 
   
-      ,"page3": {
+      ,"page4": {
           "title": "Vocabulary",
           "content": "Word Definition . Sequence | Two or more lines of code | . Key | A mix of fields used to take and sort rows from a given criteria | . Value | Representation of an entity that can be changed by a given program | . Import | A command that is used to add additional functions that have been previously developed | . If | A command that is used to determine whether a response is correct or incorrect based on previously set expressions/conditions | . Expression | Used in an if statement to determine whether a given command is right or wrong | .",
           "url": "https://muddydog25.github.io/fastpages_EthanT/Vocabulary/",
@@ -191,7 +202,7 @@
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://muddydog25.github.io/fastpages_EthanT/robots.txt",
