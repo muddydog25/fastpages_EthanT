@@ -81,7 +81,7 @@ html_escape:
   description: false
 
 
-class_periods: [AP Biology, Honors Humanities, Spanish, AP CSP, Math]
+class_periods: [ AP Biology, Honors Humanities, Spanish, AP CSP, Math]
 
 
 
