@@ -87,7 +87,7 @@ class_periods: [N/A, AP Biology, Honors Humanities, Spanish, AP CSP, Math]
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
-theme: jekyll/theme/cayman
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -106,7 +106,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/cayman
+remote_theme: pages-themes/cayman@v0.2.0 
 
 titles_from_headings:
   enabled:     true
