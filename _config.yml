@@ -87,7 +87,7 @@ class_periods: [N/A, AP Biology, Honors Humanities, Spanish, AP CSP, Math]
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
   - jekyll-gist
