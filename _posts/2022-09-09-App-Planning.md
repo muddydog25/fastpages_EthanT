@@ -3,7 +3,7 @@ layout: post
 description: My AP Biology Notes
 categories: [markdown, storyboard, planning, applab]
 title: App Story-boarding/Planning
-image: (../../../../Pictures/myappscreenshot.png
+image: (../../../../Pictures/myappscreenshot.png)
 ---
 
 ## PBL Prototyping  (planning, purpose, and function)
@@ -25,13 +25,8 @@ image: (../../../../Pictures/myappscreenshot.png
 
 Note: I will need time to collect data to show for the demo of the application 
 
-## PBL Test
+## PBL Test 
 - Using Test-driven development (TDD), I have now been able to complete the first rendition of my app.
 - The application works as it should be and is ready to be demoed
 
-<html>
-<head></head>
- <body>
-<img src = "(../../../../Pictures/myappscreenshot.png)">
-    </body>
-</html>
+![](../../../../Pictures/myappscreenshot.png)
