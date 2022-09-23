@@ -14,7 +14,7 @@ layout: notebook
 - Completely demonstrates commits, syncs, and changes to each local server - as well as a permanent change to his fastpages website
 
 ### Grade & Final Statement
-Rohin, overall your video was detailed and was easy to follow along. Despite these successes, it was still well above the time limit (around 1 minute), for that I would have to give you a 2.6.
+Rohin, overall your video was detailed and was easy to follow along. Despite these successes, it was still well above the time limit of around 1 minute, for that I would have to give you a 2.6.
 
 ## Taiyo Iwazaki
 - Nice editing of the video itself
