@@ -1,3 +1,6 @@
+---
+layout: post
+---
 Ethan Tran
 
 Mrs. Philyaw

@@ -1,0 +1,21 @@
+<div id = "javaScriptTable">
+    
+</div>
+
+<script>
+
+const data = ["Ethan" , "Taiyo" , "Rohin" , "Luna" , "Parav"];
+const table = document.createElement("table");
+
+const row = document.createElement("tr");
+
+for (let i = 0 ; i < data.length ; i++){
+    const td = document.createElement("td");
+    const node = document.createTextNode(data[i]);
+    td.appendChild(node);
+    row.appendChild(td);
+}
+table.appendChild(row);
+const div = document.getElementById("javaScriptTable");
+div.appendChild(table);
+</script>
