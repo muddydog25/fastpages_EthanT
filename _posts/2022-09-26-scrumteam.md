@@ -51,11 +51,11 @@ layout: post
 
   p {
     text-align: center;
-    background-color: black;
+    background-color: deepskyblue;
   }
 
   h2 {
-    background-color: black;
+    background-color: deepskyblue;
   }
 
 </style>
