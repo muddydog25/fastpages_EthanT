@@ -1,5 +1,5 @@
 ---
-description: Scrum Team graphic using HTML, CSS, & JS" courtesy of Rohin Shood 
+description: Scrum Team graphic using HTML, CSS, & JS" courtesy of Rohin Sood 
 title: "Scrum Team"
 badges: true
 comments: true
