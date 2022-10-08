@@ -177,7 +177,9 @@ window.onload = wrap_img;
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;  $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> 
 
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="n">ordering</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">while</span> <span class="n">ordering</span><span class="p">:</span>
     <span class="n">food</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu. Press enter when you are done.&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">food</span> <span class="ow">in</span> <span class="n">menu</span><span class="p">:</span>
@@ -185,7 +187,7 @@ window.onload = wrap_img;
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total: &quot;&quot;$&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your order will be ready soon!&quot;</span><span class="p">)</span>
-        <span class="n">exit</span><span class="p">()</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 
     </div>
@@ -203,24 +205,11 @@ burger  $3.99
 fries  $1.99
 drink  $0.99
 Your total: $3.99
-Your total: $5.98
+Your total: $4.98
 Your total: $6.97
-Your total: $10.96
-Your total: $12.95
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
-Your order will be ready soon!
+Your total: $8.96
+Your total: $9.95
+Your total: $13.94
 Your order will be ready soon!
 </pre>
 </div>
