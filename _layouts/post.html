@@ -2,20 +2,7 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-    <table style="text-align: center;">
-      <tr>
-        <td>
-          <a href="{{site.baseurl}}/">Home</a>
-        </td>
-        <td>
-          <a href="{{site.baseurl}}/fastpages/python/api/2022/10/06/api-python.html">API</a>
-        </td>
-        <td>
-          <a href="{{site.baseurl}}/classes">Notes</a>
-        </td>
-      </tr>
-    </table>
-    
+
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     {%- if page.description -%}
@@ -79,5 +66,3 @@ layout: default
   {%- endif -%}
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
-
-{{ content }}
