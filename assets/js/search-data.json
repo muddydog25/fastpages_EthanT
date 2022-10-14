@@ -4,9 +4,9 @@
         "post0": {
             "title": "Fixing Errors (Menu Problem)",
             "content": "import sys total = 0 menu = {&quot;burger&quot;: 3.99, &quot;fries&quot;: 1.99, &quot;drink&quot;: 0.99, &quot;Burger&quot;: 3.99, &quot;Fries&quot;: 1.99, &quot;Drink&quot;: 0.99} print(&quot;Menu&quot;) for k,v in menu.items(): print(k + &quot; $&quot; + str(v)) ordering = True while ordering: food = input(&quot;Please select an item from the menu. Press enter when you are done.&quot;) if food in menu: total += menu[food] print(&quot;Your total: $&quot; + &quot;{:.2f}&quot;.format(total)) else: print(&quot;Your order will be ready soon!&quot;) ordering = False . Menu burger $3.99 fries $1.99 drink $0.99 Your total: $3.99 Your total: $5.98 Your total: $6.97 Your total: $7.96 Your total: $11.95 Your order will be ready soon! .",
-            "url": "https://muddydog25.github.io/fastpages_EthanT/fastpages/python/lists/iterations/menu/2022/10/12/ErrorFixing.html",
-            "relUrl": "/fastpages/python/lists/iterations/menu/2022/10/12/ErrorFixing.html",
-            "date": " • Oct 12, 2022"
+            "url": "https://muddydog25.github.io/fastpages_EthanT/fastpages/python/lists/iterations/menu/2022/10/13/ErrorFixing.html",
+            "relUrl": "/fastpages/python/lists/iterations/menu/2022/10/13/ErrorFixing.html",
+            "date": " • Oct 13, 2022"
         }
         
     
