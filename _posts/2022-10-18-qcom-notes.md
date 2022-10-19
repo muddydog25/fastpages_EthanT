@@ -1,5 +1,14 @@
+---
+title: Qualcomm Career Series Notes
+badges: true
+comments: true
+author: Ethan Tran
+categories: [fastpages, markdown, md, Qualcomm, notes]
+layout: post
+---
+
 <html>
-<img src ="https://app.slack.com/client/TUDAF53UJ/CUS8E3M6Z" id="QCOM">
+<img src ="https://user-images.githubusercontent.com/109186517/196571282-346c55df-1882-44c3-b75d-7b38b9f72e48.png" id="QCOM">
 </html>
 
 ## What I learned...
