@@ -1,6 +1,3 @@
----
-layout: post
----
   - > 2 or more lines of code = sequence
 
   - > print(“) = a cmd or function
