@@ -1,9 +1,9 @@
 ---
-title: Qualcomm Career Series Notes
+title: Finals Week Trimester 1
 badges: true
 comments: true
 author: Ethan Tran
-categories: [fastpages, markdown, md, Qualcomm, notes]
+categories: [markdown, finals, collegeboard]
 layout: post
 ---
 
