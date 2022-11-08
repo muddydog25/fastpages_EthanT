@@ -9,7 +9,7 @@ layout: post
 ## Night at the Museum Experience
 <p>Night at the Museum was a very interesting and awesome experience. Some notable works I saw were a recreation of Kahoot and a Marvel comic tracker. It was really cool to see the framework and code of various other teams across the AP CSP periods. It was also very gratifying to present our team's website, which was an NBA team tracker. There were many people that were intrigued with our project and gave us compliments. One particular moment I remember was a young child that asked us to input the Trailblazers, who were his favorite team. When we showed the information, he was really interested in our app and said that it was really cool.</p>
 
-
+### Missed Problems
 <img src="https://user-images.githubusercontent.com/109186517/200424917-b23e0281-5f39-4d86-b2d2-664fa0e78e3c.png" id="Final1">
 <p></p>
 <img src="https://user-images.githubusercontent.com/109186517/200425114-b37524a8-13fc-4720-89c8-50c2fe8e402d.png" id="Final2">
