@@ -3,7 +3,7 @@ title: Finals Week Trimester 1
 badges: true
 comments: true
 author: Ethan Tran
-categories: [markdown, finals, collegeboard]
+categories: [markdown, finals, natm, collegeboard]
 layout: post
 ---
 ## Night at the Museum Experience
