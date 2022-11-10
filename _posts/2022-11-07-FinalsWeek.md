@@ -6,6 +6,7 @@ author: Ethan Tran
 categories: [markdown, finals, natm, collegeboard]
 layout: post
 ---
+
 ## Overall Class Experience
 This was quite an informative class that has helped me step into the world of Computer Science. I enjoyed the various projects and assignments given to us, as they helped us develop skills that we can use in the future. 
 
