@@ -31,3 +31,8 @@ This was quite an informative class that has helped me step into the world of Co
 
 ## Problems/Difficulties
 There were a few problems that I had issues with. I had previously watched the College board videos to help me prepare for this quiz. I found that though I was quite prepared, there were some problems that were tricky. Another fault I found was that I went through this quiz a bit quickly, so some of these missed questions may be due to myself going over the quiz too quickly. I think that I need to practice more and look over more of the overall theory of this course. Since taking the test, I have taken a look at some online videos and read over the material on the College board website. 
+
+### Links for help
+https://apclassroom.collegeboard.org/103/assessments/results/48247192/performance/1519904?apd=t5x16fbkls
+https://apclassroom.collegeboard.org/103/assessments/results/48247192/performance/1519878?apd=8to186ayba
+https://apclassroom.collegeboard.org/103/assessments/results/48247192/performance/1519867?apd=n41wuewukt
