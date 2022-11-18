@@ -1,12 +1,3 @@
----
-layout: home
-search_exclude: true
-image: IMG_0439.JPG
----
-<p1 style = "color:#ffffff"> Welcome to Ethan's fastpages! </p1>
-
-<img src = "IMG_0439.JPG" height = "300"> 
-
 <html>
 	<head>
 		<title>Binary Calculator</title>
@@ -93,8 +84,31 @@ image: IMG_0439.JPG
 			});
 		</script>
 	</body>
+</html		var multiplyButton = document.getElementById("multiply-button");
+			var divideButton = document.getElementById("divide-button");
+			var moduloButton = document.getElementById("modulo-button");
+			var clearButton = document.getElementById("clear-button");
+			var result = document.getElementById("result");
+			addButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, add);
+			});
+			subtractButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, subtract);
+			});
+			multiplyButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, multiply);
+			});
+			divideButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, divide);
+			});
+			moduloButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, modulo);
+			});
+			clearButton.addEventListener("click", function() {
+				firstNumber.value = "";
+				secondNumber.value = "";
+				result.innerHTML = "";
+			});
+	    </script>
+	</body>
 </html>
-
-
-# Posts
-
