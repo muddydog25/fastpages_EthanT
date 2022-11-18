@@ -72,9 +72,98 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p1 style="color:#ffffff"> Welcome to Ethan's fastpages!</p1>
+        <div class="home"><p1 style="color:#ffffff"> Welcome to Ethan's fastpages! </p1>
 
 <p><img src="IMG_0439.JPG" height="300" /></p>
+
+<html>
+	<head>
+		<title>Binary Calculator</title>
+	</head>
+	<body>
+		<h1>Binary Calculator</h1>
+		<form>
+			<input type="text" id="first-number" placeholder="First Number" />
+			<input type="text" id="second-number" placeholder="Second Number" />
+			<button type="button" id="add-button">+</button>
+			<button type="button" id="subtract-button">-</button>
+			<button type="button" id="multiply-button">*</button>
+			<button type="button" id="divide-button">/</button>
+			<button type="button" id="modulo-button">%</button>
+			<button type="button" id="clear-button">Clear</button>
+			<p id="result"></p>
+		</form>
+		<script>
+			function binaryToDecimal(binary) {
+				var decimal = 0;
+				var power = 0;
+				for (var i = binary.length - 1; i >= 0; i--) {
+					decimal += binary[i] * Math.pow(2, power);
+					power++;
+				}
+				return decimal;
+			}
+			function decimalToBinary(decimal) {
+				var binary = "";
+				while (decimal > 0) {
+					binary = decimal % 2 + binary;
+					decimal = Math.floor(decimal / 2);
+				}
+				return binary;
+			}
+			function add(a, b) {
+				return a + b;
+			}
+			function subtract(a, b) {
+				return a - b;
+			}
+			function multiply(a, b) {
+				return a * b;
+			}
+			function divide(a, b) {
+				return a / b;
+			}
+			function modulo(a, b) {
+				return a % b;
+			}
+			function calculate(a, b, operation) {
+				var decimalA = binaryToDecimal(a);
+				var decimalB = binaryToDecimal(b);
+				var decimalResult = operation(decimalA, decimalB);
+				var binaryResult = decimalToBinary(decimalResult);
+				return binaryResult;
+			}
+			var firstNumber = document.getElementById("first-number");
+			var secondNumber = document.getElementById("second-number");
+			var addButton = document.getElementById("add-button");
+			var subtractButton = document.getElementById("subtract-button");
+			var moduloButton = document.getElementById("modulo-button");
+			var clearButton = document.getElementById("clear-button");
+			var result = document.getElementById("result");
+			addButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, add);
+			});
+			subtractButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, subtract);
+			});
+			multiplyButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, multiply);
+			});
+			divideButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, divide);
+			});
+			moduloButton.addEventListener("click", function() {
+				result.innerHTML = calculate(firstNumber.value, secondNumber.value, modulo);
+			});
+			clearButton.addEventListener("click", function() {
+				firstNumber.value = "";
+				secondNumber.value = "";
+				result.innerHTML = "";
+			});
+		</script>
+	</body>
+</html>
+
 <h1 id="posts">Posts</h1>
 
 
@@ -104,6 +193,11 @@ window.onload = wrap_img;
 </li><li><h3>
     <a class="post-link" href="/fastpages_EthanT/fastpages/python/lists/iterations/menu/2022/11/17/ErrorFixing.html">
     Fixing Errors (Menu Problem)
+    </a>
+</h3><p class="post-meta">Nov 17, 2022</p>
+</li><li><h3>
+    <a class="post-link" href="/fastpages_EthanT/2022/11/17/.binarycalc.html">
+    Title
     </a>
 </h3><p class="post-meta">Nov 17, 2022</p>
 </li><li><h3>
@@ -147,15 +241,15 @@ window.onload = wrap_img;
     </a>
 </h3><p class="post-meta">Sep 30, 2022</p>
 </li><li><h3>
-    <a class="post-link" href="/fastpages_EthanT/scrum/2022/09/26/scrumteam.html">
-    Scrum Team
-    </a>
-</h3><p class="post-meta-description">Scrum Team graphic using HTML, CSS, & JS" courtesy of Rohin Sood</p><p class="post-meta">Sep 26, 2022</p>
-</li><li><h3>
     <a class="post-link" href="/fastpages_EthanT/2022/09/26/test.ipynb">
     Test
     </a>
 </h3><p class="post-meta">Sep 26, 2022</p>
+</li><li><h3>
+    <a class="post-link" href="/fastpages_EthanT/scrum/2022/09/26/scrumteam.html">
+    Scrum Team
+    </a>
+</h3><p class="post-meta-description">Scrum Team graphic using HTML, CSS, & JS" courtesy of Rohin Sood</p><p class="post-meta">Sep 26, 2022</p>
 </li><li><h3>
     <a class="post-link" href="/fastpages_EthanT/fastpages/jupyter/javascript/table/html/2022/09/25/javascript-table.html">
     Java Script Table
@@ -166,11 +260,6 @@ window.onload = wrap_img;
     Title
     </a>
 </h3><p class="post-meta">Sep 25, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/fastpages_EthanT/fastpages/jupyter/scrum/python%20web%20server/local/server/2022/09/22/scrumreviewwk4.html">
-    Scrum Team Review (Python Web Server)
-    </a>
-</h3><p class="post-meta">Sep 22, 2022</p>
 </li></ul>
 
     
