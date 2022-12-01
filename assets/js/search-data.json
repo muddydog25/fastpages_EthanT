@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Hacks Sections 3-4",
-            "content": "Notes . Algorithms . An algorithm is a set of instructions that complete a given task | There are three key parts to an algorithm: sequencing, selection, and iteration | Sequence: The order in which a statement is carried out | Selection: The ability to allow an algorithm to carry out a conditional based condition | Iteration: A loop that executes code until a given condition is met | . Strings . Unit 3.3 Hack . Crossword Puzzle Answers 1) Iteration 2) Selection 3) Sequence . Unit 3.4 Hack . .",
+            "content": "Notes . Algorithms . An algorithm is a set of instructions that complete a given task | There are three key parts to an algorithm: sequencing, selection, and iteration | Sequence: The order in which a statement is carried out | Selection: The ability to allow an algorithm to carry out a conditional based condition | Iteration: A loop that executes code until a given condition is met | . Strings . Unit 3.3 Hacks . Code Evaluation . The result is 3.0 | . num1 = 5 num2 = num1 * 3 num3 = num2 / num1 * (9 % 2) * 4 result = (num3 % num1 + num2) % num3 * 3 / 5 print(result) . 3.0 . Crossword Puzzle Answers 1) Iteration 2) Selection 3) Sequence . Unit 3.4 Hack . .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/hacks/turkey/tree/notes/2022/11/29/Section_3_4_Hacks.html",
             "relUrl": "/hacks/turkey/tree/notes/2022/11/29/Section_3_4_Hacks.html",
             "date": " • Nov 29, 2022"
