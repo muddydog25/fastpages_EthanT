@@ -234,12 +234,13 @@ Score: 3 / 3
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Input a number: "</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 
-<span class="k">def</span> <span class="nf">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span>
-    <span class="k">else</span><span class="p">:</span>
-        
+<span class="n">userNum</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="n">sqrt</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">userNum</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Input:"</span> <span class="p">,</span> <span class="n">userNum</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -251,16 +252,10 @@ Score: 3 / 3
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">c:\Users\etran\.vscode\fastpages_EthanT\_notebooks\2022-12-8-Section-12-13.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 2&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-fg">      &lt;a href='vscode-notebook-cell:/c%3A/Users/etran/.vscode/fastpages_EthanT/_notebooks/2022-12-8-Section-12-13.ipynb#X10sZmlsZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> num = input(int())
-<span class="ansi-green-intense-fg ansi-bold">----&gt; &lt;a href='vscode-notebook-cell:/c%3A/Users/etran/.vscode/fastpages_EthanT/_notebooks/2022-12-8-Section-12-13.ipynb#X10sZmlsZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> num1= num /2
-<span class="ansi-green-fg">      &lt;a href='vscode-notebook-cell:/c%3A/Users/etran/.vscode/fastpages_EthanT/_notebooks/2022-12-8-Section-12-13.ipynb#X10sZmlsZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> print(num1)
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: unsupported operand type(s) for /: 'str' and 'int'</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Input: 25.0
+5.0
+</pre>
 </div>
 </div>
 
