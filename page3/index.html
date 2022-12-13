@@ -75,7 +75,6 @@ window.onload = wrap_img;
         <div class="home"><p1 style="color:#ffffff"> Welcome to Ethan's fastpages! </p1>
 
 <p><img src="IMG_0439.JPG" height="300" /></p>
-
 <html>
 	<head>
 		<title>Binary Calculator</title>
@@ -89,7 +88,6 @@ window.onload = wrap_img;
 			<button type="button" id="subtract-button">-</button>
 			<button type="button" id="multiply-button">*</button>
 			<button type="button" id="divide-button">/</button>
-			<button type="button" id="modulo-button">%</button>
 			<button type="button" id="clear-button">Clear</button>
 			<p id="result"></p>
 		</form>
@@ -113,19 +111,16 @@ window.onload = wrap_img;
 			}
 			function add(a, b) {
 				return a + b;
-			}
+			};
 			function subtract(a, b) {
 				return a - b;
-			}
+			};
 			function multiply(a, b) {
 				return a * b;
-			}
+			};
 			function divide(a, b) {
 				return a / b;
-			}
-			function modulo(a, b) {
-				return a % b;
-			}
+			};
 			function calculate(a, b, operation) {
 				var decimalA = binaryToDecimal(a);
 				var decimalB = binaryToDecimal(b);
@@ -137,8 +132,9 @@ window.onload = wrap_img;
 			var secondNumber = document.getElementById("second-number");
 			var addButton = document.getElementById("add-button");
 			var subtractButton = document.getElementById("subtract-button");
-			var moduloButton = document.getElementById("modulo-button");
 			var clearButton = document.getElementById("clear-button");
+      var multiplyButton = document.getElementById("multiply-button");
+      var divideButton = document.getElementById("divide-button");
 			var result = document.getElementById("result");
 			addButton.addEventListener("click", function() {
 				result.innerHTML = calculate(firstNumber.value, secondNumber.value, add);
@@ -152,13 +148,10 @@ window.onload = wrap_img;
 			divideButton.addEventListener("click", function() {
 				result.innerHTML = calculate(firstNumber.value, secondNumber.value, divide);
 			});
-			moduloButton.addEventListener("click", function() {
-				result.innerHTML = calculate(firstNumber.value, secondNumber.value, modulo);
-			});
 			clearButton.addEventListener("click", function() {
-				firstNumber.value = "";
-				secondNumber.value = "";
-				result.innerHTML = "";
+				result.innerHTML = " ";
+				firstNumber.value = " ";
+				secondNumber.value = " ";
 			});
 		</script>
 	</body>

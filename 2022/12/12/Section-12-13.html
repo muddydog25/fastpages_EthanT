@@ -438,7 +438,6 @@ Procedures and arguments are used to describe chunks of code that accomplish spe
             <button type="button" id="subtract-button">-</button>
             <button type="button" id="multiply-button">*</button>
             <button type="button" id="divide-button">/</button>
-            <button type="button" id="modulo-button">%</button>
             <button type="button" id="clear-button">Clear</button>
             <p id="result"></p>
         </form>
@@ -472,9 +471,6 @@ Procedures and arguments are used to describe chunks of code that accomplish spe
             function divide(a, b) {
                 return a / b;
             };
-            function modulo(a, b) {
-                return a % b;
-            };
             function calculate(a, b, operation) {
                 var decimalA = binaryToDecimal(a);
                 var decimalB = binaryToDecimal(b);
@@ -486,8 +482,9 @@ Procedures and arguments are used to describe chunks of code that accomplish spe
             var secondNumber = document.getElementById("second-number");
             var addButton = document.getElementById("add-button");
             var subtractButton = document.getElementById("subtract-button");
-            var moduloButton = document.getElementById("modulo-button");
             var clearButton = document.getElementById("clear-button");
+      var multiplyButton = document.getElementById("multiply-button");
+      var divideButton = document.getElementById("divide-button");
             var result = document.getElementById("result");
             addButton.addEventListener("click", function() {
                 result.innerHTML = calculate(firstNumber.value, secondNumber.value, add);
@@ -501,13 +498,10 @@ Procedures and arguments are used to describe chunks of code that accomplish spe
             divideButton.addEventListener("click", function() {
                 result.innerHTML = calculate(firstNumber.value, secondNumber.value, divide);
             });
-            moduloButton.addEventListener("click", function() {
-                result.innerHTML = calculate(firstNumber.value, secondNumber.value, modulo);
-            });
             clearButton.addEventListener("click", function() {
-                result.innerHTML == " ";
-                firstNumber.value == " ";
-                secondNumber.value == " ";
+                result.innerHTML = " ";
+                firstNumber.value = " ";
+                secondNumber.value = " ";
             });
         </script>
     
