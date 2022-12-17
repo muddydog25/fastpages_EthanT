@@ -49,10 +49,22 @@ SCREEN_HEIGHT = 600
 
 pygame.init()
 
+ADDENEMY = pygame.USEREVENT + 1
+pygame.time.set_timer(ADDENEMY, 250)
+
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 clock = pygame.time.Clock()
 
+enemies = pygame.sprite.Group()
+all_sprites = pygame.sprite.Group()
+
 player = Player()
+all_sprites.add(player)
+
+for _ in range(10):
+    enemy = Enemy()
+    enemies.add(enemy)
+    all_sprites.add(enemy)
 
 running = True
 
@@ -63,13 +75,21 @@ while running:
             running = False
         elif event.type == QUIT:
             running = False
+        elif event.type == ADDENEMY:
+            new_enemy = Enemy()
+            enemies.add(new_enemy)
+            all_sprites.add(new_enemy)
 
     pressed_keys = pygame.key.get_pressed()
     player.move(pressed_keys)
 
     screen.fill((173, 216, 230))
 
-    screen.blit(player.surf, player.rect)
+    for entity in all_sprites:
+        screen.blit(entity.surf, entity.rect)
+
+    if pygame.sprite.spritecollideany(player, enemies):
+        player.kill()
 
     pygame.display.flip()
 
