@@ -321,35 +321,6 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Test 1, find user 3
-name: "Thomas Edison", id: "toby", psw: "sha256$nTQ..."
-name: "Nicholas Tesla", id: "nick", psw: "sha256$JPM..."
-* name: "Alexander Graham Bell", id: "lex", psw: "sha256$iHV..."
-name: "Eli Whitney", id: "eli", psw: "sha256$US0..."
-name: "Hedy Lemarr", id: "hedy", psw: "sha256$2cC..."
-Test 2, change user 3
-name: "Thomas Edison", id: "toby", psw: "sha256$nTQ..."
-name: "Nicholas Tesla", id: "nick", psw: "sha256$JPM..."
-* name: "John Mortensen", id: "jm1021", psw: "sha256$2I7..."
-name: "Eli Whitney", id: "eli", psw: "sha256$US0..."
-name: "Hedy Lemarr", id: "hedy", psw: "sha256$2cC..."
-Test 3, make a dictionary
-[{"_name": "Thomas Edison", "_uid": "toby", "_password": "sha256$nTQxZ9alViZd3WOn$34c90a641520c96e3d91ac148340b8b07d3c0958249dfcfe4a3eb05e2621efef"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_password": "sha256$JPMovUtCRid1pCTE$089368f59621e8878ea730e5328bd9fc442f1d63f40d99f52502c059f9921281"}, {"_name": "John Mortensen", "_uid": "jm1021", "_password": "sha256$2I7yhf1jQOPNu2YE$473f9f24b42cbbd52d6fd4effe03b73ba41ff31ea5532940480aadef56b3ce2d"}, {"_name": "Eli Whitney", "_uid": "eli", "_password": "sha256$US0fsfAaoQix8ido$5b6bac49c74a9fe08b18147a8d0f5c41d7805c42238a9d29dc2e8dbafff8324f"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_password": "sha256$2cC6Hp5Z4WcmxpBK$df9ed2dbe43edee11d7dc5101057274b2c47be5db95d6610ab7e4fba2dbf6d17"}]
-Test 4, make a dictionary
-[{"_name": "Thomas Edison", "_uid": "toby", "_password": "sha256$nTQxZ9alViZd3WOn$34c90a641520c96e3d91ac148340b8b07d3c0958249dfcfe4a3eb05e2621efef"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_password": "sha256$JPMovUtCRid1pCTE$089368f59621e8878ea730e5328bd9fc442f1d63f40d99f52502c059f9921281"}, {"_name": "John Mortensen", "_uid": "jm1021", "_password": "sha256$2I7yhf1jQOPNu2YE$473f9f24b42cbbd52d6fd4effe03b73ba41ff31ea5532940480aadef56b3ce2d"}, {"_name": "Eli Whitney", "_uid": "eli", "_password": "sha256$US0fsfAaoQix8ido$5b6bac49c74a9fe08b18147a8d0f5c41d7805c42238a9d29dc2e8dbafff8324f"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_password": "sha256$2cC6Hp5Z4WcmxpBK$df9ed2dbe43edee11d7dc5101057274b2c47be5db95d6610ab7e4fba2dbf6d17"}]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -411,12 +382,37 @@ Test 4, make a dictionary
     <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">born</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="p">((</span><span class="n">today</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">born</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">born</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
 
+<span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
+    <span class="n">tillGrad</span> <span class="o">=</span> <span class="mi">18</span> <span class="o">-</span> <span class="n">age</span>
+    <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">+</span> <span class="n">tillGrad</span>
+    
+
 <span class="n">dob</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
 <span class="n">age</span> <span class="o">=</span> <span class="n">calculate_age</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span>
+<span class="n">classOf</span> <span class="o">=</span> <span class="n">classOf</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classOf</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>18
+2004-12-31
+2023
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
