@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      9 min read
     
 </span></p>
 
@@ -321,6 +321,35 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Test 1, find user 3
+name: "Thomas Edison", id: "toby", psw: "sha256$7jJ..."
+name: "Nicholas Tesla", id: "nick", psw: "sha256$rNA..."
+* name: "Alexander Graham Bell", id: "lex", psw: "sha256$53s..."
+name: "Eli Whitney", id: "eli", psw: "sha256$Pi7..."
+name: "Hedy Lemarr", id: "hedy", psw: "sha256$W9a..."
+Test 2, change user 3
+name: "Thomas Edison", id: "toby", psw: "sha256$7jJ..."
+name: "Nicholas Tesla", id: "nick", psw: "sha256$rNA..."
+* name: "John Mortensen", id: "jm1021", psw: "sha256$2LN..."
+name: "Eli Whitney", id: "eli", psw: "sha256$Pi7..."
+name: "Hedy Lemarr", id: "hedy", psw: "sha256$W9a..."
+Test 3, make a dictionary
+[{"_name": "Thomas Edison", "_uid": "toby", "_password": "sha256$7jJDwlnJSQ4q23Ru$71c2dd654a918df919de1d638f7c4c1881a8a92d513e55beead2bf41201a31d2"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_password": "sha256$rNAgXUdUoDoOR4sv$a67e67888b5c0f5f4a8765a6c6dc2ed0a345ca5dd0b6dd250472642ec5c183ed"}, {"_name": "John Mortensen", "_uid": "jm1021", "_password": "sha256$2LNER8mcksE4NCG1$2e37efc0ce916afac5ea34b7bcfc274c1059e7a024a55d32cba6941a1a5a92ab"}, {"_name": "Eli Whitney", "_uid": "eli", "_password": "sha256$Pi7E4fQEd4f01Xa0$add8a5f860e9a0a58baf18e47bc042e2adb16f91a55c35a2ebbd1b15e541c9ea"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_password": "sha256$W9aWgEtlWIzmOTc1$731eec138e4c3e1f530821d9ecb1d23fbb93728009547ca3e75fb8796404690b"}]
+Test 4, make a dictionary
+[{"_name": "Thomas Edison", "_uid": "toby", "_password": "sha256$7jJDwlnJSQ4q23Ru$71c2dd654a918df919de1d638f7c4c1881a8a92d513e55beead2bf41201a31d2"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_password": "sha256$rNAgXUdUoDoOR4sv$a67e67888b5c0f5f4a8765a6c6dc2ed0a345ca5dd0b6dd250472642ec5c183ed"}, {"_name": "John Mortensen", "_uid": "jm1021", "_password": "sha256$2LNER8mcksE4NCG1$2e37efc0ce916afac5ea34b7bcfc274c1059e7a024a55d32cba6941a1a5a92ab"}, {"_name": "Eli Whitney", "_uid": "eli", "_password": "sha256$Pi7E4fQEd4f01Xa0$add8a5f860e9a0a58baf18e47bc042e2adb16f91a55c35a2ebbd1b15e541c9ea"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_password": "sha256$W9aWgEtlWIzmOTc1$731eec138e4c3e1f530821d9ecb1d23fbb93728009547ca3e75fb8796404690b"}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -369,95 +398,6 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
-
-<span class="k">def</span> <span class="nf">calculate_age</span><span class="p">(</span><span class="n">born</span><span class="p">):</span>
-    <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">born</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="p">((</span><span class="n">today</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">born</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">born</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
-
-<span class="n">dob</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
-<span class="n">age</span> <span class="o">=</span> <span class="n">calculate_age</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>18
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
-
-<span class="k">def</span> <span class="nf">calculate_age</span><span class="p">(</span><span class="n">born</span><span class="p">):</span>
-    <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">born</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="p">((</span><span class="n">today</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">born</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">born</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="n">age</span><span class="p">):</span>
-    <span class="n">tillGrad</span> <span class="o">=</span> <span class="mi">18</span> <span class="o">-</span> <span class="n">age</span>
-    <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">+</span> <span class="n">tillGrad</span>
-    
-
-<span class="n">dob</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
-<span class="n">age</span> <span class="o">=</span> <span class="n">calculate_age</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span>
-<span class="n">classOf</span> <span class="o">=</span> <span class="n">classOf</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">classOf</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>18
-2004-12-31
-2023
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -566,7 +506,7 @@ window.onload = wrap_img;
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">)</span>
     
-    <span class="c1"># output command to recreate the object, uses attribute directly</span>
+    <span class="c1"># # output command to recreate the object, uses attribute directly</span>
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s1">'User(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s1">, uid=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_uid</span><span class="si">}</span><span class="s1">, password=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="si">}</span><span class="s1">,dob=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="si">}</span><span class="s1">, classOf=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span><span class="si">}</span><span class="s1">, make=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_make</span><span class="si">}</span><span class="s1">)'</span>
     
@@ -608,15 +548,114 @@ JSON ready string:
  {"name": "Thomas Edison", "uid": "toby", "dob": "02-11-1847", "age": 175, "classOf": 1865, "make": "Ford"} 
 
 Raw Variables of object:
- {'_name': 'Thomas Edison', '_uid': 'toby', '_password': 'sha256$xZgpYg3w5hFFm1eO$1b0296132e79e80ee7242c7e3f81fd0c53e7b979baee769ebb597e6652d513ef', '_dob': datetime.date(1847, 2, 11), '_classOf': 1865, '_make': 'Ford'} 
+ {'_name': 'Thomas Edison', '_uid': 'toby', '_password': 'sha256$Zl0poiVoh6l6Rxtr$59d3be058549b0575f56516a1fd2bb7571ca2dd81fc0b517e7132c034d0b761f', '_dob': datetime.date(1847, 2, 11), '_classOf': 1865, '_make': 'Ford'} 
 
 Raw Attributes and Methods of object:
  ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_classOf', '_dob', '_make', '_name', '_password', '_uid', 'age', 'classOf', 'dictionary', 'dob', 'is_password', 'is_uid', 'make', 'name', 'set_password', 'uid'] 
 
 Representation to Re-Create the object:
- User(name=Thomas Edison, uid=toby, password=sha256$xZgpYg3w5hFFm1eO$1b0296132e79e80ee7242c7e3f81fd0c53e7b979baee769ebb597e6652d513ef,dob=1847-02-11, classOf=1865, make=Ford) 
+ User(name=Thomas Edison, uid=toby, password=sha256$Zl0poiVoh6l6Rxtr$59d3be058549b0575f56516a1fd2bb7571ca2dd81fc0b517e7132c034d0b761f,dob=1847-02-11, classOf=1865, make=Ford) 
 
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">company</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_company</span> <span class="o">=</span> <span class="n">company</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_price</span> <span class="o">=</span> <span class="n">price</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_year</span> <span class="o">=</span> <span class="n">year</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">company</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_company</span>
+    
+    <span class="nd">@company</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">company</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">company</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_company</span> <span class="o">=</span> <span class="n">company</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span>
+    
+    <span class="nd">@model</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">price</span>
+    
+    <span class="nd">@price</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_price</span> <span class="o">=</span> <span class="n">price</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_year</span>
+    
+    <span class="nd">@year</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">year</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_year</span> <span class="o">=</span> <span class="n">year</span>
+
+    <span class="c1">#Calculating Depreciation</span>
+    <span class="k">def</span> <span class="nf">calculate_depreciation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">years</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">0.9</span><span class="o">**</span><span class="n">years</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">"company"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">company</span><span class="p">,</span>
+            <span class="s2">"model"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span>
+            <span class="s2">"price"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">price</span><span class="p">,</span>
+            <span class="s2">"year"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">dict</span> 
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">car1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">company</span><span class="o">=</span><span class="s2">"Lexus"</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"IS 500"</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="s2">"$58,000"</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="s2">"2022"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">car1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">Canceled future for execute_request message before replies were done</span></pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">The Kernel crashed while executing code in the the current cell or a previous cell. Please review the code in the cell(s) to identify a possible cause of the failure. Click &lt;a href='https://aka.ms/vscodeJupyterKernelCrash'&gt;here&lt;/a&gt; for more info. View Jupyter &lt;a href='command:jupyter.viewOutput'&gt;log&lt;/a&gt; for further details.</span></pre>
 </div>
 </div>
 
