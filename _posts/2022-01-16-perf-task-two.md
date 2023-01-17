@@ -7,6 +7,16 @@ categories: [perfromance task, 2]
 layout: post
 ---
 
+[Link to my Scoring Tables](https://github.com/realethantran/fastpages_EthanT/issues/23)
+
+[College Board's Scoring Guide for Submission #1](https://drive.google.com/file/d/1HXDauimq8edpT0-aZ2iIujzLdIxtyKMx/view)
+
+[College Board's Scoring Guide for Submission #2](https://drive.google.com/file/d/1bzSueMdVVt3QVmkMCSKEkIVd9mZ3hQBP/view)
+
+[College Board's Scoring Guide for Submission #3](https://drive.google.com/file/d/1dX7KNT9axip5DQDEYdIYbuajcrWUB4lR/view)
+
+[College Board's Scoring Guide for Submission #4](https://drive.google.com/file/d/1so2WKNMi5vONuFCWZFFUqq8gVWNe_jCS/view)
+
 ## Submission 1
 ###  Video
 <table>
