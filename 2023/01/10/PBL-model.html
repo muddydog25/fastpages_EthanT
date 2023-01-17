@@ -511,14 +511,13 @@ Test 4, make a dictionary
         <span class="k">return</span> <span class="sa">f</span><span class="s1">'User(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s1">, uid=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_uid</span><span class="si">}</span><span class="s1">, password=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="si">}</span><span class="s1">,dob=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="si">}</span><span class="s1">, classOf=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span><span class="si">}</span><span class="s1">, make=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_make</span><span class="si">}</span><span class="s1">)'</span>
     
 <span class="k">def</span> <span class="nf">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">psw</span><span class="p">):</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
 
         <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">uid</span> <span class="o">==</span> <span class="n">uid</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">is_password</span><span class="p">(</span><span class="n">psw</span><span class="p">):</span>  
             <span class="nb">print</span><span class="p">(</span><span class="s2">"* "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">user</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">result</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
@@ -548,13 +547,13 @@ JSON ready string:
  {"name": "Thomas Edison", "uid": "toby", "dob": "02-11-1847", "age": 175, "classOf": 1865, "make": "Ford"} 
 
 Raw Variables of object:
- {'_name': 'Thomas Edison', '_uid': 'toby', '_password': 'sha256$Zl0poiVoh6l6Rxtr$59d3be058549b0575f56516a1fd2bb7571ca2dd81fc0b517e7132c034d0b761f', '_dob': datetime.date(1847, 2, 11), '_classOf': 1865, '_make': 'Ford'} 
+ {'_name': 'Thomas Edison', '_uid': 'toby', '_password': 'sha256$QkrQNhK1q5nIw7UD$49912df1a026a96e928939a937255414542d6b0f29c11ba3946870e71149bf24', '_dob': datetime.date(1847, 2, 11), '_classOf': 1865, '_make': 'Ford'} 
 
 Raw Attributes and Methods of object:
  ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_classOf', '_dob', '_make', '_name', '_password', '_uid', 'age', 'classOf', 'dictionary', 'dob', 'is_password', 'is_uid', 'make', 'name', 'set_password', 'uid'] 
 
 Representation to Re-Create the object:
- User(name=Thomas Edison, uid=toby, password=sha256$Zl0poiVoh6l6Rxtr$59d3be058549b0575f56516a1fd2bb7571ca2dd81fc0b517e7132c034d0b761f,dob=1847-02-11, classOf=1865, make=Ford) 
+ User(name=Thomas Edison, uid=toby, password=sha256$QkrQNhK1q5nIw7UD$49912df1a026a96e928939a937255414542d6b0f29c11ba3946870e71149bf24,dob=1847-02-11, classOf=1865, make=Ford) 
 
 </pre>
 </div>
