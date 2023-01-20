@@ -18,6 +18,7 @@ layout: post
 
 [College Board's Scoring Guide for Submission #4](https://drive.google.com/file/d/1so2WKNMi5vONuFCWZFFUqq8gVWNe_jCS/view)
 
+### Note: CLICK THE ABOVE LINK FOR MY SCORING TABLES
 ## Submission 1
 
 ## My Score: 2/6
