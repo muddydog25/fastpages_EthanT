@@ -8,7 +8,7 @@ layout: post
 ---
 
 ## GitHub Scoring Tables
-[Link to my Scoring Tables](https://github.com/realethantran/fastpages_EthanT/issues/23)
+[CLICK HERE for the Link to my Scoring Tables](https://github.com/realethantran/fastpages_EthanT/issues/23)
 
 [College Board's Scoring Guide for Submission #1](https://drive.google.com/file/d/1HXDauimq8edpT0-aZ2iIujzLdIxtyKMx/view)
 
