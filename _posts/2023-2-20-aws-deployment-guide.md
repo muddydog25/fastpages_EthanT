@@ -7,7 +7,7 @@ permalink: /deploy
 categories: [6.B, C7.0, C7.1, C7.2]
 tags: [aws, ec2. docker, nginx, certbot, dns]
 type: pbl
-layout: notebook
+layout: post
 ---
 
 ## Server Setup and Initial Deployment
