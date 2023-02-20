@@ -113,7 +113,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#amazon-web-services-aws-electric-cloud-compute-ec2-setup">Amazon Web Services (AWS): Electric Cloud Compute (EC2) Setup</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#docker-composeyml--dockerfile">docker-compose.yml &amp; Dockerfile</a>
+<li class="toc-entry toc-h2"><a href="#docker-composeyml">docker-compose.yml</a></li>
+<li class="toc-entry toc-h2"><a href="#dockerfile">Dockerfile</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#clone-and-change-directory-to-project-location">Clone and Change Directory to project location</a></li>
 </ul>
@@ -156,14 +157,52 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<h2 id="docker-composeyml--dockerfile">
-<a class="anchor" href="#docker-composeyml--dockerfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>docker-compose.yml &amp; Dockerfile</h2>
+<h2 id="docker-composeyml">
+<a class="anchor" href="#docker-composeyml" aria-hidden="true"><span class="octicon octicon-link"></span></a>docker-compose.yml</h2>
 <ul>
   <li>Next, head to VSCode on your local machine and update the docker-compose.yml and Docker files.</li>
-  <li>Select a port that is not used and change the left side of docker-compose.yml port to be an unussed port XYZ:8086.  The “XYZ” would be the port that you have selected.</li>
-  <li>
-    <p>The right side 8086 matches the port you have used in your Docker file in two locations - 8080 is typically used as an internal port.</p>
-  </li>
+  <li>Select a port that is not used and change the left side of docker-compose.yml port to be an unused port XYZ:8086.  The “XYZ” would be the port that you have selected.</li>
+  <li>The right side 8086 matches the port you have used in your Docker file in two locations - 8080 is typically used as an internal port.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: <span class="s1">'3'</span>
+services:
+        web:
+                image: flask_port_v1 <span class="c"># The image name should be unique to your project</span>
+                build: <span class="nb">.</span>
+                ports:
+                        - <span class="s2">"XYZ:8086"</span> <span class="c"># The "XYZ" would be the port that you have selected. </span>
+                volumes:
+                        - ./volumes:/volumes
+                        - ./instance:/instance
+                restart: unless-stopped
+</code></pre></div></div>
+<h2 id="dockerfile">
+<a class="anchor" href="#dockerfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dockerfile</h2>
+<ul>
+  <li>Check that your Dockerfile is the same as below</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM docker.io/python:3.10
+
+WORKDIR /
+
+<span class="c"># --- [Install python and pip] ---</span>
+RUN apt-get update <span class="o">&amp;&amp;</span> apt-get upgrade <span class="nt">-y</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    apt-get <span class="nb">install</span> <span class="nt">-y</span> python3 python3-pip git
+COPY <span class="nb">.</span> /app
+
+RUN pip <span class="nb">install</span> <span class="nt">--no-cache-dir</span> <span class="nt">-r</span> requirements.txt
+RUN pip <span class="nb">install </span>gunicorn
+
+ENV <span class="nv">GUNICORN_CMD_ARGS</span><span class="o">=</span><span class="s2">"--workers=3 --bind=0.0.0.0:8080"</span>
+
+EXPOSE 8080
+
+CMD <span class="o">[</span> <span class="s2">"gunicorn"</span>, <span class="s2">"main:app"</span> <span class="o">]</span>
+</code></pre></div></div>
+
+<ul>
   <li>In VSCode, open up your terminal. Run <code class="language-plaintext highlighter-rouge">sudo docker-compose up</code> and make sure it builds properly. Type localhost:XYZ in your browser (XYZ is the unused port you have selected).  Check for any errors occur in the Terminal. If this fails, please be sure to review the previous steps.</li>
   <li>If all is well, make sure to commit your changes to docker-compose.yml &amp; Dockerfile</li>
 </ul>
