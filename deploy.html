@@ -71,31 +71,93 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <h2 id="server-setup-and-initial-deployment">Server Setup and Initial Deployment</h2>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Flask/Python Deployment Guide</h1><p class="page-description">Description of key methods process used to deploy a Flask/Python website; AWS EC2, Docker, docker-compose, and Nginx</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-02-20T00:00:00-06:00" itemprop="datePublished">
+        Feb 20, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Team OrbOrb (Ethan Tran)</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      8 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages_EthanT/categories/#6.B">6.B</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages_EthanT/categories/#C7.0">C7.0</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages_EthanT/categories/#C7.1">C7.1</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages_EthanT/categories/#C7.2">C7.2</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#server-setup-and-initial-deployment">Server Setup and Initial Deployment</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#amazon-web-services-aws-electric-cloud-compute-ec2-setup">Amazon Web Services (AWS): Electric Cloud Compute (EC2) Setup</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#docker-composeyml--dockerfile">docker-compose.yml &amp; Dockerfile</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#clone-and-change-directory-to-project-location">Clone and Change Directory to project location</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#test-preparation-for-docker-web-application-using-ip-for-internet-access">Test preparation for Docker Web Application using IP for Internet Access</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#activating-nginx-configuration">Activating Nginx configuration</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#final-preparation-the-docker-web-application-using-dns-for-internet-access">Final preparation the Docker Web Application using DNS for Internet Access</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#certbot-configuration">Certbot configuration</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#update-deployment">Update Deployment</a></li>
+</ul><h2 id="server-setup-and-initial-deployment">
+<a class="anchor" href="#server-setup-and-initial-deployment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server Setup and Initial Deployment</h2>
 <blockquote>
   <p>Development Operations (DevOps) begins with server setup.</p>
-  <h3 id="amazon-web-services-aws-electric-cloud-compute-ec2-setup">Amazon Web Services (AWS): Electric Cloud Compute (EC2) Setup</h3>
+  <h3 id="amazon-web-services-aws-electric-cloud-compute-ec2-setup">
+<a class="anchor" href="#amazon-web-services-aws-electric-cloud-compute-ec2-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Amazon Web Services (AWS): Electric Cloud Compute (EC2) Setup</h3>
   <ul>
     <li>To begin, head to  the “Instances” dropdown on AWS and select “Instances.”</li>
   </ul>
 </blockquote>
 
-<p><img src="https://user-images.githubusercontent.com/109186517/220186297-adf65729-a8db-4506-ae03-cd75273d92d0.png" /></p>
+<p><img src="https://user-images.githubusercontent.com/109186517/220186297-adf65729-a8db-4506-ae03-cd75273d92d0.png"></p>
 
 <ul>
   <li>From here, a variety of instances will show up. For this project, depending on which teacher you have, select either “NCS.cf Yeung CSP” or “NCS.gq Mort CSP”</li>
 </ul>
 
-<p><img src="https://user-images.githubusercontent.com/109186517/220186519-ca92be0c-c9e6-4173-bbdb-9715a13a8a69.png" /></p>
+<p><img src="https://user-images.githubusercontent.com/109186517/220186519-ca92be0c-c9e6-4173-bbdb-9715a13a8a69.png"></p>
 
 <ul>
   <li>Then, run
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker ps <span class="c"># This allows you to observe the ports that are currently being used</span>
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker ps <span class="c"># This allows you to observe the ports that are currently being used</span>
 </code></pre></div>    </div>
   </li>
 </ul>
 
-<h2 id="docker-composeyml--dockerfile">docker-compose.yml &amp; Dockerfile</h2>
+<h2 id="docker-composeyml--dockerfile">
+<a class="anchor" href="#docker-composeyml--dockerfile" aria-hidden="true"><span class="octicon octicon-link"></span></a>docker-compose.yml &amp; Dockerfile</h2>
 <ul>
   <li>Next, head to VSCode on your local machine and update the docker-compose.yml and Docker files.</li>
   <li>Select a port that is not used and change the left side of docker-compose.yml port to be an unussed port XYZ:8086.  The “XYZ” would be the port that you have selected.</li>
@@ -106,7 +168,8 @@ window.onload = wrap_img;
   <li>If all is well, make sure to commit your changes to docker-compose.yml &amp; Dockerfile</li>
 </ul>
 
-<h3 id="clone-and-change-directory-to-project-location">Clone and Change Directory to project location</h3>
+<h3 id="clone-and-change-directory-to-project-location">
+<a class="anchor" href="#clone-and-change-directory-to-project-location" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clone and Change Directory to project location</h3>
 <blockquote>
   <p>This command allows you to clone your GitHub repository onto the AWS instance. In this example, the GitHub HTTPs link is: https://github.com/nighthawkcoders/flask_portfolio.git.</p>
   <ul>
@@ -148,7 +211,8 @@ window.onload = wrap_img;
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl localhost:XYZ <span class="c"># Replace XYZ with the port you have selected</span>
 </code></pre></div></div>
 
-<h2 id="test-preparation-for-docker-web-application-using-ip-for-internet-access">Test preparation for Docker Web Application using IP for Internet Access</h2>
+<h2 id="test-preparation-for-docker-web-application-using-ip-for-internet-access">
+<a class="anchor" href="#test-preparation-for-docker-web-application-using-ip-for-internet-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Test preparation for Docker Web Application using IP for Internet Access</h2>
 <p>Each student scrum team will perform Nginx test and verify Group Web Project is working on EC2 instance.  This step is can only support a single Web Application at a time.</p>
 
 <p>This Step is dependent on…</p>
@@ -161,15 +225,18 @@ window.onload = wrap_img;
 
 <ul>
   <li>Install Nginx on Ubuntu servers
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>nginx
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>nginx
 </code></pre></div>    </div>
   </li>
   <li>Go to location of Nginx server configuration files
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /etc/nginx/sites-available
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /etc/nginx/sites-available
 </code></pre></div>    </div>
   </li>
   <li>Open editor to Create your own “Nginx test configuration”.
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>nano my-unique-file <span class="c"># Replace "my-unique-file" with the name you wish to call your nginx file</span>
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>nano my-unique-file <span class="c"># Replace "my-unique-file" with the name you wish to call your nginx file</span>
 </code></pre></div>    </div>
   </li>
   <li>Edit your own Nginx server configuration making modifications to:
@@ -211,12 +278,14 @@ window.onload = wrap_img;
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h3 id="activating-nginx-configuration">Activating Nginx configuration</h3>
+<h3 id="activating-nginx-configuration">
+<a class="anchor" href="#activating-nginx-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activating Nginx configuration</h3>
 <ul>
   <li>Activate/enabled Nginx server configuration:
     <ul>
       <li>nginx configuration file: test
-        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo ln</span> <span class="nt">-s</span> /etc/nginx/sites-available/my-unique-file /etc/nginx/sites-enabled <span class="c"># Replace "my-unique-file" with the name of your nginx file</span>
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo ln</span> <span class="nt">-s</span> /etc/nginx/sites-available/my-unique-file /etc/nginx/sites-enabled <span class="c"># Replace "my-unique-file" with the name of your nginx file</span>
 <span class="nv">$ </span><span class="nb">sudo </span>nginx <span class="nt">-t</span>
 </code></pre></div>        </div>
       </li>
@@ -235,17 +304,20 @@ window.onload = wrap_img;
     </ul>
   </li>
   <li>If there are no errors, restart NGINX so the server to activate <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-enabled</code> files:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>systemctl restart nginx
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>systemctl restart nginx
 </code></pre></div>    </div>
   </li>
   <li>Check that your server is running on the browser using the domain using http://mydomain</li>
   <li>Replace “mydomain” with the domain you have previously selected</li>
 </ul>
 
-<h2 id="final-preparation-the-docker-web-application-using-dns-for-internet-access">Final preparation the Docker Web Application using DNS for Internet Access</h2>
+<h2 id="final-preparation-the-docker-web-application-using-dns-for-internet-access">
+<a class="anchor" href="#final-preparation-the-docker-web-application-using-dns-for-internet-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final preparation the Docker Web Application using DNS for Internet Access</h2>
 <p>There are additional steps to this preparation. We need to direct the internet to the AWS server running the Web Application, this is done using Domain Name Service (DNS).   After being directed to the Web Server, the server needs to respond to the HTTP (Hyper Text Transfer Protocol) request.  The proxy of HTTP to your Web Application is manged by Nginx.   Finally, we will Secure HTTP (HTTPS), with a utility called Certbot.</p>
 
-<h3 id="certbot-configuration">Certbot configuration</h3>
+<h3 id="certbot-configuration">
+<a class="anchor" href="#certbot-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Certbot configuration</h3>
 <p>Each student scrum team will learn Certbot on on AWS EC2 test server, establish working https web application.  The final configuration will be on AWS server managed by Teachers or Student DevOps Engineers.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>certbot <span class="nt">--nginx</span>
@@ -258,7 +330,7 @@ window.onload = wrap_img;
 Plugins selected: Authenticator nginx, Installer nginx</p>
 
 <p>Which names would you like to activate HTTPS for?</p>
-<hr />
+<hr>
 <p>1: coolcodersjava.pw
 2: www.coolcodersjava.pw
 3: ajarcade.duckdns.org
@@ -295,7 +367,7 @@ Plugins selected: Authenticator nginx, Installer nginx</p>
 34: www.teambrobro.tk
 35: teamcheeseatimetime.tk
 36: www.teamcheeseatimetime.tk</p>
-<hr />
+<hr>
 <p>Select the appropriate numbers separated by commas and/or spaces, or leave input
 blank to select all options shown (Enter ‘c’ to cancel): # ENTER YOUR CORRESPONDING NUMBER</p>
 
@@ -305,10 +377,10 @@ blank to select all options shown (Enter ‘c’ to cancel): # ENTER YOUR CORRES
 (ref: /etc/letsencrypt/renewal/nighthawkcodingsociety.com-0001.conf)</p>
 
 <p>What would you like to do?</p>
-<hr />
+<hr>
 <p>1: Attempt to reinstall this existing certificate
 2: Renew &amp; replace the cert (limit ~5 per 7 days)</p>
-<hr />
+<hr>
 <p>Select the appropriate number [1-2] then [enter] (press ‘c’ to cancel): 2
 Renewing an existing certificate
 Performing the following challenges:
@@ -324,19 +396,19 @@ Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_csp
 Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_flm</p>
 
 <p>Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.</p>
-<hr />
+<hr>
 <p>1: No redirect - Make no further changes to the webserver configuration.
 2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
 new sites, or if you’re confident your site works on HTTPS. You can undo this
 change by editing your web server’s configuration.</p>
-<hr />
+<hr>
 <p>Select the appropriate number [1-2] then [enter] (press ‘c’ to cancel): 2
 Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_society
 Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_csa
 Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_csp
 Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_flm</p>
 
-<hr />
+<hr>
 <p>Your existing certificate has been successfully renewed, and the new certificate
 has been installed.</p>
 
@@ -351,7 +423,7 @@ https://www.ssllabs.com/ssltest/analyze.html?d=nighthawkcodingsociety.com
 https://www.ssllabs.com/ssltest/analyze.html?d=csa.nighthawkcodingsociety.com
 https://www.ssllabs.com/ssltest/analyze.html?d=csp.nighthawkcodingsociety.com
 https://www.ssllabs.com/ssltest/analyze.html?d=flm.nighthawkcodingsociety.com</p>
-<hr />
+<hr>
 
 <p>IMPORTANT NOTES:</p>
 <ul>
@@ -373,7 +445,8 @@ Donating to EFF:                    https://eff.org/donate-le</p>
   <li>Replace “mydomain” with the domain you have previously selected</li>
 </ul>
 
-<h1 id="update-deployment">Update Deployment</h1>
+<h1 id="update-deployment">
+<a class="anchor" href="#update-deployment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update Deployment</h1>
 
 <ul>
   <li>To update your code, run</li>
@@ -414,6 +487,9 @@ Recreating flask_portfolio_web_1 ... <span class="k">done</span>
 <ul>
   <li>If all of the steps have been completed properly, the server should be back up with the applied changes/updates</li>
 </ul>
+
+  </div><a class="u-url" href="/fastpages_EthanT/deploy" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
