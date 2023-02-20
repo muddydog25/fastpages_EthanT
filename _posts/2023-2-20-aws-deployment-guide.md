@@ -193,8 +193,9 @@ Each student scrum team will learn Certbot on on AWS EC2 test server, establish 
 ```bash
 $ sudo certbot --nginx
 ```
-- Make sure that your domain appears on the list of names to activate HTTPS for
+- Make sure that your domain appears on the list of names to activate HTTPS...
 
+```
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator nginx, Installer nginx
 
@@ -307,6 +308,7 @@ IMPORTANT NOTES:
 
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
+```
 
 - Conclude this process by running ``` sudo certbot --nginx ```  and testing https://mydomain
 - Replace "mydomain" with the domain you have previously selected
