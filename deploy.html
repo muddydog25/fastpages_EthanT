@@ -7,10 +7,10 @@
 <title>Flask/Python Deployment Guide | EthanTran</title>
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Flask/Python Deployment Guide" />
-<meta name="author" content="Team OrbOrb (Ethan Tran)" />
+<meta name="author" content="Ethan Tran" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Description of key methods process used to deploy a Flask/Python website; AWS EC2, Docker, docker-compose, and Nginx" />
-<meta property="og:description" content="Description of key methods process used to deploy a Flask/Python website; AWS EC2, Docker, docker-compose, and Nginx" />
+<meta name="description" content="A quick guide on how to deploy your flask server on AWS!" />
+<meta property="og:description" content="A quick guide on how to deploy your flask server on AWS!" />
 <link rel="canonical" href="https://muddydog25.github.io/fastpages_EthanT/deploy" />
 <meta property="og:url" content="https://muddydog25.github.io/fastpages_EthanT/deploy" />
 <meta property="og:site_name" content="EthanTran" />
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Flask/Python Deployment Guide" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Team OrbOrb (Ethan Tran)"},"dateModified":"2023-02-20T00:00:00-06:00","datePublished":"2023-02-20T00:00:00-06:00","description":"Description of key methods process used to deploy a Flask/Python website; AWS EC2, Docker, docker-compose, and Nginx","headline":"Flask/Python Deployment Guide","mainEntityOfPage":{"@type":"WebPage","@id":"https://muddydog25.github.io/fastpages_EthanT/deploy"},"url":"https://muddydog25.github.io/fastpages_EthanT/deploy"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ethan Tran"},"dateModified":"2023-02-20T00:00:00-06:00","datePublished":"2023-02-20T00:00:00-06:00","description":"A quick guide on how to deploy your flask server on AWS!","headline":"Flask/Python Deployment Guide","mainEntityOfPage":{"@type":"WebPage","@id":"https://muddydog25.github.io/fastpages_EthanT/deploy"},"url":"https://muddydog25.github.io/fastpages_EthanT/deploy"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastpages_EthanT/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://muddydog25.github.io/fastpages_EthanT/feed.xml" title="EthanTran" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages_EthanT/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -74,11 +74,11 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Flask/Python Deployment Guide</h1><p class="page-description">Description of key methods process used to deploy a Flask/Python website; AWS EC2, Docker, docker-compose, and Nginx</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-02-20T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Flask/Python Deployment Guide</h1><p class="page-description">A quick guide on how to deploy your flask server on AWS!</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-02-20T00:00:00-06:00" itemprop="datePublished">
         Feb 20, 2023
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">Team OrbOrb (Ethan Tran)</span></span>
+            <span class="p-author h-card" itemprop="name">Ethan Tran</span></span>
        • <span class="read-time" title="Estimated read time">
     
     
