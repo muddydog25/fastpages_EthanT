@@ -26,10 +26,47 @@ layout: post
 $ sudo docker ps # This allows you to observe the ports that are currently being used
 ``` 
 
-## docker-compose.yml & Dockerfile
+## docker-compose.yml
 - Next, head to VSCode on your local machine and update the docker-compose.yml and Docker files.
-- Select a port that is not used and change the left side of docker-compose.yml port to be an unussed port XYZ:8086.  The "XYZ" would be the port that you have selected. 
+- Select a port that is not used and change the left side of docker-compose.yml port to be an unused port XYZ:8086.  The "XYZ" would be the port that you have selected. 
 - The right side 8086 matches the port you have used in your Docker file in two locations - 8080 is typically used as an internal port.  
+
+```bash
+version: '3'
+services:
+        web:
+                image: flask_port_v1 # The image name should be unique to your project
+                build: .
+                ports:
+                        - "XYZ:8086" # The "XYZ" would be the port that you have selected. 
+                volumes:
+                        - ./volumes:/volumes
+                        - ./instance:/instance
+                restart: unless-stopped
+```
+## Dockerfile
+- Check that your Dockerfile is the same as below
+
+``` bash
+FROM docker.io/python:3.10
+
+WORKDIR /
+
+# --- [Install python and pip] ---
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y python3 python3-pip git
+COPY . /app
+
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install gunicorn
+
+ENV GUNICORN_CMD_ARGS="--workers=3 --bind=0.0.0.0:8080"
+
+EXPOSE 8080
+
+CMD [ "gunicorn", "main:app" ]
+```
+
 
 - In VSCode, open up your terminal. Run ``` sudo docker-compose up ``` and make sure it builds properly. Type localhost:XYZ in your browser (XYZ is the unused port you have selected).  Check for any errors occur in the Terminal. If this fails, please be sure to review the previous steps.
 - If all is well, make sure to commit your changes to docker-compose.yml & Dockerfile
