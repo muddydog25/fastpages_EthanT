@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      10 min read
     
 </span></p>
 
@@ -362,15 +362,15 @@ CMD <span class="o">[</span> <span class="s2">"gunicorn"</span>, <span class="s2
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>certbot <span class="nt">--nginx</span>
 </code></pre></div></div>
 <ul>
-  <li>Make sure that your domain appears on the list of names to activate HTTPS for</li>
+  <li>Make sure that your domain appears on the list of names to activate HTTPS…</li>
 </ul>
 
-<p>Saving debug log to /var/log/letsencrypt/letsencrypt.log
-Plugins selected: Authenticator nginx, Installer nginx</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator nginx, Installer nginx
 
-<p>Which names would you like to activate HTTPS for?</p>
-<hr>
-<p>1: coolcodersjava.pw
+Which names would you like to activate HTTPS for?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: coolcodersjava.pw
 2: www.coolcodersjava.pw
 3: ajarcade.duckdns.org
 4: flowhealth.duckdns.org
@@ -405,81 +405,81 @@ Plugins selected: Authenticator nginx, Installer nginx</p>
 33: teambrobro.tk
 34: www.teambrobro.tk
 35: teamcheeseatimetime.tk
-36: www.teamcheeseatimetime.tk</p>
-<hr>
-<p>Select the appropriate numbers separated by commas and/or spaces, or leave input
-blank to select all options shown (Enter ‘c’ to cancel): # ENTER YOUR CORRESPONDING NUMBER</p>
+36: www.teamcheeseatimetime.tk
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate numbers separated by commas and/or spaces, or leave input
+blank to select all options shown (Enter 'c' to cancel): # ENTER YOUR CORRESPONDING NUMBER
 
-<p>Cert not yet due for renewal</p>
+Cert not yet due for renewal
 
-<p>You have an existing certificate that has exactly the same domains or certificate name you requested and isn’t close to expiry.
-(ref: /etc/letsencrypt/renewal/nighthawkcodingsociety.com-0001.conf)</p>
+You have an existing certificate that has exactly the same domains or certificate name you requested and isn't close to expiry.
+(ref: /etc/letsencrypt/renewal/nighthawkcodingsociety.com-0001.conf)
 
-<p>What would you like to do?</p>
-<hr>
-<p>1: Attempt to reinstall this existing certificate
-2: Renew &amp; replace the cert (limit ~5 per 7 days)</p>
-<hr>
-<p>Select the appropriate number [1-2] then [enter] (press ‘c’ to cancel): 2
+What would you like to do?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: Attempt to reinstall this existing certificate
+2: Renew &amp; replace the cert (limit ~5 per 7 days)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
 Renewing an existing certificate
 Performing the following challenges:
 http-01 challenge for nighthawkcodingsociety.com
 http-01 challenge for csa.nighthawkcodingsociety.com
 http-01 challenge for cso.nighthawkcodingsociety.com
 http-01 challenge for flm.nighthawkcodingsociety.com
-Waiting for verification…
+Waiting for verification...
 Cleaning up challenges
 Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_society
 Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_csa
 Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_csp
-Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_flm</p>
+Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_flm
 
-<p>Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.</p>
-<hr>
-<p>1: No redirect - Make no further changes to the webserver configuration.
+Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1: No redirect - Make no further changes to the webserver configuration.
 2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
-new sites, or if you’re confident your site works on HTTPS. You can undo this
-change by editing your web server’s configuration.</p>
-<hr>
-<p>Select the appropriate number [1-2] then [enter] (press ‘c’ to cancel): 2
+new sites, or if you're confident your site works on HTTPS. You can undo this
+change by editing your web server's configuration.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
 Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_society
 Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_csa
 Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_csp
-Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_flm</p>
+Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_flm
 
-<hr>
-<p>Your existing certificate has been successfully renewed, and the new certificate
-has been installed.</p>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Your existing certificate has been successfully renewed, and the new certificate
+has been installed.
 
-<p>The new certificate covers the following domains:
+The new certificate covers the following domains:
 https://nighthawkcodingsociety.com, 
 https://csa.nighthawkcodingsociety.com, 
 https://csp.nighthawkcodingsociety.com, and
-https://flm.nighthawkcodingsociety.com,</p>
+https://flm.nighthawkcodingsociety.com,
 
-<p>You should test your configuration at:
+You should test your configuration at:
 https://www.ssllabs.com/ssltest/analyze.html?d=nighthawkcodingsociety.com
 https://www.ssllabs.com/ssltest/analyze.html?d=csa.nighthawkcodingsociety.com
 https://www.ssllabs.com/ssltest/analyze.html?d=csp.nighthawkcodingsociety.com
-https://www.ssllabs.com/ssltest/analyze.html?d=flm.nighthawkcodingsociety.com</p>
-<hr>
+https://www.ssllabs.com/ssltest/analyze.html?d=flm.nighthawkcodingsociety.com
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-<p>IMPORTANT NOTES:</p>
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/nighthawkcodingsociety.com-0001/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/nighthawkcodingsociety.com-0001/privkey.pem
+   Your cert will expire on 2022-03-06. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot again
+   with the "certonly" option. To non-interactively renew *all* of
+   your certificates, run "certbot renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+</code></pre></div></div>
+
 <ul>
-  <li>Congratulations! Your certificate and chain have been saved at:
-/etc/letsencrypt/live/nighthawkcodingsociety.com-0001/fullchain.pem
-Your key file has been saved at:
-/etc/letsencrypt/live/nighthawkcodingsociety.com-0001/privkey.pem
-Your cert will expire on 2022-03-06. To obtain a new or tweaked
-version of this certificate in the future, simply run certbot again
-with the “certonly” option. To non-interactively renew <em>all</em> of
-your certificates, run “certbot renew”</li>
-  <li>
-    <p>If you like Certbot, please consider supporting our work by:</p>
-
-    <p>Donating to ISRG / Let’s Encrypt:   https://letsencrypt.org/donate
-Donating to EFF:                    https://eff.org/donate-le</p>
-  </li>
   <li>Conclude this process by running <code class="language-plaintext highlighter-rouge">sudo certbot --nginx</code>  and testing https://mydomain</li>
   <li>Replace “mydomain” with the domain you have previously selected</li>
 </ul>
