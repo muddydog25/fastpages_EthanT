@@ -14,11 +14,11 @@ type: pbl
 ### Amazon Web Services (AWS): Electric Cloud Compute (EC2) Setup
 - To begin, head to  the "Instances" dropdown on AWS and select "Instances."
 
-<img src="https://user-images.githubusercontent.com/109186517/220186297-adf65729-a8db-4506-ae03-cd75273d92d0.png"></img>
+<img src="https://user-images.githubusercontent.com/109186517/220186297-adf65729-a8db-4506-ae03-cd75273d92d0.png">
 
 - From here, a variety of instances will show up. For this project, depending on which teacher you have, select either "NCS.cf Yeung CSP" or "NCS.gq Mort CSP"
 
-<img src="https://user-images.githubusercontent.com/109186517/220186519-ca92be0c-c9e6-4173-bbdb-9715a13a8a69.png"></img>
+<img src="https://user-images.githubusercontent.com/109186517/220186519-ca92be0c-c9e6-4173-bbdb-9715a13a8a69.png">
 
 - Then, run
 ```bash
