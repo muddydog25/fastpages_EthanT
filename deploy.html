@@ -1,0 +1,343 @@
+<h2 id="server-setup-and-initial-deployment">Server Setup and Initial Deployment</h2>
+<blockquote>
+  <p>Development Operations (DevOps) begins with server setup.</p>
+  <h3 id="amazon-web-services-aws-electric-cloud-compute-ec2-setup">Amazon Web Services (AWS): Electric Cloud Compute (EC2) Setup</h3>
+  <ul>
+    <li>To begin, head to  the “Instances” dropdown on AWS and select “Instances.”</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://user-images.githubusercontent.com/109186517/220186297-adf65729-a8db-4506-ae03-cd75273d92d0.png" />&lt;/img&gt;</p>
+
+<ul>
+  <li>From here, a variety of instances will show up. For this project, depending on which teacher you have, select either “NCS.cf Yeung CSP” or “NCS.gq Mort CSP”</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/109186517/220186519-ca92be0c-c9e6-4173-bbdb-9715a13a8a69.png" />&lt;/img&gt;</p>
+
+<ul>
+  <li>Then, run
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker ps <span class="c"># This allows you to observe the ports that are currently being used</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="docker-composeyml--dockerfile">docker-compose.yml &amp; Dockerfile</h2>
+<ul>
+  <li>Next, head to VSCode on your local machine and update the docker-compose.yml and Docker files.</li>
+  <li>Select a port that is not used and change the left side of docker-compose.yml port to be an unussed port XYZ:8086.  The “XYZ” would be the port that you have selected.</li>
+  <li>
+    <p>The right side 8086 matches the port you have used in your Docker file in two locations - 8080 is typically used as an internal port.</p>
+  </li>
+  <li>In VSCode, open up your terminal. Run <code class="language-plaintext highlighter-rouge">sudo docker-compose up</code> and make sure it builds properly. Type localhost:XYZ in your browser (XYZ is the unused port you have selected).  Check for any errors occur in the Terminal. If this fails, please be sure to review the previous steps.</li>
+  <li>If all is well, make sure to commit your changes to docker-compose.yml &amp; Dockerfile</li>
+</ul>
+
+<h3 id="clone-and-change-directory-to-project-location">Clone and Change Directory to project location</h3>
+<blockquote>
+  <p>This command allows you to clone your GitHub repository onto the AWS instance. In this example, the GitHub HTTPs link is: https://github.com/nighthawkcoders/flask_portfolio.git.</p>
+  <ul>
+    <li>Head back to either the instance “NCS.cf Yeung CSP” or “NCS.gq Mort CSP” on AWS</li>
+  </ul>
+</blockquote>
+
+<p><strong>Note</strong></p>
+<blockquote>
+  <p>Your repository should be using the  APCSP flask_portfolio as a template</p>
+  <ul>
+    <li>Once you are in the instance, run</li>
+  </ul>
+</blockquote>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="c"># Check the other repository names, make sure that the one the name you select does not match the ones that appear when running this command</span>
+</code></pre></div></div>
+<ul>
+  <li>Next, run</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span>
+<span class="nv">$ </span>git clone https://github.com/nighthawkcoders/flask_portfolio.git my-unique-name 
+<span class="c"># Replace "my-unique-name- with your desired name for this repository, it is recommended that your table number and period are featured in this name to avoid confusion among groups</span>
+<span class="nv">$ </span><span class="nb">cd </span>my-unique-name
+</code></pre></div></div>
+
+<ul>
+  <li>Once you are in your repository, run</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up <span class="nt">-d</span> <span class="nt">--build</span> 
+</code></pre></div></div>
+
+<ul>
+  <li>To make sure that your application is running, run the following command</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl localhost:XYZ <span class="c"># Replace XYZ with the port you have selected</span>
+</code></pre></div></div>
+
+<h2 id="test-preparation-for-docker-web-application-using-ip-for-internet-access">Test preparation for Docker Web Application using IP for Internet Access</h2>
+<p>Each student scrum team will perform Nginx test and verify Group Web Project is working on EC2 instance.  This step is can only support a single Web Application at a time.</p>
+
+<p>This Step is dependent on…</p>
+<ul>
+  <li>EC2 Public IPs: 3.233.212.71</li>
+  <li>Docker Port: 8086</li>
+</ul>
+
+<p>Enable Nginx to retrieve default Web Application using IP Address from internet request (Reverse Proxy)!</p>
+
+<ul>
+  <li>Install Nginx on Ubuntu servers
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>nginx
+</code></pre></div>    </div>
+  </li>
+  <li>Go to location of Nginx server configuration files
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /etc/nginx/sites-available
+</code></pre></div>    </div>
+  </li>
+  <li>Open editor to Create your own “Nginx test configuration”.
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>nano my-unique-file <span class="c"># Replace "my-unique-file" with the name you wish to call your nginx file</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Edit your own Nginx server configuration making modifications to:
+    <ul>
+      <li>IP Address: 3.233.212.71</li>
+      <li>docker-compose, proxy pass Port: 8086</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Requirements</strong></p>
+<ul>
+  <li>A unique name for your file</li>
+  <li>
+    <p>DNS name for server
+<a href="https://moonpiedumplings.github.io/quartotest/posts/duckdns/">Link to Jeffery F’s DNS Domain Guide</a></p>
+  </li>
+  <li>Change the port in proxy_pass line to the one you have previously selected</li>
+</ul>
+
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
+    <span class="kn">server_name</span> <span class="mi">3</span><span class="s">.233.212.71</span><span class="p">;</span>
+    <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+        <span class="kn">proxy_pass</span> <span class="s">http://localhost:8086</span><span class="p">;</span>
+        <span class="c1"># Simple requests</span>
+        <span class="kn">if</span> <span class="s">(</span><span class="nv">$request_method</span> <span class="p">~</span><span class="sr">*</span> <span class="s">"(GET|POST)")</span> <span class="p">{</span>
+                <span class="kn">add_header</span> <span class="s">"Access-Control-Allow-Origin"</span>  <span class="s">*</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1"># Preflight requests</span>
+        <span class="kn">if</span> <span class="s">(</span><span class="nv">$request_method</span> <span class="p">=</span> <span class="s">OPTIONS</span> <span class="s">)</span> <span class="p">{</span>
+                <span class="kn">add_header</span> <span class="s">"Access-Control-Allow-Origin"</span>  <span class="s">*</span><span class="p">;</span>
+                <span class="kn">add_header</span> <span class="s">"Access-Control-Allow-Methods"</span> <span class="s">"GET,</span> <span class="s">POST,</span> <span class="s">OPTIONS,</span> <span class="s">HEAD"</span><span class="p">;</span>
+                <span class="kn">add_header</span> <span class="s">"Access-Control-Allow-Headers"</span> <span class="s">"Authorization,</span> <span class="s">Origin,</span> <span class="s">X-Requested-With,</span> <span class="s">Content-Type,</span> <span class="s">Accept"</span><span class="p">;</span>
+                <span class="kn">return</span> <span class="mi">200</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="activating-nginx-configuration">Activating Nginx configuration</h3>
+<ul>
+  <li>Activate/enabled Nginx server configuration:
+    <ul>
+      <li>nginx configuration file: test
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo ln</span> <span class="nt">-s</span> /etc/nginx/sites-available/my-unique-file /etc/nginx/sites-enabled <span class="c"># Replace "my-unique-file" with the name of your nginx file</span>
+<span class="nv">$ </span><span class="nb">sudo </span>nginx <span class="nt">-t</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>If there are errors, something is wrong…
+    <ul>
+      <li>Perhaps you are missing semicolon at the end of server)name or proxy_pass lines.</li>
+      <li>Perhaps link to file in sites-enabled is bad as a result of bad syntax in <code class="language-plaintext highlighter-rouge">ln -a</code> command.
+        <ul>
+          <li>There are two directories <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-available</code> and <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-enabled</code>.</li>
+          <li>The 1st is for preliminary editing, the second is for activation.  Perform <code class="language-plaintext highlighter-rouge">ls</code> in <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-enabled</code> and make sure all the names look correct.</li>
+          <li>Correct by <code class="language-plaintext highlighter-rouge">rm</code> of mistake in <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-enabled</code> without deleting original file in <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-available</code>.  Then repeat <code class="language-plaintext highlighter-rouge">ln -s</code> command.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>If there are no errors, restart NGINX so the server to activate <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-enabled</code> files:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>systemctl restart nginx
+</code></pre></div>    </div>
+  </li>
+  <li>Check that your server is running on the browser using the domain using http://mydomain</li>
+  <li>Replace “mydomain” with the domain you have previously selected</li>
+</ul>
+
+<h2 id="final-preparation-the-docker-web-application-using-dns-for-internet-access">Final preparation the Docker Web Application using DNS for Internet Access</h2>
+<p>There are additional steps to this preparation. We need to direct the internet to the AWS server running the Web Application, this is done using Domain Name Service (DNS).   After being directed to the Web Server, the server needs to respond to the HTTP (Hyper Text Transfer Protocol) request.  The proxy of HTTP to your Web Application is manged by Nginx.   Finally, we will Secure HTTP (HTTPS), with a utility called Certbot.</p>
+
+<h3 id="certbot-configuration">Certbot configuration</h3>
+<p>Each student scrum team will learn Certbot on on AWS EC2 test server, establish working https web application.  The final configuration will be on AWS server managed by Teachers or Student DevOps Engineers.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>certbot <span class="nt">--nginx</span>
+</code></pre></div></div>
+<ul>
+  <li>Make sure that your domain appears on the list of names to activate HTTPS for</li>
+</ul>
+
+<p>Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator nginx, Installer nginx</p>
+
+<p>Which names would you like to activate HTTPS for?</p>
+<hr />
+<p>1: coolcodersjava.pw
+2: www.coolcodersjava.pw
+3: ajarcade.duckdns.org
+4: flowhealth.duckdns.org
+5: goatedgroup.duckdns.org
+6: jasj-inventory.duckdns.org
+7: recipies.duckdns.org
+8: ssvgcars.duckdns.org
+9: userapi.duckdns.org
+10: fr0st.ml
+11: www.fr0st.ml
+12: agenda.nighthawkcodescrums.gq
+13: coolcoders.nighthawkcodescrums.gq
+14: escaperoom.nighthawkcodescrums.gq
+15: frost.nighthawkcodescrums.gq
+16: jame.nighthawkcodescrums.gq
+17: lawnmowers.nighthawkcodescrums.gq
+18: loopholegames.nighthawkcodescrums.gq
+19: musicmania.nighthawkcodescrums.gq
+20: nba.nighthawkcodescrums.gq
+21: sadv.nighthawkcodescrums.gq
+22: ssjn.nighthawkcodescrums.gq
+23: stocks.nighthawkcodescrums.gq
+24: striver.nighthawkcodescrums.gq
+25: tngc.nighthawkcodescrums.gq
+26: white.nighthawkcodescrums.gq
+27: workwatch.nighthawkcodescrums.gq
+28: cars.nighthawkcodingsociety.com
+29: dolphin.nighthawkcodingsociety.com
+30: saakd.nighthawkcodingsociety.com
+31: pythonalflask.tk
+32: www.pythonalflask.tk
+33: teambrobro.tk
+34: www.teambrobro.tk
+35: teamcheeseatimetime.tk
+36: www.teamcheeseatimetime.tk</p>
+<hr />
+<p>Select the appropriate numbers separated by commas and/or spaces, or leave input
+blank to select all options shown (Enter ‘c’ to cancel): # ENTER YOUR CORRESPONDING NUMBER</p>
+
+<p>Cert not yet due for renewal</p>
+
+<p>You have an existing certificate that has exactly the same domains or certificate name you requested and isn’t close to expiry.
+(ref: /etc/letsencrypt/renewal/nighthawkcodingsociety.com-0001.conf)</p>
+
+<p>What would you like to do?</p>
+<hr />
+<p>1: Attempt to reinstall this existing certificate
+2: Renew &amp; replace the cert (limit ~5 per 7 days)</p>
+<hr />
+<p>Select the appropriate number [1-2] then [enter] (press ‘c’ to cancel): 2
+Renewing an existing certificate
+Performing the following challenges:
+http-01 challenge for nighthawkcodingsociety.com
+http-01 challenge for csa.nighthawkcodingsociety.com
+http-01 challenge for cso.nighthawkcodingsociety.com
+http-01 challenge for flm.nighthawkcodingsociety.com
+Waiting for verification…
+Cleaning up challenges
+Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_society
+Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_csa
+Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_csp
+Deploying Certificate to VirtualHost /etc/nginx/sites-enabled/nighthawk_flm</p>
+
+<p>Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.</p>
+<hr />
+<p>1: No redirect - Make no further changes to the webserver configuration.
+2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+new sites, or if you’re confident your site works on HTTPS. You can undo this
+change by editing your web server’s configuration.</p>
+<hr />
+<p>Select the appropriate number [1-2] then [enter] (press ‘c’ to cancel): 2
+Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_society
+Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_csa
+Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_csp
+Traffic on port 80 already redirecting to ssl in /etc/nginx/sites-enabled/nighthawk_flm</p>
+
+<hr />
+<p>Your existing certificate has been successfully renewed, and the new certificate
+has been installed.</p>
+
+<p>The new certificate covers the following domains:
+https://nighthawkcodingsociety.com, 
+https://csa.nighthawkcodingsociety.com, 
+https://csp.nighthawkcodingsociety.com, and
+https://flm.nighthawkcodingsociety.com,</p>
+
+<p>You should test your configuration at:
+https://www.ssllabs.com/ssltest/analyze.html?d=nighthawkcodingsociety.com
+https://www.ssllabs.com/ssltest/analyze.html?d=csa.nighthawkcodingsociety.com
+https://www.ssllabs.com/ssltest/analyze.html?d=csp.nighthawkcodingsociety.com
+https://www.ssllabs.com/ssltest/analyze.html?d=flm.nighthawkcodingsociety.com</p>
+<hr />
+
+<p>IMPORTANT NOTES:</p>
+<ul>
+  <li>Congratulations! Your certificate and chain have been saved at:
+/etc/letsencrypt/live/nighthawkcodingsociety.com-0001/fullchain.pem
+Your key file has been saved at:
+/etc/letsencrypt/live/nighthawkcodingsociety.com-0001/privkey.pem
+Your cert will expire on 2022-03-06. To obtain a new or tweaked
+version of this certificate in the future, simply run certbot again
+with the “certonly” option. To non-interactively renew <em>all</em> of
+your certificates, run “certbot renew”</li>
+  <li>
+    <p>If you like Certbot, please consider supporting our work by:</p>
+
+    <p>Donating to ISRG / Let’s Encrypt:   https://letsencrypt.org/donate
+Donating to EFF:                    https://eff.org/donate-le</p>
+  </li>
+  <li>Conclude this process by running <code class="language-plaintext highlighter-rouge">sudo certbot --nginx</code>  and testing https://mydomain</li>
+  <li>Replace “mydomain” with the domain you have previously selected</li>
+</ul>
+
+<h1 id="update-deployment">Update Deployment</h1>
+
+<ul>
+  <li>To update your code, run</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker-compose <span class="nb">kill
+</span>Killing flask_portfolio_web_1 ... <span class="k">done</span>
+</code></pre></div></div>
+
+<ul>
+  <li>From here, the server should be down and displaying a 502 error</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git pull <span class="c"># This allows you to update your code</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Then, rebuild your container by running…</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker-compose build <span class="nt">--no-cache</span>
+</code></pre></div></div>
+
+<p><strong>Note</strong></p>
+<ul>
+  <li>
+    <p>This step can take a few minutes</p>
+  </li>
+  <li>
+    <p>Finally, run…</p>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker-compose up <span class="nt">-d</span>
+Recreating flask_portfolio_web_1 ... <span class="k">done</span>
+</code></pre></div></div>
+
+<ul>
+  <li>If all of the steps have been completed properly, the server should be back up with the applied changes/updates</li>
+</ul>
