@@ -6,4 +6,6 @@
 
 [My Blog](https://realethantran.github.io/fastpages_EthanT/)
 
-![image](https://user-images.githubusercontent.com/109186517/217068489-c909acd4-e85f-4751-b89d-08e817a490ce.png)
+<html>
+<img src="https://user-images.githubusercontent.com/109186517/217068489-c909acd4-e85f-4751-b89d-08e817a490ce.png" height="250px">
+</html>
