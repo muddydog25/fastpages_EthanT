@@ -296,7 +296,7 @@ Why? The teacher can answer the questions "Do students who enjoy the subject mat
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/tmp/ipykernel_1116/1459572364.py:3: DtypeWarning: Columns (70,71,72,73,74,76,79) have mixed types. Specify dtype option on import or set low_memory=False.
+<pre>/tmp/ipykernel_1721/1459572364.py:3: DtypeWarning: Columns (70,71,72,73,74,76,79) have mixed types. Specify dtype option on import or set low_memory=False.
   fuel_economy_df = pd.read_csv(&#34;/home/etran/vscode/fastpages_EthanT/_notebooks/files/vehicles.csv&#34;)
 </pre>
 </div>
@@ -465,7 +465,7 @@ Why? The teacher can answer the questions "Do students who enjoy the subject mat
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_rows</span><span class="p">,</span> <span class="n">num_cols</span> <span class="o">=</span> <span class="n">fuel_economy_df</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_rows</span><span class="p">,</span> <span class="n">num_cols</span> <span class="o">=</span> <span class="n">fuel_economy_df</span><span class="o">.</span><span class="n">shape</span> <span class="c1"># Get the total number of rows and columns in the dataset</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">num_rows</span><span class="si">}</span><span class="s2"> rows and </span><span class="si">{</span><span class="n">num_cols</span><span class="si">}</span><span class="s2"> columns in the dataset.&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -497,7 +497,7 @@ Why? The teacher can answer the questions "Do students who enjoy the subject mat
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_makes</span> <span class="o">=</span> <span class="n">fuel_economy_df</span><span class="p">[</span><span class="s1">&#39;make&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_makes</span> <span class="o">=</span> <span class="n">fuel_economy_df</span><span class="p">[</span><span class="s1">&#39;make&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Get the top 10 makes of vehicles by number of models in the dataset</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">top_makes</span><span class="p">)</span>
 </pre></div>
 
@@ -539,7 +539,7 @@ Name: make, dtype: int64
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fuel_cyl_counts</span> <span class="o">=</span> <span class="n">fuel_economy_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;fuelType&#39;</span><span class="p">,</span> <span class="s1">&#39;cylinders&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fuel_cyl_counts</span> <span class="o">=</span> <span class="n">fuel_economy_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;fuelType&#39;</span><span class="p">,</span> <span class="s1">&#39;cylinders&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="c1"># Get the number of vehicles by fuel type and cylinder count</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fuel_cyl_counts</span><span class="p">)</span>
 </pre></div>
 
