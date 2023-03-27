@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -793,7 +793,7 @@ A new user record  has been created
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>A new car has been added
+<pre>Error while executing the INSERT: UNIQUE constraint failed: cars._desc
 </pre>
 </div>
 </div>
@@ -856,12 +856,15 @@ A new user record  has been created
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 'BMW', '2 Series', 34000, 2021, 'The BMW 2 series is a stylish sports coupe that drives just as well as it looks.', '2.0L four-cylinder', 'coupe', 'John Doe')
-(3, 'Toyota', 'Sienna', 40000, 2019, 'Reliable Van', 'Van', 'Van', 'Johnny Doe')
-(4, '', '', '', '', '', '', '', '')
-(5, 'Hyundai', 'Elantra N', 48000, 2022, 'Elantra N!!!', 'V6', 'Sedan', 'Wayne')
-(6, '', '', '', '', ' ', '', '', '')
-(7, 'Hyundai', 'Veloster N', 48000, 2019, 'Veloster N!', 'V6', 'Coupe', 'Jan')
+<pre>(1, 'BMW', '2 Series', 34000, 2021, 'The BMW 2 Series NEW DESCRIPTION!', '4 cylinder', 'Coupe', 'DoeJohn')
+(7, 'Hyundai', 'Veloster N', 48000, 2019, 'New Description!', 'V6', 'Coupe', 'Jan')
+(9, 'Kia Stinger', '45000', 2022, 'Kia Stinger, sports sedan!', 'Sedan', 'V6', 'Sedan', '')
+(10, 'Dodge', 'Charger', 45000, 2021, 'Vroom!', 'V8', 'Sedan', "Scatpack's are cool")
+(11, 'Ford', 'Mustang', 50000, 2019, 'American Muscle!', 'V8', 'Coupe', 'Mr. Muscle')
+(12, 'Kia', 'Rio', 22000, 2020, 'Rioooooooo!', '4 cylinder', 'Sedan', 'Blue')
+(13, 'TestMake', 'TestModel', 1000000, 2021, 'TestDesc', 'V12', 'NewBody', 'Test')
+(14, 'BMW', '2 Series', 34000, 2021, 'The BMW 2 series is a stylish sports coupe that drives just as well as it looks.', '2.0L four-cylinder', 'coupe', 'John Doe')
+(15, '', '', '', '', '', '', '', '')
 </pre>
 </div>
 </div>
@@ -943,7 +946,7 @@ A new user record  has been created
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Car with the id 7 has been updated
+<pre>No id was found in the table
 </pre>
 </div>
 </div>
@@ -1015,7 +1018,7 @@ A new user record  has been created
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Row with ID 6 has been deleted.
+<pre>Row with ID 16 has been deleted.
 </pre>
 </div>
 </div>
@@ -1076,12 +1079,24 @@ A new user record  has been created
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>A new car has been added
-(1, 'BMW', '2 Series', 34000, 2021, 'The BMW 2 series is a stylish sports coupe that drives just as well as it looks.', '2.0L four-cylinder', 'coupe', 'John Doe')
-(3, 'Toyota', 'Sienna', 40000, 2019, 'Reliable Van', 'Van', 'Van', 'Johnny Doe')
-(5, 'Hyundai', 'Elantra N', 48000, 2022, 'Elantra N!!!', 'V6', 'Sedan', 'Wayne')
+<pre>(1, 'BMW', '2 Series', 34000, 2021, 'The BMW 2 Series NEW DESCRIPTION!', '4 cylinder', 'Coupe', 'DoeJohn')
 (7, 'Hyundai', 'Veloster N', 48000, 2019, 'New Description!', 'V6', 'Coupe', 'Jan')
-(8, 'Lucid', 'Air', 72000, 2023, 'The all new, all electric, Lucid Air!', 'Electric', 'Sedan', 'Lucid')
+(9, 'Kia Stinger', '45000', 2022, 'Kia Stinger, sports sedan!', 'Sedan', 'V6', 'Sedan', '')
+(10, 'Dodge', 'Charger', 45000, 2021, 'Vroom!', 'V8', 'Sedan', "Scatpack's are cool")
+(11, 'Ford', 'Mustang', 50000, 2019, 'American Muscle!', 'V8', 'Coupe', 'Mr. Muscle')
+(12, 'Kia', 'Rio', 22000, 2020, 'Rioooooooo!', '4 cylinder', 'Sedan', 'Blue')
+(13, 'TestMake', 'TestModel', 1000000, 2021, 'TestDesc', 'V12', 'NewBody', 'Test')
+(14, 'BMW', '2 Series', 34000, 2021, 'The BMW 2 series is a stylish sports coupe that drives just as well as it looks.', '2.0L four-cylinder', 'coupe', 'John Doe')
+(15, '', '', '', '', '', '', '', '')
+Row with ID 15 has been deleted.
+(1, 'BMW', '2 Series', 34000, 2021, 'The BMW 2 Series NEW DESCRIPTION!', '4 cylinder', 'Coupe', 'DoeJohn')
+(7, 'Hyundai', 'Veloster N', 48000, 2019, 'New Description!', 'V6', 'Coupe', 'Jan')
+(9, 'Kia Stinger', '45000', 2022, 'Kia Stinger, sports sedan!', 'Sedan', 'V6', 'Sedan', '')
+(10, 'Dodge', 'Charger', 45000, 2021, 'Vroom!', 'V8', 'Sedan', "Scatpack's are cool")
+(11, 'Ford', 'Mustang', 50000, 2019, 'American Muscle!', 'V8', 'Coupe', 'Mr. Muscle')
+(12, 'Kia', 'Rio', 22000, 2020, 'Rioooooooo!', '4 cylinder', 'Sedan', 'Blue')
+(13, 'TestMake', 'TestModel', 1000000, 2021, 'TestDesc', 'V12', 'NewBody', 'Test')
+(14, 'BMW', '2 Series', 34000, 2021, 'The BMW 2 series is a stylish sports coupe that drives just as well as it looks.', '2.0L four-cylinder', 'coupe', 'John Doe')
 </pre>
 </div>
 </div>
