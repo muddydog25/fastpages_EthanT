@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -130,6 +130,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Notes">Notes </a></li>
 <li class="toc-entry toc-h2"><a href="#Lesson-Questions">Lesson Questions </a></li>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
 </ul><article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
@@ -159,6 +160,16 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Notes">
+<a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes<a class="anchor-link" href="#Notes"> </a>
+</h2>
+<ul>
+<li>Programmers should care about space and time complexity to optimize code for better performance and scalability, especially for large-scale applications.</li>
+<li>Different types of sorting algorithms have different time complexities, ranging from O(n^2) to O(n log n) to O(n + k).</li>
+<li>Time and space complexity are important when choosing an algorithm since they determine the algorithm's efficiency in terms of time and memory usage.</li>
+<li>The choice of algorithm depends on the problem and its specific requirements for time and space efficiency.</li>
+<li>General patterns for determining an algorithm's time and space complexity include the number of inputs, the size of input data, the number of loops or recursive calls, and the use of data structures such as arrays, lists, and trees.</li>
+</ul>
 <h2 id="Lesson-Questions">
 <a class="anchor" href="#Lesson-Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lesson Questions<a class="anchor-link" href="#Lesson-Questions"> </a>
 </h2>
@@ -193,59 +204,13 @@ window.onload = wrap_img;
 <li>What are some general patterns that you noticed to determine each algorithm's time and space complexity?</li>
 </ol>
 <p>Some general patterns for determining an algorithm's time and space complexity include the number of inputs (n), the size of the input data (k), the number of loops or recursive calls in the algorithm, and the use of data structures such as arrays, lists, and trees.</p>
-<ol>
+<ul>
 <li>Complete the Time and Space Complexity analysis questions linked below. Practice</li>
-</ol>
+</ul>
 
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-
-<span class="c1"># Define a list of items on the wheel</span>
-<span class="n">wheel_items</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Prize 1"</span><span class="p">,</span> <span class="s2">"Prize 2"</span><span class="p">,</span> <span class="s2">"Prize 3"</span><span class="p">,</span> <span class="s2">"Prize 4"</span><span class="p">,</span> <span class="s2">"Prize 5"</span><span class="p">]</span>
-
-<span class="c1"># Define a function to spin the wheel</span>
-<span class="k">def</span> <span class="nf">spin_wheel</span><span class="p">():</span>
-    <span class="c1"># Choose a random item from the wheel_items list</span>
-    <span class="n">spin_result</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">wheel_items</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">spin_result</span>
-
-<span class="c1"># Call the spin_wheel function to spin the wheel</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">spin_wheel</span><span class="p">()</span>
-
-<span class="c1"># Print the result</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"You spun the wheel and landed on:"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>You spun the wheel and landed on: Prize 1
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 </div>
 
 
