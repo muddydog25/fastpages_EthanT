@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Unit 4.3a Parallel Computing Hacks",
-            "content": "",
+            "content": "Hacks . AP Classroom. Provide answers and thoughts on theoretical question form college board Video in section 4.3. They start at about the 9 minute mark. . Example 1 | Example 2 | . Data Structures. Build a List Comprehension example . list = [calc(item) for item in items] | . fruits = [&quot;apples&quot;, &quot;bananas&quot;, &quot;pears&quot;, &quot;oranges&quot;, &quot;grapes&quot;] grocery_num = 0 for i in fruits: grocery_num += 1 print(grocery_num) . 5 .",
             "url": "https://muddydog25.github.io/fastpages_EthanT/data%20structures/space%20and%20time%20complexity/hacks/2023/03/28/parallel-computing-hacks.html",
             "relUrl": "/data%20structures/space%20and%20time%20complexity/hacks/2023/03/28/parallel-computing-hacks.html",
             "date": " • Mar 28, 2023"
