@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -124,6 +124,8 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Explanation-of-the-code">Explanation of the code </a></li>
+<li class="toc-entry toc-h2"><a href="#Implementation">Implementation </a></li>
 <li class="toc-entry toc-h2"><a href="#Explanation-of-the-code">Explanation of the code </a></li>
 <li class="toc-entry toc-h2"><a href="#Implementation">Implementation </a></li>
 </ul><article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
@@ -209,6 +211,59 @@ window.onload = wrap_img;
 <p>One way that I can implement this code into my group's lesson it to allow students to visualize the data structure used in this code is to by creating a visual version of this code. This version can utilize something such as a a pie chart that represents the probabilities of landing on each prize. The size of each slice of the pie would be proportional to the probability of landing on that prize.</p>
 <p>For example, if we assume that the spinning wheel is equally likely to land on each prize, then each slice of the pie would be the same size (1/5 or 20% of the total area). We could use a library like Matplotlib to create a pie chart of the probabilities, and then display the chart to students to help them understand how the data is structured and how it relates to the code.</p>
 <p>Additionally, we could use this code as an example to teach iteration in Python. For example, we could modify the code to simulate spinning the wheel multiple times and keeping track of the results. We could use a loop to repeat the spin process a certain number of times, and then create a histogram or bar chart of the results to show the frequency of each prize. This would help students understand how iteration can be used to process large amounts of data and visualize the results.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">flip_coin</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'Heads'</span><span class="p">,</span> <span class="s1">'Tails'</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Example usage</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">flip_coin</span><span class="p">())</span>  <span class="c1"># Output: Heads or Tails</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tails
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Explanation-of-the-code">
+<a class="anchor" href="#Explanation-of-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explanation of the code<a class="anchor-link" href="#Explanation-of-the-code"> </a>
+</h2>
+<p>This code defines a function called flip_coin() that uses the random.choice() method to randomly select either "Heads" or "Tails". The function returns the result of the coin flip. The program then calls the flip_coin() function to get a random result. Note that since this is a random process, the result of the coin flip will be different each time you run the code.</p>
+<h2 id="Implementation">
+<a class="anchor" href="#Implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation<a class="anchor-link" href="#Implementation"> </a>
+</h2>
+<p>The code for flipping a coin can be a great addition to our lesson on using lists and dictionaries in Python. One way to use this code is to demonstrate how a list can be used to store the results of multiple coin flips. For example, we can modify the flip_coin() function to return the result of the coin flip as well as store it in a list. Additionally, we can use a dictionary to keep track of the number of times each side of the coin appears in the list. This provides an opportunity to teach students how to manipulate lists and dictionaries, as well as how to use basic Python functions like append() and get(). Furthermore, this code can be used to demonstrate how to use loops and conditionals to perform multiple coin flips and to analyze the results. Overall, the code for flipping a coin can be a fun and engaging way to teach the fundamentals of lists and dictionaries in Python.</p>
 
 </div>
 </div>
