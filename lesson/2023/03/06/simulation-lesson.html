@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      6 min read
     
 </span></p>
 
@@ -124,6 +124,8 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Explanation-of-the-code">Explanation of the code </a></li>
+<li class="toc-entry toc-h2"><a href="#Implementation">Implementation </a></li>
 <li class="toc-entry toc-h2"><a href="#Explanation-of-the-code">Explanation of the code </a></li>
 <li class="toc-entry toc-h2"><a href="#Implementation">Implementation </a></li>
 <li class="toc-entry toc-h2"><a href="#Explanation-of-the-code">Explanation of the code </a></li>
@@ -264,6 +266,82 @@ window.onload = wrap_img;
 <a class="anchor" href="#Implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation<a class="anchor-link" href="#Implementation"> </a>
 </h2>
 <p>The code for flipping a coin can be a great addition to our lesson on using lists and dictionaries in Python. One way to use this code is to demonstrate how a list can be used to store the results of multiple coin flips. For example, we can modify the flip_coin() function to return the result of the coin flip as well as store it in a list. Additionally, we can use a dictionary to keep track of the number of times each side of the coin appears in the list. This provides an opportunity to teach students how to manipulate lists and dictionaries, as well as how to use basic Python functions like append() and get(). Furthermore, this code can be used to demonstrate how to use loops and conditionals to perform multiple coin flips and to analyze the results. Overall, the code for flipping a coin can be a fun and engaging way to teach the fundamentals of lists and dictionaries in Python.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Prompt the user to add or remove an element from the list</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Would you like to add or remove an element from the list? (a/r): "</span><span class="p">)</span>
+
+    <span class="c1"># If the user wants to add an element to the list</span>
+    <span class="k">if</span> <span class="n">action</span> <span class="o">==</span> <span class="s2">"a"</span><span class="p">:</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What element would you like to add to the list? "</span><span class="p">)</span>
+        <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"You added"</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="s2">"to the list."</span><span class="p">)</span>
+
+    <span class="c1"># If the user wants to remove an element from the list</span>
+    <span class="k">elif</span> <span class="n">action</span> <span class="o">==</span> <span class="s2">"r"</span><span class="p">:</span>
+        <span class="n">element</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What element would you like to remove from the list? Enter the specific element you want removed."</span><span class="p">)</span>
+        <span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"You removed"</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="s2">"from the list."</span><span class="p">)</span>
+
+    <span class="c1"># If the user wants to exit</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">break</span>
+
+<span class="c1"># Print the final list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Final list:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You added test1 to the list.
+You added test2 to the list.
+You added test3 to the list.
+You added test4 to the list.
+You removed test2 from the list.
+Final list:
+['test1', 'test3', 'test4']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Explanation-of-the-code">
+<a class="anchor" href="#Explanation-of-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explanation of the code<a class="anchor-link" href="#Explanation-of-the-code"> </a>
+</h2>
+<p>This code creates an empty list called my_list and prompts the user to add or remove elements from the list. The code uses a while loop that runs indefinitely until the user chooses to exit. Within the while loop, the code prompts the user to enter "a" to add an element or "r" to remove an element from the list. If the user enters "a," the program prompts the user to enter the element they want to add to the list. It then adds the element to the list using the append() method and prints a message confirming that the element has been added. If the user enters "r," the program prompts the user to enter the specific element they want to remove from the list. It then removes the element from the list using the remove() method and prints a message confirming that the element has been removed. If the user enters any other input besides "a" or "r," the program breaks out of the while loop and moves on to print the final list. Finally, the program prints the final list using the print() function.</p>
+<h2 id="Implementation">
+<a class="anchor" href="#Implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation<a class="anchor-link" href="#Implementation"> </a>
+</h2>
+<p>This code can be used to teach a lesson on lists in Python by providing an interactive way for students to create and manipulate lists using user input. The lesson can begin by introducing the concept of a list, which is a collection of ordered and mutable elements. I can then explain how lists can be created in Python using the square brackets notation [], and how to add and remove elements from a list using the append() and remove() methods respectively. After, I can provide the code to the students and explain how the code uses a while loop and if-else statements to allow the user to add or remove elements from the list using their own input. To further reinforce the lesson, I can provide additional exercises for the students to practice creating and manipulating lists on their own. For example, I could ask them to modify the code to add more options for manipulating the list, such as inserting an element at a specific index or sorting the list.</p>
 
 </div>
 </div>
