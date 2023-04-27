@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      7 min read
     
 </span></p>
 
@@ -145,58 +145,717 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Objectives:">Objectives:<a class="anchor-link" href="#Objectives:"> </a></h2><p>Students will be able to...</p>
 <ul>
-<li>Estimated Duration: 35 minutes</li>
+<li>Understand the concept of data structures, including lists, dictionaries, and 2D arrays</li>
+<li>Learn how to iterate through data structures using loops</li>
+<li>Able to visualize data structures and iteration processes</li>
+<li>Able to apply their knowledge to build simulations/interactions using lists and iteration</li>
+<li>Learn how to store list and dictionary content in databases</li>
 </ul>
-<h2 id="Objectives:">Objectives:<a class="anchor-link" href="#Objectives:"> </a></h2><ul>
-<li>Students will understand the concept of data structures, including lists, dictionaries, and 2D arrays</li>
-<li>Students will learn how to iterate through data structures using loops</li>
-<li>Students will be able to visualize data structures and iteration processes</li>
-<li>Students will be able to apply their knowledge to build simulations/interactions using lists and iteration</li>
-<li>Students will learn how to store list and dictionary content in databases</li>
-</ul>
-<h2 id="Introduction-(5-min):">Introduction (5 min):<a class="anchor-link" href="#Introduction-(5-min):"> </a></h2><ul>
-<li>Greet the class and introduce the topic of data structures and iteration.</li>
-<li>Explain the importance of data structures in computer science and programming.</li>
-<li>Show examples of data structures in real-life scenarios, such as grocery lists, phone contacts, or spreadsheets.</li>
-</ul>
-<h2 id="Lesson-1:-Lists-and-Iteration-(10-min)">Lesson 1: Lists and Iteration (10 min)<a class="anchor-link" href="#Lesson-1:-Lists-and-Iteration-(10-min)"> </a></h2><ul>
-<li>Explain the concept of lists and how to create and manipulate them in Python.</li>
-<li>Show examples of list operations, such as appending, inserting, and slicing.</li>
-<li>Introduce the concept of iteration and how to use loops to iterate through lists.</li>
-<li>Show examples of loop structures, such as for and while loops.</li>
-<li>Use the code example provided to demonstrate how to spin a wheel using a list and a loop.</li>
-</ul>
-<h2 id="Lesson-2:-Dictionaries-and-2D-Arrays-(10-min)">Lesson 2: Dictionaries and 2D Arrays (10 min)<a class="anchor-link" href="#Lesson-2:-Dictionaries-and-2D-Arrays-(10-min)"> </a></h2><ul>
-<li>Explain the concept of dictionaries and how to create and manipulate them in Python.</li>
-<li>Show examples of dictionary operations, such as adding, modifying, and deleting entries.</li>
-<li>Introduce the concept of 2D arrays and how to create and access them in Python.</li>
-<li>Show examples of 2D array operations, such as indexing and slicing.</li>
-</ul>
-<h2 id="Lesson-3:-Simulations-and-Interactions-(10-min)">Lesson 3: Simulations and Interactions (10 min)<a class="anchor-link" href="#Lesson-3:-Simulations-and-Interactions-(10-min)"> </a></h2><ul>
-<li>Explain how to use lists and iteration to build simulations and interactions in Python.</li>
-<li>Show examples of simulation scenarios, such as rolling dice and flipping coins.</li>
-<li>Use the code example provided to demonstrate how to build a spinning wheel simulation using a list and a loop.</li>
-</ul>
-<h2 id="Lesson-4:-Storing-List-and-Dictionary-Content-in-Databases-(5-min)">Lesson 4: Storing List and Dictionary Content in Databases (5 min)<a class="anchor-link" href="#Lesson-4:-Storing-List-and-Dictionary-Content-in-Databases-(5-min)"> </a></h2><ul>
-<li>Explain the concept of databases and how to store data in them.</li>
-<li>Show examples of database management software and tools, such as SQLite or MySQL.</li>
-<li>Explain how to connect to a database and how to store and retrieve list and dictionary content from it.</li>
-</ul>
-<h2 id="Conclusion-(5-min):">Conclusion (5 min):<a class="anchor-link" href="#Conclusion-(5-min):"> </a></h2><ul>
-<li>Recap the main concepts and topics covered in the lesson.</li>
-<li>Ask students to share their thoughts, feedback, and questions on the lesson.</li>
-<li>Encourage students to continue practicing and exploring data structures and iteration in their own projects and applications.</li>
-</ul>
-<h1 id="Hacks-(1-point-total):">Hacks (1 point total):<a class="anchor-link" href="#Hacks-(1-point-total):"> </a></h1><ul>
-<li>(0.2 points) Students will create a visual to compare lists and dictionaries.</li>
-<li>(0.3 points) Students will create their own lists and write code to perform specific operations on them, such as sorting, filtering, or counting elements.</li>
-<li>(0.5 points) Students will build their own simulation or interaction using lists and iteration, such as the guessing game and dice roll.</li>
+<h1 id="Lesson-1:-Lists-and-Iteration">Lesson 1: Lists and Iteration<a class="anchor-link" href="#Lesson-1:-Lists-and-Iteration"> </a></h1><h2 id="Lists-(Ethan)">Lists (Ethan)<a class="anchor-link" href="#Lists-(Ethan)"> </a></h2><ul>
+<li>Lists are a type of data structure that can store multiple items in a single variable</li>
+<li>Lists are defined using square brackets [ ]</li>
+<li>Each item in a list is separated by a comma</li>
+<li>Lists are indexed, starting at 0 </li>
 </ul>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;grape&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;banana&#39;, &#39;orange&#39;, &#39;grape&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Accessing-Lists">Accessing Lists<a class="anchor-link" href="#Accessing-Lists"> </a></h2><ul>
+<li>To access individual items in a list, we use the index of the item.</li>
+<li>Python uses zero-based indexing, which means the first item in the list has an index of 0, the second item has an index of 1, and so on.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>   
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>apple
+orange
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Slicing-Lists">Slicing Lists<a class="anchor-link" href="#Slicing-Lists"> </a></h2><ul>
+<li>We can also extract a specific portion of a list using slicing.</li>
+<li>We use the colon : operator to specify a range of indices to include.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;banana&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Modifying-List-Items">Modifying List Items<a class="anchor-link" href="#Modifying-List-Items"> </a></h2><ul>
+<li>Lists are mutable, meaning that we can change the value of an item in a list.</li>
+<li>To change the value of an item in a list, we can use the indexing operator (square brackets) to access the item and then assign a new value to it.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pear&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;banana&#39;, &#39;pear&#39;, &#39;grape&#39;, &#39;kiwi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adding-and-Removing-List-Items">Adding and Removing List Items<a class="anchor-link" href="#Adding-and-Removing-List-Items"> </a></h2><blockquote><p>Adding</p>
+</blockquote>
+<ul>
+<li>Use the append() method to add an item to the end of a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;kiwi&quot;</span><span class="p">)</span> <span class="c1"># Adds &#39;kiwi&#39; to the end of the list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;banana&#39;, &#39;pear&#39;, &#39;grape&#39;, &#39;kiwi&#39;, &#39;kiwi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use the insert() method to add an item to a specific index in a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">)</span> <span class="c1"># Inserts &quot;peach&quot; at index 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;peach&#39;, &#39;banana&#39;, &#39;pear&#39;, &#39;grape&#39;, &#39;kiwi&#39;, &#39;kiwi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>Removing</p>
+</blockquote>
+<ul>
+<li>Use the remove() method to remove the first occurrence of an item from a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;pear&#39;</span><span class="p">)</span> <span class="c1"># Removes the first occurrence of &#39;pear&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;peach&#39;, &#39;banana&#39;, &#39;grape&#39;, &#39;kiwi&#39;, &#39;kiwi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use the pop() method to remove the item at a specific index from a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Removes the item at index 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;apple&#39;, &#39;peach&#39;, &#39;grape&#39;, &#39;kiwi&#39;, &#39;kiwi&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use the clear() method to remove all items from a list.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># Removes all items from the list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Function-Explanation">Function Explanation<a class="anchor-link" href="#Function-Explanation"> </a></h2><blockquote><p>InsertToList</p>
+</blockquote>
+<ul>
+<li>This function is designed to insert a new item into a list at a specific index.</li>
+<li>It first retrieves the new item to be added and the index at which to add it from the HTML document.</li>
+<li>It checks if the retrieved values are both valid integers and if the index is within the range of the list.</li>
+<li>If the values are valid, the function uses the splice() method to insert the new item into the list at the specified index. </li>
+<li>In JavaScript, the splice() method modifies an array by removing, replacing, or adding elements.</li>
+<li>The splice() method takes three arguments:the index at which to start changing the list, the number of elements to remove, and the new item to add. - The item is inserted without removing any elements, so we pass 0 as the second argument.</li>
+<li>Finally, the function calls the visualizeList() function to display the updated list on the web page.</li>
+</ul>
+
+<pre><code>  // Get the value of the new item and the index where it should be inserted
+  function insertToList() {
+      let newItem = parseInt(document.getElementById("newItem").value);
+      let index = parseInt(document.getElementById("index").value);
+      if (!isNaN(newItem) &amp;&amp; !isNaN(index) &amp;&amp; index &gt;= 0 &amp;&amp; index &lt;= myList.length) {
+        // splice() method to insert the new item into the list
+        myList.splice(index - 1, 0, newItem);
+        // Call the visualizeList() function to update the display of the list
+        visualizeList();
+      }
+    }</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p>SortList</p>
+</blockquote>
+<ul>
+<li>In JavaScript, sort() is a built-in method used to sort the elements of an array in place. The default sort order is ascending, but you can also specify a descending sort order.</li>
+<li>In this case, the function sorts myList in ascending order based on their numerical value.</li>
+</ul>
+
+<pre><code>  // Sort myList array in ascending order     
+  function sortList() {
+      // The function a - b is used, which subtracts the second element b from the first element a. 
+      // If the result is negative, a is sorted before b. If the result is positive, b is sorted before a. If the result is zero, the order of the elements is unchanged.
+      myList.sort((a, b) =&gt; a - b);
+      visualizeList();
+    }</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Applications-of-Lists">Applications of Lists<a class="anchor-link" href="#Applications-of-Lists"> </a></h2><ul>
+<li><p>Data processing: Lists are commonly used to store and process large amounts of data. In data analysis and machine learning, lists are often used to store datasets.</p>
+</li>
+<li><p>Gaming: Lists are used extensively in game development to store game objects, player statistics, and game maps.</p>
+</li>
+<li><p>Finance: Lists are used in finance to store and process financial data, such as stock prices and market trends. The data from these lists can also be used to calculate financial metrics and to create financial models.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks-(0.3)">Hacks (0.3)<a class="anchor-link" href="#Hacks-(0.3)"> </a></h2><ul>
+<li>Make your own list and manipulate via accessing specific elements, adding or removing elements, etc.</li>
+<li>Extra: Make an interactable visualization that can manipulate elements in a list such as the one demonstrated in our flask repository</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Iteration-(Alex)">Iteration (Alex)<a class="anchor-link" href="#Iteration-(Alex)"> </a></h2><p>What is iteration?</p>
+<ul>
+<li>In programming, iteration refers to the process of repeating a set of instructions until a specific condition is met. This can be achieved using loop structures like for loops and while loops.</li>
+</ul>
+<p>For Loops</p>
+<ul>
+<li>A for loop is used to iterate over a sequence (e.g. a list, tuple, string, etc.) and execute a set of statements for each item in the sequence. Here's the basic syntax of a for loop in Python:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+6
+7
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
+
+<span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">my_string</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">character</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>H
+e
+l
+l
+o
+,
+ 
+W
+o
+r
+l
+d
+!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>While Loops A while loop is used to repeat a set of statements as long as a condition is true. Here's the basic syntax of a while loop in Python:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+1
+2
+3
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Applications-of-Iteration">Applications of Iteration<a class="anchor-link" href="#Applications-of-Iteration"> </a></h2><blockquote><p>Iteration is a fundamental concept in computer programming and is used in a variety of real-life applications. Here are some examples:Data Processing</p>
+<ul>
+<li>Data processing often involves iterating over large datasets to perform specific operations on each element. For example, in a data analysis task, you might iterate over a list of numbers to compute the average, or iterate over a list of strings to find the longest string.</li>
+</ul>
+</blockquote>
+<p>User Interfaces</p>
+<ul>
+<li>User interfaces often involve iteration to display and handle data from various sources. For example, in a web application, you might iterate over a list of users to display their information in a table. Similarly, in a desktop application, you might iterate over a list of files to display them in a file explorer.</li>
+</ul>
+<p>Machine Learning</p>
+<ul>
+<li>Machine learning algorithms often involve iterative processes to train models and improve their accuracy. For example, in a gradient descent algorithm, you might iterate over a set of training data to update the model's parameters and minimize the loss function.</li>
+</ul>
+<h2 id="Popcorn-hack-(0.3)">Popcorn hack (0.3)<a class="anchor-link" href="#Popcorn-hack-(0.3)"> </a></h2><ul>
+<li>Make a list related to your CPT project</li>
+<li>Make a while loop that will print each term in the list</li>
+<li>Make a for loop that will print each term in the list</li>
+</ul>
+<p>Simulation mechanics</p>
+<ul>
+<li>In Python, pop() is a method that is used to remove and return an element from a list. The syntax for using pop() is as follows:</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5]
+[1, 2, 3, 4]
+[1, 3, 4]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In Python, append() is a built-in method that is used to add an element to the end of a list. The syntax for using append() is as follows:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
