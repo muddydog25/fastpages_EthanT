@@ -178,7 +178,9 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h4"><a href="#Printing-a-CSV-File-(0.5)">Printing a CSV File (0.5) </a></li>
 <li class="toc-entry toc-h4"><a href="#Popcorn-Hacks-(0.2)">Popcorn Hacks (0.2) </a></li>
 <li class="toc-entry toc-h2"><a href="#Submit-By-Thursday-8:35-A.M.">Submit By Thursday 8:35 A.M. </a></li>
-<li class="toc-entry toc-h2"><a href="#Question-Hacks;">Question Hacks; </a></li>
+<li class="toc-entry toc-h2"><a href="#Popcorn-Hacks:-Reading-Lexile">Popcorn Hacks: Reading Lexile </a></li>
+<li class="toc-entry toc-h2"><a href="#Print/Read-CSV">Print/Read CSV </a></li>
+<li class="toc-entry toc-h2"><a href="#Question-Hacks:">Question Hacks: </a></li>
 </ul>
 </li>
 </ul><article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
@@ -1037,211 +1039,12 @@ Standard Deviation Minutes:  12.844102823170283
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="c1"># read the CSV file</span>
-<span class="n">fuel_economy_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"/home/etran/vscode/fastpages_EthanT/_notebooks/files/vehicles.csv"</span><span class="p">)</span>
-
-<span class="c1"># Show the first 20 rows of cars and their data</span>
-<span class="n">fuel_economy_df</span><span class="p">[[</span><span class="s1">'make'</span><span class="p">,</span> <span class="s1">'model'</span><span class="p">,</span> <span class="s1">'year'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/tmp/ipykernel_1342/982416885.py:3: DtypeWarning: Columns (70,71,72,73,74,76,79) have mixed types. Specify dtype option on import or set low_memory=False.
-  fuel_economy_df = pd.read_csv("/home/etran/vscode/fastpages_EthanT/_notebooks/files/vehicles.csv")
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>make</th>
-      <th>model</th>
-      <th>year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Alfa Romeo</td>
-      <td>Spider Veloce 2000</td>
-      <td>1985</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Ferrari</td>
-      <td>Testarossa</td>
-      <td>1985</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Dodge</td>
-      <td>Charger</td>
-      <td>1985</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Dodge</td>
-      <td>B150/B250 Wagon 2WD</td>
-      <td>1985</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Subaru</td>
-      <td>Legacy AWD Turbo</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Subaru</td>
-      <td>Loyale</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Subaru</td>
-      <td>Loyale</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Toyota</td>
-      <td>Corolla</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Toyota</td>
-      <td>Corolla</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Toyota</td>
-      <td>Corolla</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Toyota</td>
-      <td>Corolla</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Volkswagen</td>
-      <td>Golf III / GTI</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Volkswagen</td>
-      <td>Golf III / GTI</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Volkswagen</td>
-      <td>Jetta III</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Dodge</td>
-      <td>B150/B250 Wagon 2WD</td>
-      <td>1985</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Volkswagen</td>
-      <td>Jetta III</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Volvo</td>
-      <td>240</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Volvo</td>
-      <td>240</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Audi</td>
-      <td>100</td>
-      <td>1993</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Audi</td>
-      <td>100</td>
-      <td>1993</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-Hacks;">
-<a class="anchor" href="#Question-Hacks;" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question Hacks;<a class="anchor-link" href="#Question-Hacks;"> </a>
+<h2 id="Popcorn-Hacks:-Reading-Lexile">
+<a class="anchor" href="#Popcorn-Hacks:-Reading-Lexile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Popcorn Hacks: Reading Lexile<a class="anchor-link" href="#Popcorn-Hacks:-Reading-Lexile"> </a>
 </h2>
-<p>What is NumPy and how is it used in data analysis?</p>
-<p>What is Pandas and how is it used in data analysis?</p>
-<p>How is NunPy different than Pandas for data analysis?</p>
-<p>What is a DataFrame?</p>
-<p>What are some common operations you can perform with NunPy?</p>
-<p>How Can You Incorporate Either of these Data Analysis Tools (NunPy, Pandas) into your project?</p>
-
 </div>
 </div>
 </div>
@@ -1252,55 +1055,24 @@ Standard Deviation Minutes:  12.844102823170283
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="c1"># list of words to be used in the game</span>
-<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'python'</span><span class="p">,</span> <span class="s1">'java'</span><span class="p">,</span> <span class="s1">'ruby'</span><span class="p">,</span> <span class="s1">'javascript'</span><span class="p">,</span> <span class="s1">'php'</span><span class="p">]</span>
+<span class="c1"># A numpy array of each reader's lexile score</span>
+<span class="n">lexiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">243</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">618</span><span class="p">,</span> <span class="mi">1540</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">])</span>
 
-<span class="c1"># select a word from the list</span>
-<span class="n">word</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="c1"># Calculate the lexile level of each person</span>
+<span class="n">percentiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">lexiles</span><span class="p">,</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">])</span>
 
-<span class="c1"># list to store the letters guessed by the player</span>
-<span class="n">guessed_letters</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># Print the results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The 25th percentile score is"</span><span class="p">,</span> <span class="n">percentiles</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">"points."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The 50th percentile score is"</span><span class="p">,</span> <span class="n">percentiles</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">"points."</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The 75th percentile score is"</span><span class="p">,</span> <span class="n">percentiles</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s2">"points."</span><span class="p">)</span>
 
-<span class="c1"># maximum number of guesses allowed</span>
-<span class="n">max_guesses</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="c1"># Determine the number of players who are in the top 10% tallest</span>
+<span class="n">top10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">lexiles</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+<span class="n">high_lexile</span> <span class="o">=</span> <span class="n">lexiles</span><span class="p">[</span><span class="n">lexiles</span> <span class="o">&gt;=</span> <span class="n">top10</span><span class="p">]</span>
 
-<span class="c1"># loop until the player guesses the word or runs out of guesses</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="c1"># ask the player to enter a letter and store it in a variable</span>
-    <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Guess a letter: "</span><span class="p">)</span>
-
-    <span class="c1"># check if the letter has already been guessed</span>
-    <span class="k">if</span> <span class="n">guess</span> <span class="ow">in</span> <span class="n">guessed_letters</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"You already guessed that letter. Try again."</span><span class="p">)</span>
-        <span class="k">continue</span>
-
-    <span class="c1"># add the guessed letter to the list of guessed letters</span>
-    <span class="n">guessed_letters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
-
-    <span class="c1"># check if the guessed letter is in the selected word</span>
-    <span class="k">if</span> <span class="n">guess</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"You guessed a letter!"</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)):</span>
-            <span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s1">'_'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"That letter is not in the word. Try again."</span><span class="p">)</span>
-        <span class="n">max_guesses</span> <span class="o">-=</span> <span class="mi">1</span>
-
-    <span class="c1"># check if the player has guessed the entire word correctly</span>
-    <span class="k">if</span> <span class="nb">set</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">guessed_letters</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Congratulations! You guessed the word!"</span><span class="p">)</span>
-        <span class="k">break</span>
-
-    <span class="c1"># check if the player has run out of guesses</span>
-    <span class="k">if</span> <span class="n">max_guesses</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Sorry, you ran out of guesses. The word was"</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-        <span class="k">break</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"There are"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">high_lexile</span><span class="p">),</span> <span class="s2">"readers at the highest lexile level."</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1313,13 +1085,10 @@ Standard Deviation Minutes:  12.844102823170283
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>That letter is not in the word. Try again.
-That letter is not in the word. Try again.
-That letter is not in the word. Try again.
-That letter is not in the word. Try again.
-That letter is not in the word. Try again.
-That letter is not in the word. Try again.
-Sorry, you ran out of guesses. The word was python
+<pre>The 25th percentile score is 168.25 points.
+The 50th percentile score is 430.5 points.
+The 75th percentile score is 1655.0 points.
+There are 2 readers at the highest lexile level.
 </pre>
 </div>
 </div>
@@ -1330,6 +1099,121 @@ Sorry, you ran out of guesses. The word was python
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Print/Read-CSV">
+<a class="anchor" href="#Print/Read-CSV" aria-hidden="true"><span class="octicon octicon-link"></span></a>Print/Read CSV<a class="anchor-link" href="#Print/Read-CSV"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1"># read the CSV file</span>
+<span class="n">fuel_economy_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"/home/etran/vscode/fastpages_EthanT/_notebooks/files/vehicles.csv"</span><span class="p">)</span>
+
+<span class="c1"># Show the first 20 rows of cars and their data</span>
+<span class="n">csv</span> <span class="o">=</span> <span class="n">fuel_economy_df</span><span class="p">[[</span><span class="s1">'make'</span><span class="p">,</span> <span class="s1">'model'</span><span class="p">,</span> <span class="s1">'year'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">csv</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>          make                model  year
+0   Alfa Romeo   Spider Veloce 2000  1985
+1      Ferrari           Testarossa  1985
+2        Dodge              Charger  1985
+3        Dodge  B150/B250 Wagon 2WD  1985
+4       Subaru     Legacy AWD Turbo  1993
+5       Subaru               Loyale  1993
+6       Subaru               Loyale  1993
+7       Toyota              Corolla  1993
+8       Toyota              Corolla  1993
+9       Toyota              Corolla  1993
+10      Toyota              Corolla  1993
+11  Volkswagen       Golf III / GTI  1993
+12  Volkswagen       Golf III / GTI  1993
+13  Volkswagen            Jetta III  1993
+14       Dodge  B150/B250 Wagon 2WD  1985
+15  Volkswagen            Jetta III  1993
+16       Volvo                  240  1993
+17       Volvo                  240  1993
+18        Audi                  100  1993
+19        Audi                  100  1993
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/tmp/ipykernel_435/1725921080.py:3: DtypeWarning: Columns (70,71,72,73,74,76,79) have mixed types. Specify dtype option on import or set low_memory=False.
+  fuel_economy_df = pd.read_csv("/home/etran/vscode/fastpages_EthanT/_notebooks/files/vehicles.csv")
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-Hacks:">
+<a class="anchor" href="#Question-Hacks:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question Hacks:<a class="anchor-link" href="#Question-Hacks:"> </a>
+</h2>
+<ol>
+<li>What is NumPy and how is it used in data analysis?</li>
+</ol>
+<p>NumPy is a Python library that provides a high-performance multidimensional array object. It is used in data analysis for performing mathematical operations on large datasets.</p>
+<ol>
+<li>What is Pandas and how is it used in data analysis?</li>
+</ol>
+<p>Pandas is a Python library that provides high-performance, easy-to-use data structures and data analysis tools. It is used in data analysis for loading, cleaning, transforming, and analyzing data.</p>
+<ol>
+<li>How is NunPy different than Pandas for data analysis?</li>
+</ol>
+<p>NumPy is different from Pandas in that NumPy is primarily used for performing mathematical operations on data, while Pandas is used for loading, cleaning, transforming, and analyzing data.</p>
+<ol>
+<li>What is a DataFrame?</li>
+</ol>
+<p>A DataFrame is a two-dimensional data structure with labeled axes (rows and columns). It is used in data analysis for storing and manipulating data.</p>
+<ol>
+<li>What are some common operations you can perform with NunPy?</li>
+</ol>
+<p>Some common operations you can perform with NumPy include:</p>
+<ul>
+<li>Adding, subtracting, multiplying, and dividing arrays</li>
+<li>Finding the mean, median, and standard deviation of arrays</li>
+<li>Applying mathematical functions to arrays</li>
+</ul>
+<ol>
+<li>How Can You Incorporate Either of these Data Analysis Tools (NunPy, Pandas) into your project?</li>
+</ol>
+<p>You can incorporate either NumPy or Pandas into your project by importing the library into your Python script. Once the library is imported, you can use the functions and classes provided by the library to perform data analysis tasks.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 

@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -181,6 +181,20 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>142.250.189.14
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -200,6 +214,20 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Successfully connected!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -211,8 +239,12 @@ window.onload = wrap_img;
 </h2>
 <ol>
 <li>What is an IP address?</li>
+</ol>
+<p>A string of numbers that allow a device to be uniquely identified on the internet.</p>
+<ol>
 <li>What is a TCP port?</li>
 </ol>
+<p>A TCP port allows two devices to communicate and reassemble data sent to each other through the use of packets. Packets are a collection of bytes, sending them allows two computers to determine whether each packet has been received from a specific location.</p>
 
 </div>
 </div>
@@ -230,12 +262,44 @@ window.onload = wrap_img;
     <span class="c1"># Send a GET request to "/"</span>
     <span class="n">s</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="sa">b</span><span class="s2">"GET / HTTP/1.1</span><span class="se">\r\n\r\n</span><span class="s2">"</span><span class="p">)</span>
 
-    <span class="c1"># Recieve &amp; print 2048 bytes of data</span>
+    <span class="c1"># Receive &amp; print 2048 bytes of data</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">2048</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>HTTP/1.1 200 OK
+Date: Wed, 26 Apr 2023 21:18:31 GMT
+Expires: -1
+Cache-Control: private, max-age=0
+Content-Type: text/html; charset=ISO-8859-1
+Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-gRXVZiimWFC3Sk-ep3WaGg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Server: gws
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: 1P_JAR=2023-04-26-21; expires=Fri, 26-May-2023 21:18:31 GMT; path=/; domain=.google.com; Secure
+Set-Cookie: AEC=AUEFqZfidJWIAB3S83vWyq-evvkFEK8NZ9Gutxg2O9Cnp5Xl5iXUbsM5nA; expires=Mon, 23-Oct-2023 21:18:31 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax
+Set-Cookie: NID=511=QNKuTsIXvsyE6PFkMRC8nZV1YXDhy54OPoCgl8s1n5RxvZz7AvQI1A1u9a69a2PrjoqnNp1ch6UAsW7GXNPeAnbFuJAsdpwMn-D7axb5jZ1_NtaURW5qCRdnK6dppCiUVD-igaEIHgImHMJ5kA297Z0BqL3q4myQMQrVxGCRV_k; expires=Thu, 26-Oct-2023 21:18:31 GMT; path=/; domain=.google.com; HttpOnly
+Accept-Ranges: none
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+
+5b6f
+&lt;!doctype html&gt;&lt;html itemscope="" itemtype="http://schema.org/WebPage" lang="en"&gt;&lt;head&gt;&lt;meta content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for." name="description"&gt;&lt;meta content="noodp" name="robots"&gt;&lt;meta content="text/html; charset=UTF-8" http-equiv="Content-Type"&gt;&lt;meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"&gt;&lt;title&gt;Google&lt;/title&gt;&lt;script nonce="gRXVZiimWFC3Sk-ep3WaGg"&gt;(function(){window.google={kEI:'J5VJZLrbH7LbkPIPpM6voAY',kEXPI:'0,1359409,6058,207,2414,2390,2316,383,246,5,1129120,1197790,380701,16108,19404,9286,22430,1362,12318,17581,4998,13228,3847,38444,2872,2891,3926,4422,3406,606,60690,6515,8809,432,3,1590,1,16916,2652,4,1528,2304,29062,13065,13658,2980,18243,5824,2533,4094,7596,1,11943,30211,2,14022,2373,3
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -252,7 +316,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="c1"># Change the URL to whatever you'd like</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"https://google.com"</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"https://www.espn.com/"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Status code:"</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Headers:"</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
@@ -263,6 +327,26 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Status code: 200
+Headers: {'Content-Type': 'text/html;charset=UTF-8', 'Content-Length': '400056', 'Connection': 'keep-alive', 'Date': 'Wed, 26 Apr 2023 21:18:24 GMT', 'access-control-allow-origin': '*', 'content-security-policy': "frame-ancestors  'self' asia.espn.com:* asia.espnqa.com:* *.espn.com:* *.espnqa.com:* *.espnsb.com:* *.espnsb.com *.espn.co.uk *.espndeportes.espn.com *.espn.com.br *.espn.com.mx *.espn.com.ve *.espn.com.ar *.espn.com.co *.espnfc.com.au *.espn.com.au *.espn.in *.espn.com.sg *.espn.cl *.espn.ph *.espn.ph:* *.espn.com.pe *.espn.com.gt *.espn.com.do *.espn.com.ec *.espn.com.uy *.espn.com.pa *.espn.co.cr qa.abcnews.go.com preview.abcnews.go.com abc7ny.com abc7.com *.abcotvssb.com preview.goodmorningamerica.com http://*.espnqa.com:* http://*.espn.com:* *.abcotvssb.com *.abcnews.go.com *.abcnews.go.com:* http://*.abcnews.go.com:* abc30.com abc7news.com abc13.com abc7chicago.com 6abc.com abc11.com *.goodmorningamerica.com qa.abc7.com qa.abc30.com qa.abc7news.com qa.abc13.com qa.abc7chicago.com qa.6abc.com qa.abc7ny.com qa.abc11.com *.abcnews.go.com:* abcnews.go.com qa.secsports.com *.secsports.com", 'etag': 'W/"c77b52ee736b7c6c3b01ffacf6fd116d94ea220d"', 'content-encoding': 'gzip', 'via': '1.1 varnish (Varnish/6.0), 1.1 c05b92533bb05b06cb6ce1b3ba4ff604.cloudfront.net (CloudFront)', 'vary': 'Accept-Encoding', 'accept-ranges': 'bytes', 'set-cookie': 'country=us; path=/;, connectionspeed=full; path=/; Expires=Wed, 03 May 2023 21:18:24 GMT;, edition=espn-en-us; path=/; Expires=Wed, 03 May 2023 21:18:24 GMT;, edition-view=espn-en-us; path=/; Expires=Wed, 03 May 2023 21:18:24 GMT;, region=ccpa; path=/; Expires=Wed, 03 May 2023 21:18:24 GMT;, _dcf=1; path=/; Expires=Wed, 03 May 2023 21:18:24 GMT;, SWID=91787D6C-6093-4B52-CBDF-34682458BD2A; path=/; Expires=Sun, 26 Apr 2043 21:18:24 GMT; domain=espn.com;', 'cache-control': 'max-age=0, must-revalidate', 'X-Cache': 'Miss from cloudfront', 'X-Amz-Cf-Pop': 'LAX3-C4', 'X-Amz-Cf-Id': 'Yp7QSXYWLhsehIbtrLkECmGlmxUQvU8h18qdpL980vGVFzlE5-Pr7A=='}
+Response text: 
+	&lt;!DOCTYPE html&gt;
+	&lt;html class="no-icon-fonts" lang="en"&gt;
+	&lt;head&gt;
+		&lt;meta http-equiv="content-type" 
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -292,6 +376,28 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;html&gt;&lt;head&gt;&lt;title&gt;ContentKeeper&lt;/title&gt;&lt;/heQad&gt;
+&lt;body bgcolor="#A02E5F" text="White" link="Lime" vlink="Aqua"&gt;
+&lt;center&gt;&lt;br&gt;&lt;h1&gt;ContentKeeper&lt;br&gt;Non-Managed Site&lt;/h1&gt;
+No access is available to NON-Managed Sites.&lt;br&gt;&lt;br&gt;
+&lt;table border="1" cellspacing="0"&gt;
+&lt;tr&gt;&lt;td&gt;URL&lt;/td&gt;&lt;td&gt;&lt;b&gt;3.130.255.192&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Username&lt;/td&gt;&lt;td&gt;&lt;b&gt;1905720/pusd&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -346,8 +452,14 @@ window.onload = wrap_img;
 </h2>
 <ol>
 <li>Research 1 HTTP header and describe, in detail, its purpose.</li>
+</ol>
+<ol>
 <li>Write a line in a sample NGINX configuration that will add that specific header to the <code>/information</code> location</li>
+</ol>
+<ol>
 <li>Explain the purpose of the load balancing performed by NGINX</li>
+</ol>
+<ol>
 <li>Modify the following code block to obtain the value of the secret header on <code>/products</code> of the AWS site</li>
 </ol>
 
@@ -369,6 +481,20 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The secret header is: ...
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
