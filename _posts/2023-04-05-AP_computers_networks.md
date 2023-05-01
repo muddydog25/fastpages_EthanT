@@ -107,7 +107,7 @@ devices include keyboards, mice, and microphones.
 
 ![Local System Computer](https://user-images.githubusercontent.com/109186517/235439636-4d8e9a64-3a79-45ef-82f8-4b1911a50eed.png)
 
-![application layer](https://user-images.githubusercontent.com/109186517/235526375-1f3a7665-db2d-4daf-81cc-2323cc3f8164.png)
+![Internet Process Layers](https://user-images.githubusercontent.com/109186517/235528531-90e333e2-f651-4f85-81e8-7852ba54b110.png)
 
 
 - Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following ...
