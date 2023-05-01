@@ -63,6 +63,14 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 - Complete True of False Questions
 
+- True
+- False
+- False
+- True
+- False
+- False
+- True
+
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
     - Access to the internet depends on the ability to connect a computing device to an internet connected device.
@@ -85,7 +93,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 ## My Canva Illustration
 
-![Local System  Computer](https://user-images.githubusercontent.com/109186517/233475202-ff4cded2-8016-4666-a0eb-3dcb6e61520e.png)
+![Local System  Computer](https://user-images.githubusercontent.com/109186517/235439636-4d8e9a64-3a79-45ef-82f8-4b1911a50eed.png)
 
 - Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following ...
 
