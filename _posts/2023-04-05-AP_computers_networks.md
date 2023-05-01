@@ -18,21 +18,31 @@ week: 29
 > As we have learned, a computer needs aa program to do something smart.  The sequence of a program initiates a series of actions with the computers Central Processing Unit (CPU). This component is essentially a binary machine focussing on program instructions provided.  The CPU retrieives and stores the data it acts upon in Random Access Memory (RAM). Between the CPU, RAM, and Storage Devices a computer can work with many programs and large amounts of data.
 
 List specification of your Computer, or Computers if working as Pair/Trio
-- Processor GHz:
-- Memory in GB:
-- Storage in GB:
-- OS:
+- Processor: Intel Core i5 or i7 processor
+- Memory: 8GB or 16GB of RAM
+- Storage: 256GB or 512GB SSD
+- OS: Windows 10 Home or Windows 11 Home
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
-- Input devices
-- Output devices
-- Program File
-- Program Code
-- Processes
-- Ports
-- Data File
-- Inspect Running Code
-- Inspect Variables
+
+- Input device: An input device is a device that is used to input data into a computer. Examples of input 
+devices include keyboards, mice, and microphones.
+
+- Output device: An output device is a device that is used to output data from a computer. Examples of output devices include monitors, printers, and speakers.
+
+- Program file: A program file is a file that contains instructions for a computer to follow. Program files are typically written in a programming language, such as Python or Java.
+
+- Program code: Program code is the set of instructions that make up a program file. Program code is written in a programming language and is typically stored in a text file.
+
+- Processes: A process is a program that is currently running on a computer. Processes are managed by the operating system and can be created, suspended, and terminated by the user.
+
+- Ports: A port is a connection point on a computer that can be used to connect to other devices. Examples of ports include USB ports, Ethernet ports, and HDMI ports.
+
+- Data file: A data file is a file that contains data. Data files can be used to store text, images, audio, video, and other types of data.
+
+- Inspect running code: Inspecting running code is the process of examining the instructions that are currently being executed by a computer program. This can be done using a debugger, which is a tool that allows users to step through the instructions of a program one at a time.
+
+- Inspect variables: Inspecting variables is the process of examining the values of variables that are currently being used by a computer program. This can be done using a debugger, which allows users to view the values of variables as they change during the execution of a program.
 
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
@@ -52,12 +62,14 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - Bandwidth is usually measured in bits per second
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
-    - Path 
-    - Route
-    - Computer System
-    - Computer Device
-    - Bandwidth
-    - Computer Network
+
+    - Path: A path is a sequence of connected points. In computer science, a path can refer to a sequence of directories or files, or a sequence of network nodes.
+    - Route: A route is a specific path between two points. In computer science, a route can refer to a specific path between two network nodes, or a specific path between two files or directories.
+    - Computer system: A computer system is a collection of hardware and software that works together to perform tasks. A computer system typically includes a central processing unit (CPU), memory, storage, input/output devices, and software.
+    - Computer device: A computer device is a physical object that is used to interact with a computer system. Examples of computer devices include keyboards, mice, monitors, printers, and scanners.
+    - Bandwidth: Bandwidth is the amount of data that can be transmitted over a network in a given amount of time. Bandwidth is measured in bits per second (bps).
+    - Computer network: A computer network is a group of computers that are connected together. Computer networks allow computers to share resources, such as files, printers, and internet access.
+
 
 > Watch/review College Board Daily Video 4.1.2
 
@@ -67,7 +79,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 - False
 - False
 - True
-- False
+- True
 - False
 - True
 
