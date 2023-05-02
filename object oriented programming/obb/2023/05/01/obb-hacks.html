@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Object-Oriented Programming Hacks | EthanTran</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Object-Oriented Programming Hacks" />
+<meta name="author" content="Ethan Tran" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://muddydog25.github.io/fastpages_EthanT/object%20oriented%20programming/obb/2023/05/01/obb-hacks.html" />
+<meta property="og:url" content="https://muddydog25.github.io/fastpages_EthanT/object%20oriented%20programming/obb/2023/05/01/obb-hacks.html" />
+<meta property="og:site_name" content="EthanTran" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-01T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Object-Oriented Programming Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ethan Tran"},"dateModified":"2023-05-01T00:00:00-05:00","datePublished":"2023-05-01T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Object-Oriented Programming Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://muddydog25.github.io/fastpages_EthanT/object%20oriented%20programming/obb/2023/05/01/obb-hacks.html"},"url":"https://muddydog25.github.io/fastpages_EthanT/object%20oriented%20programming/obb/2023/05/01/obb-hacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages_EthanT/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://muddydog25.github.io/fastpages_EthanT/feed.xml" title="EthanTran" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages_EthanT/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages_EthanT/">EthanTran</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages_EthanT/about/">About Me</a><a class="page-link" href="/fastpages_EthanT/classes/">Class Notes</a><a class="page-link" href="/fastpages_EthanT/vocabulary/">Vocabulary</a><a class="page-link" href="/fastpages_EthanT/class-periods/">Periods</a><a class="page-link" href="/fastpages_EthanT/javascript/">JavaScript</a><a class="page-link" href="/fastpages_EthanT/javascript/">JavaScript</a><a class="page-link" href="/fastpages_EthanT/search/">Search</a><a class="page-link" href="/fastpages_EthanT/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Object-Oriented Programming Hacks</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-01T00:00:00-05:00" itemprop="datePublished">
+        May 1, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Ethan Tran</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages_EthanT/categories/#Object oriented programming">Object oriented programming</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/fastpages_EthanT/categories/#obb">obb</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/muddydog25/fastpages_EthanT/tree/master/_notebooks/2023-1-16-obb-hacks.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastpages_EthanT/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/muddydog25/fastpages_EthanT/master?filepath=_notebooks%2F2023-1-16-obb-hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages_EthanT/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/muddydog25/fastpages_EthanT/blob/master/_notebooks/2023-1-16-obb-hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages_EthanT/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fmuddydog25%2Ffastpages_EthanT%2Fblob%2Fmaster%2F_notebooks%2F2023-1-16-obb-hacks.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/fastpages_EthanT/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <table style="text-align: center;">
+    <tr>
+      <td>
+        <a href="/fastpages_EthanT/">Home</a>
+      </td>
+      <td>
+        <a href="/fastpages_EthanT/fastpages/python/api/2022/10/06/api-python.html">API</a>
+      </td>
+      <td>
+        <a href="/fastpages_EthanT/classes">Notes</a>
+      </td>
+    </tr>
+  </table>
+<!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-1-16-obb-hacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h2><ul>
+<li><p>Add new attributes/variables to the Class. Make class specific to your CPT work.</p>
+</li>
+<li><p>Add classOf attribute to define year of graduation</p>
+</li>
+<li>Add setter and getter for classOf</li>
+<li>Add dob attribute to define date of birth</li>
+<li>This will require investigation into Python datetime objects as shown in example code below</li>
+<li>Add setter and getter for dob</li>
+<li>Add instance variable for age, make sure if dob changes age changes</li>
+<li>Add getter for age, but don't add/allow setter for age</li>
+<li>Update and format tester function to work with changes</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>    
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">dob</span><span class="p">,</span> <span class="n">classOf</span><span class="p">,</span> <span class="n">make</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>    <span class="c1"># variables with self prefix become part of the object, </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span> <span class="o">=</span> <span class="n">classOf</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_make</span> <span class="o">=</span> <span class="n">make</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+    
+    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">uid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span>
+    
+    <span class="nd">@uid</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+        
+    <span class="k">def</span> <span class="nf">is_uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">==</span> <span class="n">uid</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dob_string</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%m-</span><span class="si">%d</span><span class="s1">-%Y&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dob_string</span>
+    
+    <span class="nd">@dob</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dob</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span> <span class="o">==</span> <span class="n">date</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
+
+    <span class="c1">#classOf</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span>
+    
+    <span class="nd">@classOf</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">classOf</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span> <span class="o">=</span> <span class="n">classOf</span>
+
+    <span class="c1"># Getter for car make</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make</span>
+
+    <span class="c1"># Adding a setter function for make</span>
+    <span class="nd">@make</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_make</span> <span class="o">=</span> <span class="n">make</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="p">((</span><span class="n">today</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;uid&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span>
+            <span class="s2">&quot;dob&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">dob</span><span class="p">,</span>
+            <span class="s2">&quot;age&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span>
+            <span class="s2">&quot;classOf&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">classOf</span><span class="p">,</span>
+            <span class="s2">&quot;make&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">make</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">dict</span>
+    
+    <span class="k">def</span> <span class="nf">set_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a hashed password.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;sha256&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">is_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check against hashed password.&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+    
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;User(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s1">, uid=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_uid</span><span class="si">}</span><span class="s1">, password=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="si">}</span><span class="s1">,dob=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_dob</span><span class="si">}</span><span class="s1">, classOf=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span><span class="si">}</span><span class="s1">, make=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_make</span><span class="si">}</span><span class="s1">)&#39;</span>
+    
+<span class="k">def</span> <span class="nf">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">psw</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">uid</span> <span class="o">==</span> <span class="n">uid</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">is_password</span><span class="p">(</span><span class="n">psw</span><span class="p">):</span>  
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;* &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">user</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Adding a second user</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Thomas Edison&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;toby&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123toby&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">1847</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span> <span class="p">,</span> <span class="n">classOf</span><span class="o">=</span><span class="mi">1865</span> <span class="p">,</span> <span class="n">make</span><span class="o">=</span><span class="s2">&quot;Ford&quot;</span><span class="p">)</span>   
+    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Ethan Tran&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;ethan&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;ethan123&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span> <span class="p">,</span> <span class="n">classOf</span><span class="o">=</span><span class="mi">2025</span> <span class="p">,</span> <span class="n">make</span><span class="o">=</span><span class="s2">&quot;BMW&quot;</span><span class="p">)</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">]</span>
+
+<span class="c1"># Output shows a star or &quot;*&quot; due to the tester using the correct password</span>
+    <span class="n">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">u2</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span> <span class="s2">&quot;ethan123&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;JSON ready string:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Raw Variables of object:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">vars</span><span class="p">(</span><span class="n">u1</span><span class="p">),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Raw Attributes and Methods of object:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">dir</span><span class="p">(</span><span class="n">u1</span><span class="p">),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Representation to Re-Create the object:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">u1</span><span class="p">),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#34;name&#34;: &#34;Thomas Edison&#34;, &#34;uid&#34;: &#34;toby&#34;, &#34;dob&#34;: &#34;02-11-1847&#34;, &#34;age&#34;: 175, &#34;classOf&#34;: 1865, &#34;make&#34;: &#34;Ford&#34;}
+* {&#34;name&#34;: &#34;Ethan Tran&#34;, &#34;uid&#34;: &#34;ethan&#34;, &#34;dob&#34;: &#34;05-19-2007&#34;, &#34;age&#34;: 15, &#34;classOf&#34;: 2025, &#34;make&#34;: &#34;BMW&#34;}
+JSON ready string:
+ {&#34;name&#34;: &#34;Thomas Edison&#34;, &#34;uid&#34;: &#34;toby&#34;, &#34;dob&#34;: &#34;02-11-1847&#34;, &#34;age&#34;: 175, &#34;classOf&#34;: 1865, &#34;make&#34;: &#34;Ford&#34;} 
+
+Raw Variables of object:
+ {&#39;_name&#39;: &#39;Thomas Edison&#39;, &#39;_uid&#39;: &#39;toby&#39;, &#39;_password&#39;: &#39;sha256$PRhIHZBTIUef4gJZ$8d8568942cb27d88636af7a201be31f751afb271fccace59c0b6ab77c78db143&#39;, &#39;_dob&#39;: datetime.date(1847, 2, 11), &#39;_classOf&#39;: 1865, &#39;_make&#39;: &#39;Ford&#39;} 
+
+Raw Attributes and Methods of object:
+ [&#39;__class__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;__weakref__&#39;, &#39;_classOf&#39;, &#39;_dob&#39;, &#39;_make&#39;, &#39;_name&#39;, &#39;_password&#39;, &#39;_uid&#39;, &#39;age&#39;, &#39;classOf&#39;, &#39;dictionary&#39;, &#39;dob&#39;, &#39;is_password&#39;, &#39;is_uid&#39;, &#39;make&#39;, &#39;name&#39;, &#39;set_password&#39;, &#39;uid&#39;] 
+
+Representation to Re-Create the object:
+ User(name=Thomas Edison, uid=toby, password=sha256$PRhIHZBTIUef4gJZ$8d8568942cb27d88636af7a201be31f751afb271fccace59c0b6ab77c78db143,dob=1847-02-11, classOf=1865, make=Ford) 
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Start-a-class-design-for-each-of-your-own-Full-Stack-CPT-sections-of-your-project">Start a class design for each of your own Full Stack CPT sections of your project<a class="anchor-link" href="#Start-a-class-design-for-each-of-your-own-Full-Stack-CPT-sections-of-your-project"> </a></h2><ul>
+<li>Use new code cell in this notebook</li>
+<li>Define init and self attributes</li>
+<li>Define setters and getters</li>
+<li>Make a tester</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">class</span> <span class="nc">Car</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="c1"># Adding instance attributes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_make</span> <span class="o">=</span> <span class="n">make</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_price</span> <span class="o">=</span> <span class="n">price</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_year</span> <span class="o">=</span> <span class="n">year</span>
+
+    <span class="c1"># Add getters and setters for make, model, price, year</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make</span>
+    
+    <span class="nd">@make</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">make</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_make</span> <span class="o">=</span> <span class="n">make</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span>
+    
+    <span class="nd">@model</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price</span>
+    
+    <span class="nd">@price</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_price</span> <span class="o">=</span> <span class="n">price</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">year</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_year</span>
+    
+    <span class="nd">@year</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">year</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_year</span> <span class="o">=</span> <span class="n">year</span>
+
+    <span class="c1">#Calculating Depreciation</span>
+    <span class="k">def</span> <span class="nf">calculate_depreciation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">years</span><span class="p">):</span>
+        <span class="n">depreciation</span> <span class="o">=</span> <span class="mf">0.9</span><span class="o">**</span><span class="n">years</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_price</span>
+        <span class="k">return</span> <span class="n">depreciation</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;make&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="p">,</span>
+            <span class="s2">&quot;model&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span>
+            <span class="s2">&quot;price&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">price</span><span class="p">,</span>
+            <span class="s2">&quot;year&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">dict</span> 
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">car1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="n">make</span><span class="o">=</span><span class="s2">&quot;Lexus&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;IS 500&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="s2">&quot;$58,000&quot;</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="s2">&quot;2022&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">car1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#34;make&#34;: &#34;Lexus&#34;, &#34;model&#34;: &#34;IS 500&#34;, &#34;price&#34;: &#34;$58,000&#34;, &#34;year&#34;: &#34;2022&#34;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="muddydog25/fastpages_EthanT"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastpages_EthanT/object%20oriented%20programming/obb/2023/05/01/obb-hacks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages_EthanT/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://muddydog25.github.io/fastpages_EthanT/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages_EthanT/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
