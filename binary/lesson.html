@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      9 min read
     
 </span></p>
 
@@ -636,6 +636,487 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Final</span> <span class="n">Quiz</span> <span class="o">|</span> <span class="n">Learn</span> <span class="n">Binary</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">"viewport"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"width=device-width, initial-scale=1, user-scalable=no"</span><span class="o">&gt;</span>
+	<span class="o">&lt;!</span>--<span class="o">[</span><span class="k">if</span> lte IE <span class="m">8</span><span class="o">]</span>&gt;&lt;script <span class="nv">src</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/js/ie/html5shiv.js"</span>&gt;&lt;/script&gt;&lt;!<span class="o">[</span>endif<span class="o">]</span>--&gt;
+	<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/css/main.css"</span><span class="o">&gt;</span>
+	<span class="o">&lt;!</span>--<span class="o">[</span><span class="k">if</span> lte IE <span class="m">9</span><span class="o">]</span>&gt;&lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="nv">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/css/ie9.css"</span> /&gt;&lt;!<span class="o">[</span>endif<span class="o">]</span>--&gt;
+	<span class="o">&lt;!</span>--<span class="o">[</span><span class="k">if</span> lte IE <span class="m">8</span><span class="o">]</span>&gt;&lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">"stylesheet"</span> <span class="nv">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/css/ie8.css"</span> /&gt;&lt;!<span class="o">[</span>endif<span class="o">]</span>--&gt;
+<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+
+
+<span class="o">&lt;</span><span class="n">body</span> <span class="n">class</span><span class="o">=</span><span class="s2">""</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span><span class="n">document</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">classList</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">"is-loading"</span><span class="p">);</span><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;!</span>-- Wrapper --&gt;
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"wrapper"</span><span class="o">&gt;</span>
+
+<span class="o">&lt;!</span>-- Header --&gt;
+<span class="o">&lt;</span><span class="n">header</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"header"</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/"</span> <span class="n">class</span><span class="o">=</span><span class="s2">"logo"</span><span class="o">&gt;&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">Learn</span> <span class="n">Binary</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">span</span><span class="o">&gt;</span><span class="n">by</span> <span class="n">Runtime</span> <span class="n">Terror</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">nav</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"#menu"</span><span class="o">&gt;</span><span class="n">Menu</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+	<span class="o">&lt;/</span><span class="n">nav</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">header</span><span class="o">&gt;</span>
+
+<span class="o">&lt;!</span>-- Menu --&gt;
+
+ 
+    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">"UTF-8"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">http</span><span class="o">-</span><span class="n">equiv</span><span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"IE=edge"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">"viewport"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"width=device-width, initial-scale=1.0"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Binary</span> <span class="n">Quiz</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+
+
+
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"container"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"game"</span> <span class="n">class</span><span class="o">=</span><span class="s2">"justify-center flex-column"</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"hud"</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"hud-item"</span><span class="o">&gt;</span>
+              <span class="o">&lt;</span><span class="n">p</span> <span class="n">class</span><span class="o">=</span><span class="s2">"hud-prefix"</span><span class="o">&gt;</span>
+              <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+              <span class="o">&lt;</span><span class="n">h1</span> <span class="n">class</span><span class="o">=</span><span class="s2">"hud-main-text"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"questionCounter"</span><span class="o">&gt;</span><span class="n">Question</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+          <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">h2</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"question"</span><span class="o">&gt;</span><span class="n">What</span> <span class="n">option</span> <span class="ow">is</span> <span class="n">NOT</span> <span class="n">an</span> <span class="n">example</span> <span class="n">of</span> <span class="n">a</span> <span class="n">logical</span> <span class="n">operation</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">truth</span> <span class="n">table</span><span class="err">?</span><span class="o">&lt;/</span><span class="n">h2</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-container"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">small</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-prefix"</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">small</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">small</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-text"</span> <span class="n">data</span><span class="o">-</span><span class="n">number</span><span class="o">=</span><span class="s2">"1"</span><span class="o">&gt;</span><span class="n">AND</span><span class="o">&lt;/</span><span class="n">small</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-container"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">small</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-prefix"</span><span class="o">&gt;</span><span class="n">B</span><span class="o">&lt;/</span><span class="n">small</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">small</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-text"</span> <span class="n">data</span><span class="o">-</span><span class="n">number</span><span class="o">=</span><span class="s2">"2"</span><span class="o">&gt;</span><span class="n">XOR</span><span class="o">&lt;/</span><span class="n">small</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-container"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">small</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-prefix"</span><span class="o">&gt;</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">small</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">small</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-text"</span> <span class="n">data</span><span class="o">-</span><span class="n">number</span><span class="o">=</span><span class="s2">"3"</span><span class="o">&gt;</span><span class="n">NONE</span><span class="o">&lt;/</span><span class="n">small</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-container"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">small</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-prefix"</span><span class="o">&gt;</span><span class="n">D</span><span class="o">&lt;/</span><span class="n">small</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">small</span> <span class="n">class</span><span class="o">=</span><span class="s2">"choice-text"</span> <span class="n">data</span><span class="o">-</span><span class="n">number</span><span class="o">=</span><span class="s2">"4"</span><span class="o">&gt;</span><span class="n">OR</span><span class="o">&lt;/</span><span class="n">small</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+
+  <span class="o">.</span><span class="n">choice</span><span class="o">-</span><span class="n">container</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="n">margin</span><span class="o">-</span><span class="n">bottom</span><span class="p">:</span> <span class="mf">0.5</span><span class="n">rem</span><span class="p">;</span>
+    <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.8</span><span class="n">rem</span><span class="p">;</span>
+    <span class="n">border</span><span class="p">:</span> <span class="mf">0.1</span><span class="n">rem</span> <span class="n">solid</span> <span class="n">rgb</span><span class="p">(</span><span class="mi">86</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">);</span>
+    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">white</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="o">.</span><span class="n">choice</span><span class="o">-</span><span class="n">container</span><span class="p">:</span><span class="n">hover</span> <span class="p">{</span>
+    <span class="n">cursor</span><span class="p">:</span> <span class="n">pointer</span><span class="p">;</span>
+    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mf">0.4</span><span class="n">rem</span> <span class="mf">1.4</span><span class="n">rem</span> <span class="mi">0</span> <span class="n">rgba</span><span class="p">(</span><span class="mi">86</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+    <span class="n">transform</span><span class="p">:</span> <span class="n">translateY</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="n">rem</span><span class="p">);</span>
+    <span class="n">transition</span><span class="p">:</span> <span class="n">transform</span> <span class="mi">150</span><span class="n">ms</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="o">.</span><span class="n">choice</span><span class="o">-</span><span class="n">prefix</span> <span class="p">{</span>
+    <span class="n">padding</span><span class="p">:</span> <span class="mf">1.5</span><span class="n">rem</span> <span class="mf">2.5</span><span class="n">rem</span><span class="p">;</span>
+    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#380df2;</span>
+    <span class="n">color</span><span class="p">:</span> <span class="n">white</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="o">.</span><span class="n">choice</span><span class="o">-</span><span class="n">text</span> <span class="p">{</span>
+    <span class="n">padding</span><span class="p">:</span> <span class="mf">1.5</span><span class="n">rem</span><span class="p">;</span>
+    <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+	<span class="n">color</span><span class="p">:</span> <span class="n">black</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">#hud {</span>
+    <span class="n">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="n">justify</span><span class="o">-</span><span class="n">content</span><span class="p">:</span> <span class="n">space</span><span class="o">-</span><span class="n">between</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="o">.</span><span class="n">hud</span><span class="o">-</span><span class="n">prefix</span> <span class="p">{</span>
+    <span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">2</span><span class="n">rem</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="o">.</span><span class="n">hud</span><span class="o">-</span><span class="n">main</span><span class="o">-</span><span class="n">text</span> <span class="p">{</span>
+    <span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+    <span class="n">margin</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span> <span class="mi">0</span><span class="n">px</span> <span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">#hud-item {</span>
+    <span class="n">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="p">:</span> <span class="n">center</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">#game {</span>
+    <span class="n">padding</span><span class="p">:</span> <span class="o">.</span><span class="mi">5</span><span class="n">rem</span> <span class="mf">2.25</span><span class="n">rem</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">#question {</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">2</span><span class="n">rem</span><span class="p">;</span>
+    <span class="n">margin</span><span class="p">:</span> <span class="mi">30</span><span class="n">px</span> <span class="mi">0</span><span class="n">px</span> <span class="mi">18</span><span class="n">px</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">h1</span><span class="p">,</span>
+  <span class="n">h2</span><span class="p">,</span>
+  <span class="n">h3</span><span class="p">,</span>
+  <span class="n">h4</span> <span class="p">{</span>
+  <span class="p">}</span>
+
+  <span class="n">h1</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.5</span><span class="n">rem</span><span class="p">;</span>
+    <span class="n">color</span><span class="p">:</span> <span class="c1">#380df2;</span>
+  <span class="p">}</span>
+
+  <span class="n">h1</span> <span class="o">&gt;</span> <span class="n">span</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">1.5</span><span class="n">rem</span><span class="p">;</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span> <span class="mi">500</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">h2</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">4.2</span><span class="n">rem</span><span class="p">;</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span> <span class="mi">700</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">h3</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">2.8</span><span class="n">rem</span><span class="p">;</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span> <span class="mi">500</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
+  <span class="o">//</span> <span class="n">defining</span> <span class="n">variables</span>
+  <span class="n">const</span> <span class="n">question</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">'question'</span><span class="p">);</span>
+  <span class="n">const</span> <span class="n">choices</span> <span class="o">=</span> <span class="n">Array</span><span class="o">.</span><span class="n">from</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">getElementsByClassName</span><span class="p">(</span><span class="s1">'choice-text'</span><span class="p">));</span>
+  <span class="n">const</span> <span class="n">progressText</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">'progressText'</span><span class="p">);</span>
+  <span class="n">const</span> <span class="n">scoreText</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">'score'</span><span class="p">);</span>
+  <span class="n">const</span> <span class="n">progressBarFull</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">'progressBarFull'</span><span class="p">);</span>
+  <span class="n">const</span> <span class="n">loader</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">'loader'</span><span class="p">);</span>
+  <span class="n">const</span> <span class="n">game</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">'game'</span><span class="p">);</span>
+  <span class="n">const</span> <span class="n">MAX_QUESTIONS</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+  <span class="n">const</span> <span class="n">questionCounterText</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">'questionCounter'</span><span class="p">);</span>
+  <span class="n">let</span> <span class="n">currentQuestion</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="n">let</span> <span class="n">acceptingAnswers</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+  <span class="n">let</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">let</span> <span class="n">questionCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">let</span> <span class="n">availableQuestions</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="n">let</span> <span class="n">questionTotal</span> <span class="o">=</span> <span class="mi">0</span>
+
+  <span class="n">let</span> <span class="n">questions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="o">//</span> <span class="n">Update</span> <span class="n">MAX_QUESTIONS</span> <span class="n">when</span> <span class="n">adding</span> <span class="n">more</span>
+    <span class="o">//</span> <span class="nb">all</span> <span class="n">questions</span> <span class="ow">and</span> <span class="n">choices</span>
+      <span class="p">{</span>
+          <span class="n">question</span><span class="p">:</span> <span class="s2">"What is a bit?"</span><span class="p">,</span>
+          <span class="n">choice1</span><span class="p">:</span> <span class="s2">"a food"</span><span class="p">,</span>
+          <span class="n">choice2</span><span class="p">:</span> <span class="s2">"a binary digit"</span><span class="p">,</span>
+          <span class="n">choice3</span><span class="p">:</span> <span class="s2">"a cool dude that surfs"</span><span class="p">,</span>
+          <span class="n">choice4</span><span class="p">:</span> <span class="s2">"a variable that holds 3 possible values"</span><span class="p">,</span>
+          <span class="n">choiceAnswer</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="n">question</span><span class="p">:</span> <span class="s2">"Decimal is a base 10 system, while binary is a ____ system"</span><span class="p">,</span>
+          <span class="n">choice1</span><span class="p">:</span> <span class="s2">"base 2"</span><span class="p">,</span>
+          <span class="n">choice2</span><span class="p">:</span> <span class="s2">"base 3"</span><span class="p">,</span>
+          <span class="n">choice3</span><span class="p">:</span> <span class="s2">"base 4"</span><span class="p">,</span>
+          <span class="n">choice4</span><span class="p">:</span> <span class="s2">"object oriented"</span><span class="p">,</span>
+          <span class="n">choiceAnswer</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="n">question</span><span class="p">:</span> <span class="s2">"What is the number(s) used in the binary system?"</span><span class="p">,</span>
+          <span class="n">choice1</span><span class="p">:</span> <span class="s2">"1 and 0.1"</span><span class="p">,</span>
+          <span class="n">choice2</span><span class="p">:</span> <span class="s2">"0 only"</span><span class="p">,</span>
+          <span class="n">choice3</span><span class="p">:</span> <span class="s2">"1 and 2"</span><span class="p">,</span>
+          <span class="n">choice4</span><span class="p">:</span> <span class="s2">"0 and 1"</span><span class="p">,</span>
+          <span class="n">choiceAnswer</span><span class="p">:</span> <span class="mi">4</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="n">question</span><span class="p">:</span> <span class="s2">"What option is NOT an example of a logical operation used in a truth table?"</span><span class="p">,</span>
+          <span class="n">choice1</span><span class="p">:</span> <span class="s2">"AND"</span><span class="p">,</span>
+          <span class="n">choice2</span><span class="p">:</span> <span class="s2">"XOR"</span><span class="p">,</span>
+          <span class="n">choice3</span><span class="p">:</span> <span class="s2">"NONE"</span><span class="p">,</span>
+          <span class="n">choice4</span><span class="p">:</span> <span class="s2">"OR"</span><span class="p">,</span>
+          <span class="n">choiceAnswer</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="n">question</span><span class="p">:</span> <span class="s2">"A byte is how many bits?"</span><span class="p">,</span>
+          <span class="n">choice1</span><span class="p">:</span> <span class="s2">"2"</span><span class="p">,</span>
+          <span class="n">choice2</span><span class="p">:</span> <span class="s2">"6"</span><span class="p">,</span>
+          <span class="n">choice3</span><span class="p">:</span> <span class="s2">"4"</span><span class="p">,</span>
+          <span class="n">choice4</span><span class="p">:</span> <span class="s2">"8"</span><span class="p">,</span>
+          <span class="n">choiceAnswer</span><span class="p">:</span> <span class="mi">4</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="n">question</span><span class="p">:</span> <span class="s2">"In order for a binary search to be possible,the list must be ___"</span><span class="p">,</span>
+          <span class="n">choice1</span><span class="p">:</span> <span class="s2">"integers"</span><span class="p">,</span>
+          <span class="n">choice2</span><span class="p">:</span> <span class="s2">"sorted"</span><span class="p">,</span>
+          <span class="n">choice3</span><span class="p">:</span> <span class="s2">"have exactly 7 items"</span><span class="p">,</span>
+          <span class="n">choice4</span><span class="p">:</span> <span class="s2">"under 10 items"</span><span class="p">,</span>
+          <span class="n">choiceAnswer</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="p">}</span>
+  <span class="p">];</span>
+
+  <span class="n">startGame</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">questionCounter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">availableQuestions</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="n">questions</span><span class="p">];</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">availableQuestions</span><span class="p">)</span>
+    <span class="n">getNewQuestion</span><span class="p">();</span>
+  <span class="p">};</span> 
+  <span class="o">//</span> <span class="n">plus</span> <span class="n">minus</span> <span class="n">which</span> <span class="n">finds</span> <span class="n">middle</span> <span class="n">point</span> <span class="n">score</span> <span class="k">for</span> <span class="n">each</span> <span class="n">user</span>
+   <span class="n">getNewQuestion</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">ends</span> <span class="k">if</span> <span class="n">no</span> <span class="n">more</span> <span class="n">questions</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">availableQuestions</span><span class="o">.</span><span class="n">length</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">questionCounter</span> <span class="o">&gt;=</span> <span class="n">MAX_QUESTIONS</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">const</span> <span class="n">resultContainer</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">);</span>
+      <span class="o">//</span> <span class="n">redirects</span> <span class="n">window</span>
+      <span class="k">return</span> <span class="n">window</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="s1">'/Runtime-Terror/quizfinalscore.html'</span><span class="p">);</span> 
+    <span class="p">}</span>
+    <span class="n">questionCounter</span><span class="o">++</span><span class="p">;</span>
+    <span class="n">questionCounterText</span><span class="o">.</span><span class="n">innerText</span> <span class="o">=</span> <span class="err">`</span><span class="n">Question</span><span class="p">:</span> <span class="err">$</span><span class="p">{</span><span class="n">questionCounter</span><span class="p">}</span><span class="o">/</span><span class="err">$</span><span class="p">{</span><span class="n">MAX_QUESTIONS</span><span class="p">}</span><span class="err">`</span><span class="p">;</span>
+    <span class="n">const</span> <span class="n">questionIndex</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="n">availableQuestions</span><span class="o">.</span><span class="n">length</span><span class="p">);</span>
+    <span class="n">currentQuestion</span> <span class="o">=</span> <span class="n">availableQuestions</span><span class="p">[</span><span class="n">questionIndex</span><span class="p">];</span>
+    <span class="n">question</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">currentQuestion</span><span class="o">.</span><span class="n">question</span><span class="p">;</span>
+
+    <span class="n">choices</span><span class="o">.</span><span class="n">forEach</span><span class="p">((</span><span class="n">choice</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="n">const</span> <span class="n">number</span> <span class="o">=</span> <span class="n">choice</span><span class="o">.</span><span class="n">dataset</span><span class="p">[</span><span class="s2">"number"</span><span class="p">];</span>
+        <span class="n">choice</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">currentQuestion</span><span class="p">[</span><span class="s2">"choice"</span> <span class="o">+</span> <span class="n">number</span><span class="p">];</span>
+    <span class="p">});</span>
+    <span class="o">//</span> <span class="n">removes</span> <span class="n">a</span> <span class="n">question</span><span class="o">/</span> <span class="n">also</span> <span class="n">determines</span> <span class="n">when</span> <span class="n">it</span> <span class="n">ends</span>
+    <span class="n">availableQuestions</span><span class="o">.</span><span class="n">splice</span><span class="p">(</span><span class="n">questionIndex</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="n">acceptingAnswers</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="o">//</span> <span class="n">this</span> <span class="n">determines</span> <span class="n">score</span> <span class="k">for</span> <span class="n">each</span> <span class="n">choice</span><span class="p">,</span> <span class="n">ex</span><span class="p">:</span> <span class="n">choice3</span> <span class="o">=</span> <span class="o">+</span><span class="mi">3</span> <span class="k">for</span> <span class="n">questionTotal</span>
+  <span class="n">choices</span><span class="o">.</span><span class="n">forEach</span><span class="p">((</span><span class="n">choice</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="n">choice</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      
+          <span class="k">if</span> <span class="p">(</span><span class="o">!</span>acceptingAnswers<span class="o">)</span> <span class="k">return</span><span class="p">;</span>
+
+          <span class="n">acceptingAnswers</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+          <span class="n">const</span> <span class="n">selectedChoice</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">target</span><span class="p">;</span>
+          <span class="n">const</span> <span class="n">selectedAnswer</span> <span class="o">=</span> <span class="n">selectedChoice</span><span class="o">.</span><span class="n">dataset</span><span class="p">[</span><span class="s1">'number'</span><span class="p">];</span>
+          <span class="n">const</span> <span class="n">choiceAnswer</span> <span class="o">=</span> <span class="n">currentQuestion</span><span class="o">.</span><span class="n">choiceAnswer</span><span class="p">;</span>
+          <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"Selected Answer: "</span> <span class="o">+</span> <span class="n">selectedAnswer</span><span class="p">);</span>
+
+          <span class="k">if</span> <span class="p">(</span><span class="n">selectedAnswer</span> <span class="o">==</span> <span class="n">choiceAnswer</span><span class="p">)</span>  <span class="p">{</span>
+            <span class="n">questionTotal</span> <span class="o">=</span> <span class="n">questionTotal</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"Score: "</span> <span class="o">+</span> <span class="n">questionTotal</span><span class="p">)</span>
+          <span class="p">}</span>
+
+          <span class="n">localStorage</span><span class="o">.</span><span class="n">setItem</span><span class="p">(</span><span class="s2">"finalScore"</span><span class="p">,</span> <span class="n">questionTotal</span><span class="p">)</span>
+          <span class="n">getNewQuestion</span><span class="p">();</span> 
+    <span class="p">});</span>
+  <span class="p">});</span>
+  
+  <span class="o">//</span><span class="n">starts</span> <span class="n">game</span><span class="o">/</span><span class="n">quiz</span> <span class="ow">and</span> <span class="n">will</span> <span class="n">console</span> <span class="n">the</span> <span class="n">array</span> <span class="n">of</span> <span class="n">choices</span> <span class="n">that</span> <span class="n">the</span> <span class="n">user</span> <span class="n">has</span><span class="o">.</span> <span class="n">IE</span> <span class="mi">1</span><span class="o">-</span><span class="mi">4</span>
+  <span class="n">startGame</span><span class="p">();</span>
+  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">choices</span><span class="p">)</span>
+  
+<span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+
+ <span class="o">&lt;!</span>-- COMMENTED OUT BECAUSE I DONT LIKE THE FOOTER, -THEO --&gt;
+
+<span class="o">&lt;!</span>-- Contact 
+<span class="o">&lt;</span><span class="n">section</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"contact"</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"inner"</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="n">section</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s2">"https://formspree.io/theo.h131@gmail.com"</span> <span class="n">method</span><span class="o">=</span><span class="s2">"POST"</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"field half first"</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">label</span> <span class="k">for</span><span class="o">=</span><span class="s2">"name"</span><span class="o">&gt;</span><span class="n">Name</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"name"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"name"</span> <span class="o">/&gt;</span>
+				<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"field half"</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">label</span> <span class="k">for</span><span class="o">=</span><span class="s2">"email"</span><span class="o">&gt;</span><span class="n">Email</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"_replyto"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"email"</span> <span class="o">/&gt;</span>
+				<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"field"</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">label</span> <span class="k">for</span><span class="o">=</span><span class="s2">"message"</span><span class="o">&gt;</span><span class="n">Message</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">textarea</span> <span class="n">name</span><span class="o">=</span><span class="s2">"message"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"message"</span> <span class="n">rows</span><span class="o">=</span><span class="s2">"6"</span><span class="o">&gt;&lt;/</span><span class="n">textarea</span><span class="o">&gt;</span>
+				<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">ul</span> <span class="n">class</span><span class="o">=</span><span class="s2">"actions"</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"submit"</span> <span class="n">value</span><span class="o">=</span><span class="s2">"Send Message"</span> <span class="n">class</span><span class="o">=</span><span class="s2">"special"</span> <span class="o">/&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"reset"</span> <span class="n">value</span><span class="o">=</span><span class="s2">"Clear"</span> <span class="o">/&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+				<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+			<span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+		<span class="o">&lt;/</span><span class="n">section</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="n">section</span> <span class="n">class</span><span class="o">=</span><span class="s2">"split"</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="n">section</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"contact-method"</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">"icon alt fa-envelope"</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">h3</span><span class="o">&gt;</span><span class="n">Email</span><span class="o">&lt;/</span><span class="n">h3</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"mailto:theo.h131@gmail.com"</span><span class="o">&gt;</span><span class="n">theo</span><span class="o">.</span><span class="n">h131</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+				<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+			<span class="o">&lt;/</span><span class="n">section</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="n">section</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"contact-method"</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">"icon alt fa-phone"</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">h3</span><span class="o">&gt;</span><span class="n">Phone</span><span class="o">&lt;/</span><span class="n">h3</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"tel:"</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+				<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+			<span class="o">&lt;/</span><span class="n">section</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="n">section</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"contact-method"</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">"icon alt fa-home"</span><span class="o">&gt;&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">h3</span><span class="o">&gt;</span><span class="n">Address</span><span class="o">&lt;/</span><span class="n">h3</span><span class="o">&gt;</span>
+					<span class="o">&lt;</span><span class="n">span</span><span class="o">&gt;</span>
+					
+					
+					
+					
+					
+					<span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+				<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+			<span class="o">&lt;/</span><span class="n">section</span><span class="o">&gt;</span>
+		<span class="o">&lt;/</span><span class="n">section</span><span class="o">&gt;</span>
+	<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">section</span><span class="o">&gt;</span>
+<span class="o">--&gt;</span>
+
+<span class="o">&lt;!</span>-- Footer
+	<span class="o">&lt;</span><span class="n">footer</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"footer"</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"inner"</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="n">ul</span> <span class="n">class</span><span class="o">=</span><span class="s2">"icons"</span><span class="o">&gt;</span>
+				
+					
+						<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span>
+							<span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"https://github.com/TheoH32/Runtime_Terror"</span> <span class="n">class</span><span class="o">=</span><span class="s2">"icon alt fa-github"</span> <span class="n">target</span><span class="o">=</span><span class="s2">"_blank"</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"noopener noreferrer"</span> <span class="n">aria</span><span class="o">-</span><span class="n">label</span><span class="o">=</span><span class="s2">"GitHub"</span><span class="o">&gt;</span>
+								<span class="o">&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s2">"label"</span><span class="o">&gt;</span><span class="n">GitHub</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+							<span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+						<span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+			<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="n">ul</span> <span class="n">class</span><span class="o">=</span><span class="s2">"copyright"</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&amp;</span><span class="n">copy</span><span class="p">;</span> <span class="n">Learn</span> <span class="n">Binary</span> <span class="n">by</span> <span class="n">Runtime</span> <span class="n">Terror</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="n">Design</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"https://html5up.net"</span> <span class="n">target</span><span class="o">=</span><span class="s2">"_blank"</span><span class="o">&gt;</span><span class="n">HTML5</span> <span class="n">UP</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="n">Jekyll</span> <span class="n">integration</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"http://andrewbanchi.ch"</span> <span class="n">target</span><span class="o">=</span><span class="s2">"_blank"</span><span class="o">&gt;</span><span class="n">Andrew</span> <span class="n">Banchich</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+
+			<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+		<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+	<span class="o">&lt;/</span><span class="n">footer</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="o">--&gt;</span>
+
+<span class="o">&lt;!</span>-- Scripts --&gt;
+	<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/js/jquery.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/js/jquery.scrolly.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/js/jquery.scrollex.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/js/skel.min.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/js/util.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+	<span class="o">&lt;!</span>--<span class="o">[</span><span class="k">if</span> lte IE <span class="m">8</span><span class="o">]</span>&gt;&lt;script <span class="nv">src</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/js/ie/respond.min.js"</span>&gt;&lt;/script&gt;&lt;!<span class="o">[</span>endif<span class="o">]</span>--&gt;
+	<span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">"/Runtime_Terror/assets/js/main.js"</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
+
+
+
+
+
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;&lt;</span><span class="n">nav</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"menu"</span><span class="o">&gt;&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"inner"</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">ul</span> <span class="n">class</span><span class="o">=</span><span class="s2">"links"</span><span class="o">&gt;</span>
+        
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/"</span><span class="o">&gt;</span><span class="n">Home</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+	    	
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		
+		    
+		        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/2023-03-21-extraresources.html"</span><span class="o">&gt;</span><span class="n">Extra</span> <span class="n">Resources</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+		    
+		
+		    
+		        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/2023-04-16-imagelesson.html"</span><span class="o">&gt;</span><span class="n">Pixel</span> <span class="n">Art</span> <span class="n">Image</span> <span class="n">Lesson</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+		    
+		
+		    
+		        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/2023-04-18-Binary%20Search.html"</span><span class="o">&gt;</span><span class="n">Binary</span> <span class="n">Search</span> <span class="n">Lesson</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+		    
+		
+		    
+		        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/2023-3-30-mainlesson.html"</span><span class="o">&gt;</span><span class="n">Main</span> <span class="n">Binary</span> <span class="n">Lesson</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+		    
+		
+		    
+		
+		    
+		        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/all_posts.html"</span><span class="o">&gt;</span><span class="n">All</span> <span class="n">Posts</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+		    
+		
+		    
+		        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/elements.html"</span><span class="o">&gt;</span><span class="n">Binary</span> <span class="n">Guessing</span> <span class="n">Game</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+		    
+		
+		    
+		
+		    
+		        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/quiz.html"</span><span class="o">&gt;</span><span class="n">Final</span> <span class="n">Quiz</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+		    
+		
+		    
+		        <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime_Terror/quizfinalscore.html"</span><span class="o">&gt;</span><span class="n">Quiz</span> <span class="n">Score</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+		    
+		
+	<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="n">ul</span> <span class="n">class</span><span class="o">=</span><span class="s2">"actions vertical"</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime-Terror/2023-3-30-mainlesson.html"</span> <span class="n">class</span><span class="o">=</span><span class="s2">"button special fit"</span><span class="o">&gt;</span><span class="n">Get</span> <span class="n">Started</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/Runtime-Terror/login.html"</span> <span class="n">class</span><span class="o">=</span><span class="s2">"button fit"</span><span class="o">&gt;</span><span class="n">Log</span> <span class="n">In</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+	<span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;&lt;</span><span class="n">a</span> <span class="n">class</span><span class="o">=</span><span class="s2">"close"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"#menu"</span><span class="o">&gt;</span><span class="n">Close</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;/</span><span class="n">nav</span><span class="o">&gt;&lt;/</span><span class="n">body</span><span class="o">&gt;&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
