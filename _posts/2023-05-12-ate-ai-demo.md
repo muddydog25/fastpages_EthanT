@@ -9,7 +9,7 @@ title: Ate AI Demo
 <table id="food-table">
   <thead>
     <tr>
-      <th>Favorite Foods</th>
+      <th>Add Your Favorite Foods!</th>
       <th></th>
     </tr>
   </thead>
@@ -44,7 +44,7 @@ function addFood(foodName) {
 
 async function call(text) {
   // Set up the API request
-  const api_key = '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';
+  const api_key = process.env.OPEN_AI_API;
   const endpoint = 'https://api.openai.com/v1/completions';
   const headers = {
     'Authorization': 'Bearer ' + api_key,
