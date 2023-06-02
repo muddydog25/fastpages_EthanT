@@ -14,7 +14,7 @@ layout: base
     height: 100px;
     border: none;
     outline: none;
-    background: url('/home/etran/vscode/fastpages_EthanT/_notebooks/images/monkey-head-with-pixel-art-illustration-free-vector-PhotoRoom.png-PhotoRoom.png') no-repeat;
+    background: url('https://github.com/realethantran/fastpages_EthanT/assets/109186517/8bbff442-768e-4040-ab9e-232f1880f860') no-repeat;
     background-size: cover;
     cursor: pointer;
     transition: transform 0.3s;
