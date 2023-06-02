@@ -12,8 +12,8 @@ layout: base
 #clicker-button1 {
     width: 100px;
     height: 100px;
-    border: black;
-    outline: black;
+    border: none;
+    outline: none;
     background: url('https://github.com/realethantran/fastpages_EthanT/assets/109186517/8bbff442-768e-4040-ab9e-232f1880f860') no-repeat;
     background-size: cover;
     cursor: pointer;
@@ -25,8 +25,8 @@ layout: base
 button {
     margin: 5px; /* Add some margin around the buttons */
     padding: 10px 20px; /* Add padding to the buttons */
-    border: black;
-    outline: black;
+    border: #fff;
+    outline: #fff;
     background-color: #f1f1f1; /* Set a background color */
     color: #333; /* Set the text color */
     cursor: pointer;
