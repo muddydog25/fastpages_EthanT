@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Title | EthanTran</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://muddydog25.github.io/fastpages_EthanT/2023/05/31/js-demo.html" />
+<meta property="og:url" content="https://muddydog25.github.io/fastpages_EthanT/2023/05/31/js-demo.html" />
+<meta property="og:site_name" content="EthanTran" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-31T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Title" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-31T00:00:00-05:00","datePublished":"2023-05-31T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://muddydog25.github.io/fastpages_EthanT/2023/05/31/js-demo.html"},"url":"https://muddydog25.github.io/fastpages_EthanT/2023/05/31/js-demo.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages_EthanT/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://muddydog25.github.io/fastpages_EthanT/feed.xml" title="EthanTran" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages_EthanT/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages_EthanT/">EthanTran</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages_EthanT/about/">About Me</a><a class="page-link" href="/fastpages_EthanT/classes/">Class Notes</a><a class="page-link" href="/fastpages_EthanT/vocabulary/">Vocabulary</a><a class="page-link" href="/fastpages_EthanT/class-periods/">Periods</a><a class="page-link" href="/fastpages_EthanT/javascript/">JavaScript</a><a class="page-link" href="/fastpages_EthanT/javascript/">JavaScript</a><a class="page-link" href="/fastpages_EthanT/search/">Search</a><a class="page-link" href="/fastpages_EthanT/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-31T00:00:00-05:00" itemprop="datePublished">
+        May 31, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/muddydog25/fastpages_EthanT/tree/master/_notebooks/2023-05-31-js-demo.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastpages_EthanT/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/muddydog25/fastpages_EthanT/master?filepath=_notebooks%2F2023-05-31-js-demo.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages_EthanT/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/muddydog25/fastpages_EthanT/blob/master/_notebooks/2023-05-31-js-demo.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages_EthanT/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fmuddydog25%2Ffastpages_EthanT%2Fblob%2Fmaster%2F_notebooks%2F2023-05-31-js-demo.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/fastpages_EthanT/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <table style="text-align: center;">
+    <tr>
+      <td>
+        <a href="/fastpages_EthanT/">Home</a>
+      </td>
+      <td>
+        <a href="/fastpages_EthanT/fastpages/python/api/2022/10/06/api-python.html">API</a>
+      </td>
+      <td>
+        <a href="/fastpages_EthanT/classes">Notes</a>
+      </td>
+    </tr>
+  </table>
+<!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-05-31-js-demo.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-Draft">Python Draft<a class="anchor-link" href="#Python-Draft"> </a></h2><ul>
+<li>Simple python code to append tasks to a list</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tasks</span> <span class="o">=</span> <span class="p">[]</span> 
+
+<span class="k">def</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+    <span class="n">tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>  <span class="c1"># add the task to the list</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tasks:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">task</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tasks</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">task</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># display the tasks with numbers</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">task</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a task (or &#39;q&#39; to quit): &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">task</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;q&quot;</span><span class="p">:</span>
+        <span class="k">break</span>  <span class="c1"># exit the loop if &#39;q&#39; is entered</span>
+    <span class="n">add_task</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final task list:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">task</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tasks</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">task</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># display final list of tasks</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tasks:
+1. Car washing
+Tasks:
+1. Car washing
+2. Algebra tutoring
+Tasks:
+1. Car washing
+2. Algebra tutoring
+3. Buy groceries
+Final task list:
+1. Car washing
+2. Algebra tutoring
+3. Buy groceries
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Attempt-at-alphabetical-sort-in-python">Attempt at alphabetical sort in python<a class="anchor-link" href="#Attempt-at-alphabetical-sort-in-python"> </a></h2><ul>
+<li>This sorting algorithm swaps adjacent elements without considering their values or any sorting condition</li>
+<li>It ignores the alphabetical comparison logic required for a proper alphabetical sort, causing the sorting function to fail</li>
+</ul>
+<h2 id="Using-bubble-sort">Using bubble sort<a class="anchor-link" href="#Using-bubble-sort"> </a></h2><ul>
+<li>Allows the tasks to be sorted alphabetically</li>
+<li>The ASCII values are aligned with the alphabetical order</li>
+<li>Iterates through the list of tasks</li>
+<li>Checks if the first element is less than the second and if it is not swap them</li>
+<li>For loop used to keep going until each element is less than or equal to the next</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sort_tasks</span><span class="p">():</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tasks</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">tasks</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">tasks</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+                <span class="n">tasks</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">tasks</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">tasks</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">tasks</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Before sorting:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">task</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tasks</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">task</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Display tasks before sorting</span>
+
+<span class="n">sort_tasks</span><span class="p">()</span>  <span class="c1"># Sort the tasks</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">After sorting:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">task</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tasks</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">task</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># Display the sorted tasks</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Before sorting:
+1. Car washing
+2. Algebra tutoring
+3. Buy groceries
+
+After sorting:
+1. Algebra tutoring
+2. Buy groceries
+3. Car washing
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="JavaScript-Table">JavaScript Table<a class="anchor-link" href="#JavaScript-Table"> </a></h2><ul>
+<li>Creates an empty array called tasks to store the tasks</li>
+<li>Defines a function called addTask() that adds the entered task to the tasks array</li>
+<li>Retrieves the input field value, trims it, and adds it to the tasks array if it is not empty</li>
+</ul>
+<h2 id="Display-Tasks">Display Tasks<a class="anchor-link" href="#Display-Tasks"> </a></h2><ul>
+<li>The displayTasks() function to update the table with the current list of tasks</li>
+<li>Retrieves the table's body element and clears its content</li>
+<li>Iterates over the tasks array, creating a new row for each task and populating it with task information</li>
+<li>Appends each row to the table's body</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Task Notecard<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="c">/* CSS for the table */</span>
+        <span class="nt">table</span> <span class="p">{</span>
+            <span class="k">border-collapse</span><span class="p">:</span> <span class="kc">collapse</span><span class="p">;</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span> <span class="p">{</span>
+            <span class="k">padding</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+            <span class="k">border-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="c">/* CSS for the input and buttons */</span>
+        <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="o">],</span> <span class="nt">button</span> <span class="p">{</span>
+            <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Task Notecard<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskInput&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter a task&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;addTask()&quot;</span><span class="p">&gt;</span>Add Task<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;sortTasks()&quot;</span><span class="p">&gt;</span>Sort Tasks<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskTable&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Task<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tbody</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskList&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="kd">var</span> <span class="nx">tasks</span> <span class="o">=</span> <span class="p">[];</span>
+
+        <span class="kd">function</span> <span class="nx">addTask</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">taskInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;taskInput&quot;</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">task</span> <span class="o">=</span> <span class="nx">taskInput</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">task</span> <span class="o">!==</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">tasks</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">task</span><span class="p">);</span>
+                <span class="nx">taskInput</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+                <span class="nx">displayTasks</span><span class="p">();</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="kd">function</span> <span class="nx">sortTasks</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// bubble sort algorithm</span>
+            <span class="kd">var</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">tasks</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span> <span class="o">-</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">len</span> <span class="o">-</span> <span class="mf">1</span> <span class="o">-</span> <span class="nx">i</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">tasks</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nx">tasks</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mf">1</span><span class="p">])</span> <span class="p">{</span>
+                        <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">tasks</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+                        <span class="nx">tasks</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">tasks</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mf">1</span><span class="p">];</span>
+                        <span class="nx">tasks</span><span class="p">[</span><span class="nx">j</span> <span class="o">+</span> <span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="nx">displayTasks</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="kd">function</span> <span class="nx">displayTasks</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">taskList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;taskList&quot;</span><span class="p">);</span>
+            <span class="nx">taskList</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">tasks</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">var</span> <span class="nx">row</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">);</span>
+
+                <span class="kd">var</span> <span class="nx">indexCell</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">);</span>
+                <span class="nx">indexCell</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+                <span class="nx">row</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">indexCell</span><span class="p">);</span>
+
+                <span class="kd">var</span> <span class="nx">taskCell</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">);</span>
+                <span class="nx">taskCell</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">tasks</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+                <span class="nx">row</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">taskCell</span><span class="p">);</span>
+
+                <span class="nx">taskList</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">row</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<html>
+<head>
+    <title>Task Notecard</title>
+    <style>
+        /* CSS for the table */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        /* CSS for the input and buttons */
+        input[type="text"], button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Notecard</h1>
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="sortTasks()">Sort Tasks</button>
+
+    <table id="taskTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Task</th>
+            </tr>
+        </thead>
+        <tbody id="taskList">
+        </tbody>
+    </table>
+
+    <script>
+        var tasks = [];
+
+        function addTask() {
+            var taskInput = document.getElementById("taskInput");
+            var task = taskInput.value.trim();
+            if (task !== "") {
+                tasks.push(task);
+                taskInput.value = "";
+                displayTasks();
+            }
+        }
+
+        function sortTasks() {
+            // bubble sort algorithm
+            var len = tasks.length;
+            for (var i = 0; i < len - 1; i++) {
+                for (var j = 0; j < len - 1 - i; j++) {
+                    if (tasks[j] > tasks[j + 1]) {
+                        var temp = tasks[j];
+                        tasks[j] = tasks[j + 1];
+                        tasks[j + 1] = temp;
+                    }
+                }
+            }
+            displayTasks();
+        }
+
+        function displayTasks() {
+            var taskList = document.getElementById("taskList");
+            taskList.innerHTML = "";
+
+            for (var i = 0; i < tasks.length; i++) {
+                var row = document.createElement("tr");
+
+                var indexCell = document.createElement("td");
+                indexCell.textContent = i + 1;
+                row.appendChild(indexCell);
+
+                var taskCell = document.createElement("td");
+                taskCell.textContent = tasks[i];
+                row.appendChild(taskCell);
+
+                taskList.appendChild(row);
+            }
+        }
+    </script>
+</body>
+</html>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>The outer loop, controlled by the variable i, determines how many passes the sorting algorithm should make. It starts from the beginning of the array and goes up to the second-to-last element.</p>
+</li>
+<li><p>Inside the outer loop, there is an inner loop that uses the variable j as a counter. The purpose of this inner loop is to compare adjacent elements and swap them if they are out of order.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Change-the-background-color">Change the background color<a class="anchor-link" href="#Change-the-background-color"> </a></h2><ul>
+<li>The <code>&lt;body&gt;</code> section contains an <code>&lt;input&gt;</code> element where the user can enter a color value.</li>
+<li>The <code>input</code> element by its id and assigns it to the <code>input</code> variable.</li>
+<li>The code then adds an event listener to the <code>input</code> element using <code>input.addEventListener('input', () =&gt; { ... });</code>.</li>
+<li>When the user types into the <code>input</code> element, the event listener's callback function is triggered.</li>
+<li>Inside the callback function, the value entered by the user is captured in the <code>color</code> variable.</li>
+<li>Finally, the background color of the <code>body</code> element is updated to the entered color using <code>document.body.style.backgroundColor = color;</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Colorful Background<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="nt">body</span> <span class="p">{</span>
+      <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+      <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+      <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+      <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+      <span class="k">transition</span><span class="p">:</span> <span class="k">background-color</span> <span class="mf">0.5</span><span class="kt">s</span> <span class="kc">ease</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">#</span><span class="nn">input</span> <span class="p">{</span>
+      <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+      <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+      <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+      <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+      <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+      <span class="k">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;input&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter a color&quot;</span><span class="p">&gt;</span>
+  
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kr">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">);</span>
+    
+    <span class="nx">input</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+    <span class="p">});</span>
+  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+<html>
+<head>
+  <title>Colorful Background</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      transition: background-color 0.5s ease;
+    }
+
+    #input {
+      text-align: center;
+      font-size: 24px;
+      padding: 10px;
+      border: none;
+      background-color: transparent;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <input id="input" type="text" placeholder="Enter a color" />
+  
+  <script>
+    const input = document.getElementById('input');
+    
+    input.addEventListener('input', () => {
+      const color = input.value;
+      document.body.style.backgroundColor = color;
+    });
+  </script>
+</body>
+</html>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/fastpages_EthanT/2023/05/31/js-demo.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages_EthanT/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://muddydog25.github.io/fastpages_EthanT/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages_EthanT/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
