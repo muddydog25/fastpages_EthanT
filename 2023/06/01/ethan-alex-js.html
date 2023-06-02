@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -153,7 +153,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
 
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
@@ -162,35 +162,57 @@ window.onload = wrap_img;
     <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
     <span class="k">outline</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-    <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s1">&#39;/home/etran/vscode/fastpages_EthanT/_notebooks/images/monkey-head-with-pixel-art-illustration-free-vector-PhotoRoom.png-PhotoRoom.png&#39;</span><span class="p">)</span> <span class="kc">no-repeat</span><span class="p">;</span>
+    <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s1">&#39;https://github.com/realethantran/fastpages_EthanT/assets/109186517/8bbff442-768e-4040-ab9e-232f1880f860&#39;</span><span class="p">)</span> <span class="kc">no-repeat</span><span class="p">;</span>
     <span class="k">background-size</span><span class="p">:</span> <span class="kc">cover</span><span class="p">;</span>
     <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
     <span class="k">transition</span><span class="p">:</span> <span class="k">transform</span> <span class="mf">0.3</span><span class="kt">s</span><span class="p">;</span>
 <span class="p">}</span>
-
 <span class="p">#</span><span class="nn">clicker-button1</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
     <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">1.1</span><span class="p">);</span> <span class="c">/* Increase the size on hover */</span>
 <span class="p">}</span>
-
 <span class="nt">button</span> <span class="p">{</span>
     <span class="k">margin</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span> <span class="c">/* Add some margin around the buttons */</span>
     <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span> <span class="c">/* Add padding to the buttons */</span>
-    <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-    <span class="k">outline</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+    <span class="k">outline</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f1f1f1</span><span class="p">;</span> <span class="c">/* Set a background color */</span>
     <span class="k">color</span><span class="p">:</span> <span class="mh">#333</span><span class="p">;</span> <span class="c">/* Set the text color */</span>
     <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
     <span class="k">transition</span><span class="p">:</span> <span class="k">background-color</span> <span class="mf">0.3</span><span class="kt">s</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="p">#</span><span class="nn">container</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span> <span class="c">/* Use flexbox for layout */</span>
+    <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span> <span class="c">/* Arrange elements in a column */</span>
+    <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span> <span class="c">/* Center align the elements horizontally */</span>
+    <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span> <span class="c">/* Center align the elements vertically */</span>
+<span class="p">}</span>
+<span class="nt">button</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">1</span><span class="o">)</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#b3ffb3</span><span class="p">;</span> <span class="c">/* Set a different background color for the fourth button */</span>
+<span class="p">}</span>
+<span class="nt">button</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ff8080</span><span class="p">;</span> <span class="c">/* Set a different background color for the second button */</span>
+<span class="p">}</span>
+<span class="nt">button</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#80b3ff</span><span class="p">;</span> <span class="c">/* Set a different background color for the third button */</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">score1</span><span class="o">,</span> <span class="p">#</span><span class="nn">highscore1</span><span class="o">,</span> <span class="p">#</span><span class="nn">timer</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;score1&quot;</span><span class="p">&gt;</span>Score: 0<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;highscore1&quot;</span><span class="p">&gt;</span>High Score: 0<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;timer&quot;</span><span class="p">&gt;</span>Time: 10<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;clicker-button1&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;incrementScore()&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;upgradeOne()&quot;</span><span class="p">&gt;</span>1.5x Multiplier<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;upgradeTwo()&quot;</span><span class="p">&gt;</span>2.0x Multiplier<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;upgradeThree()&quot;</span><span class="p">&gt;</span>2.5x Multiplier<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;score1&quot;</span><span class="p">&gt;</span>Score: 0<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;highscore1&quot;</span><span class="p">&gt;</span>High Score: 0<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;timer&quot;</span><span class="p">&gt;</span>Time: 10<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;upgradeOne()&quot;</span><span class="p">&gt;</span>1.5x Multiplier<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;upgradeTwo()&quot;</span><span class="p">&gt;</span>2.0x Multiplier<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;upgradeThree()&quot;</span><span class="p">&gt;</span>2.5x Multiplier<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;clicker-button1&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;incrementScore()&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="kd">var</span> <span class="nx">score</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
@@ -226,6 +248,8 @@ window.onload = wrap_img;
                 <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span>
                 <span class="nx">timer</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
                 <span class="nx">resetScore</span><span class="p">();</span>
+                <span class="nx">resetGrowth</span><span class="p">();</span>
+                <span class="nx">resetUpgrade</span><span class="p">();</span>
             <span class="p">}</span>
         <span class="p">},</span> <span class="mf">1000</span><span class="p">);</span>
     <span class="p">}</span>
@@ -234,6 +258,14 @@ window.onload = wrap_img;
 <span class="kd">function</span> <span class="nx">resetScore</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">score</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;score1&#39;</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&quot;Score: &quot;</span> <span class="o">+</span> <span class="nx">score</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">resetGrowth</span><span class="p">(){</span>
+    <span class="nx">growth</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">resetUpgrade</span><span class="p">(){</span>
+    <span class="nx">upgradeMultiplier</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">incrementNumber</span><span class="p">()</span> <span class="p">{</span>
@@ -274,35 +306,57 @@ window.onload = wrap_img;
     height: 100px;
     border: none;
     outline: none;
-    background: url('/home/etran/vscode/fastpages_EthanT/_notebooks/images/monkey-head-with-pixel-art-illustration-free-vector-PhotoRoom.png-PhotoRoom.png') no-repeat;
+    background: url('https://github.com/realethantran/fastpages_EthanT/assets/109186517/8bbff442-768e-4040-ab9e-232f1880f860') no-repeat;
     background-size: cover;
     cursor: pointer;
     transition: transform 0.3s;
 }
-
 #clicker-button1:hover {
     transform: scale(1.1); /* Increase the size on hover */
 }
-
 button {
     margin: 5px; /* Add some margin around the buttons */
     padding: 10px 20px; /* Add padding to the buttons */
-    border: none;
-    outline: none;
+    border: #fff;
+    outline: #fff;
     background-color: #f1f1f1; /* Set a background color */
     color: #333; /* Set the text color */
     cursor: pointer;
     transition: background-color 0.3s;
 }
+#container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange elements in a column */
+    align-items: center; /* Center align the elements horizontally */
+    justify-content: center; /* Center align the elements vertically */
+}
+button:nth-child(1) {
+    background-color: #b3ffb3; /* Set a different background color for the fourth button */
+}
+button:nth-child(2) {
+    background-color: #ff8080; /* Set a different background color for the second button */
+}
+button:nth-child(3) {
+    background-color: #80b3ff; /* Set a different background color for the third button */
+}
+#score1, #highscore1, #timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
 </style>
-
-<div id="score1">Score: 0</div>
-<div id="highscore1">High Score: 0</div>
-<div id="timer">Time: 10</div>
-<button id="clicker-button1" onclick="incrementScore()"></button>
-<button onclick="upgradeOne()">1.5x Multiplier</button>
-<button onclick="upgradeTwo()">2.0x Multiplier</button>
-<button onclick="upgradeThree()">2.5x Multiplier</button>
+<div id="container">
+    <div id="score1">Score: 0</div>
+    <div id="highscore1">High Score: 0</div>
+    <div id="timer">Time: 10</div>
+    <div>
+        <button onclick="upgradeOne()">1.5x Multiplier</button>
+        <button onclick="upgradeTwo()">2.0x Multiplier</button>
+        <button onclick="upgradeThree()">2.5x Multiplier</button>
+    </div>
+    <button id="clicker-button1" onclick="incrementScore()"></button>
+</div>
 
 <script>
 var score = 0;
@@ -338,6 +392,8 @@ function incrementScore() {
                 clearInterval(timer);
                 timer = null;
                 resetScore();
+                resetGrowth();
+                resetUpgrade();
             }
         }, 1000);
     }
@@ -346,6 +402,14 @@ function incrementScore() {
 function resetScore() {
     score = 0;
     document.getElementById('score1').innerText = "Score: " + score;
+}
+
+function resetGrowth(){
+    growth = 1.0;
+}
+
+function resetUpgrade(){
+    upgradeMultiplier = 1.0;
 }
 
 function incrementNumber() {
@@ -365,7 +429,6 @@ function upgradeThree() {
 }
 </script>
 </html>
-
 
 </div>
 
