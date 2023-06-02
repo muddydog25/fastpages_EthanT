@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -195,11 +195,29 @@ window.onload = wrap_img;
 <span class="nt">button</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="mh">#80b3ff</span><span class="p">;</span> <span class="c">/* Set a different background color for the third button */</span>
 <span class="p">}</span>
-<span class="p">#</span><span class="nn">score1</span><span class="o">,</span> <span class="p">#</span><span class="nn">highscore1</span><span class="o">,</span> <span class="p">#</span><span class="nn">timer</span> <span class="p">{</span>
+<span class="p">#</span><span class="nn">score1</span><span class="o">,</span>
+<span class="p">#</span><span class="nn">highscore1</span><span class="o">,</span>
+<span class="p">#</span><span class="nn">timer</span> <span class="p">{</span>
     <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
     <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">save-form</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">save-form</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="o">]</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">score-table</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border-collapse</span><span class="p">:</span> <span class="kc">collapse</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">score-table</span> <span class="nt">th</span><span class="o">,</span>
+<span class="p">#</span><span class="nn">score-table</span> <span class="nt">td</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">black</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
@@ -212,42 +230,61 @@ window.onload = wrap_img;
         <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;upgradeThree()&quot;</span><span class="p">&gt;</span>2.5x Multiplier<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;clicker-button1&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;incrementScore()&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;save-form&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;name-input&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter your name&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;saveScore()&quot;</span><span class="p">&gt;</span>Save Score<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;score-table&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Score<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tbody</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;score-table-body&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="kd">var</span> <span class="nx">score</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">highScore</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">growth</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>  <span class="c1">// The button&#39;s initial size (as a scaling factor)</span>
-<span class="kd">var</span> <span class="nx">upgradeMultiplier</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span> <span class="c1">// setting up the multiplier</span>
+<span class="kd">var</span> <span class="nx">highScore</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;highScore&#39;</span><span class="p">)</span> <span class="o">||</span> <span class="mf">0</span><span class="p">;</span> <span class="c1">// Retrieve the high score from local storage</span>
+<span class="kd">var</span> <span class="nx">growth</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span> <span class="c1">// The button&#39;s initial size (as a scaling factor)</span>
+<span class="kd">var</span> <span class="nx">upgradeMultiplier</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span> <span class="c1">// Setting up the multiplier</span>
 <span class="kd">var</span> <span class="nx">timer</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">scores</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;scores&#39;</span><span class="p">))</span> <span class="o">||</span> <span class="p">[];</span> <span class="c1">// Retrieve the scores from local storage</span>
+
+<span class="c1">// Update the high score display</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;highscore1&#39;</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&quot;High Score: &quot;</span> <span class="o">+</span> <span class="nx">highScore</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">incrementScore</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">score</span> <span class="o">+=</span> <span class="nx">incrementNumber</span><span class="p">();</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;score1&#39;</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&quot;Score: &quot;</span> <span class="o">+</span> <span class="nx">score</span><span class="p">;</span>
 
-    <span class="c1">// check if the current score is higher than the high score</span>
+    <span class="c1">// Check if the current score is higher than the high score</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">score</span> <span class="o">&gt;</span> <span class="nx">highScore</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">highScore</span> <span class="o">=</span> <span class="nx">score</span><span class="p">;</span>
         <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;highscore1&#39;</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&quot;High Score: &quot;</span> <span class="o">+</span> <span class="nx">highScore</span><span class="p">;</span>
+        <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;highScore&#39;</span><span class="p">,</span> <span class="nx">highScore</span><span class="p">);</span> <span class="c1">// Save the new high score to local storage</span>
     <span class="p">}</span>
 
-    <span class="c1">// increase the button&#39;s size by 1% for each click, up to a maximum of 50% increase</span>
+    <span class="c1">// Increase the button&#39;s size by 1% for each click, up to a maximum of 50% increase</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">growth</span> <span class="o">&lt;</span> <span class="mf">3</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">growth</span> <span class="o">+=</span> <span class="mf">0.01</span><span class="p">;</span>
         <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;clicker-button1&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">transform</span> <span class="o">=</span> <span class="s1">&#39;scale(&#39;</span> <span class="o">+</span> <span class="nx">growth</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="c1">// restart the timer if it&#39;s not already running</span>
+    <span class="c1">// Restart the timer if it&#39;s not already running</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">timer</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">timeLeft</span> <span class="o">=</span> <span class="mf">10</span><span class="p">;</span>
         <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
             <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;timer&#39;</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&quot;Time: &quot;</span> <span class="o">+</span> <span class="nx">timeLeft</span><span class="p">;</span>
             <span class="nx">timeLeft</span><span class="o">--</span><span class="p">;</span>
-
+            
             <span class="k">if</span> <span class="p">(</span><span class="nx">timeLeft</span> <span class="o">&lt;</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
                 <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span>
                 <span class="nx">timer</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-                <span class="nx">resetScore</span><span class="p">();</span>
                 <span class="nx">resetGrowth</span><span class="p">();</span>
                 <span class="nx">resetUpgrade</span><span class="p">();</span>
             <span class="p">}</span>
@@ -260,16 +297,16 @@ window.onload = wrap_img;
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;score1&#39;</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">&quot;Score: &quot;</span> <span class="o">+</span> <span class="nx">score</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">resetGrowth</span><span class="p">(){</span>
+<span class="kd">function</span> <span class="nx">resetGrowth</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">growth</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">resetUpgrade</span><span class="p">(){</span>
+<span class="kd">function</span> <span class="nx">resetUpgrade</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">upgradeMultiplier</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">incrementNumber</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="mf">1</span> <span class="o">*</span> <span class="nx">upgradeMultiplier</span><span class="p">;</span> <span class="c1">// the default increment is 1, this allows the upgrades to be applied</span>
+    <span class="k">return</span> <span class="mf">1</span> <span class="o">*</span> <span class="nx">upgradeMultiplier</span><span class="p">;</span> <span class="c1">// The default increment is 1, this allows the upgrades to be applied</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">upgradeOne</span><span class="p">()</span> <span class="p">{</span>
@@ -283,6 +320,48 @@ window.onload = wrap_img;
 <span class="kd">function</span> <span class="nx">upgradeThree</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">upgradeMultiplier</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">;</span>
 <span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">saveScore</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;name-input&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+    
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">name</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Please enter your name.&#39;</span><span class="p">);</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">newScore</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="nx">name</span><span class="p">,</span>
+        <span class="nx">score</span><span class="o">:</span> <span class="nx">score</span>
+    <span class="p">};</span>
+
+    <span class="nx">scores</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">newScore</span><span class="p">);</span>
+    <span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;scores&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">scores</span><span class="p">));</span>
+    <span class="nx">displayScores</span><span class="p">();</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;name-input&#39;</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="nx">resetScore</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">displayScores</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">scoreTableBody</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;score-table-body&#39;</span><span class="p">);</span>
+    <span class="nx">scoreTableBody</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">scores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">scoreRow</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">nameCell</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">scoreCell</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">);</span>
+
+        <span class="nx">nameCell</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">scores</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">;</span>
+        <span class="nx">scoreCell</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">scores</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">score</span><span class="p">;</span>
+
+        <span class="nx">scoreRow</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">nameCell</span><span class="p">);</span>
+        <span class="nx">scoreRow</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">scoreCell</span><span class="p">);</span>
+        <span class="nx">scoreTableBody</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">scoreRow</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Initial display of scores</span>
+<span class="nx">displayScores</span><span class="p">();</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
@@ -339,11 +418,29 @@ button:nth-child(2) {
 button:nth-child(3) {
     background-color: #80b3ff; /* Set a different background color for the third button */
 }
-#score1, #highscore1, #timer {
+#score1,
+#highscore1,
+#timer {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
+}
+#save-form {
+    margin-top: 20px;
+}
+#save-form input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+#score-table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+#score-table th,
+#score-table td {
+    padding: 5px 10px;
+    border: 1px solid black;
 }
 </style>
 <div id="container">
@@ -356,42 +453,61 @@ button:nth-child(3) {
         <button onclick="upgradeThree()">2.5x Multiplier</button>
     </div>
     <button id="clicker-button1" onclick="incrementScore()"></button>
+
+    <form id="save-form">
+        <input type="text" id="name-input" placeholder="Enter your name" />
+        <button type="button" onclick="saveScore()">Save Score</button>
+    </form>
+
+    <table id="score-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody id="score-table-body"></tbody>
+    </table>
 </div>
 
 <script>
 var score = 0;
-var highScore = 0;
-var growth = 1.0;  // The button's initial size (as a scaling factor)
-var upgradeMultiplier = 1.0; // setting up the multiplier
+var highScore = localStorage.getItem('highScore') || 0; // Retrieve the high score from local storage
+var growth = 1.0; // The button's initial size (as a scaling factor)
+var upgradeMultiplier = 1.0; // Setting up the multiplier
 var timer;
+var scores = JSON.parse(localStorage.getItem('scores')) || []; // Retrieve the scores from local storage
+
+// Update the high score display
+document.getElementById('highscore1').innerText = "High Score: " + highScore;
 
 function incrementScore() {
     score += incrementNumber();
     document.getElementById('score1').innerText = "Score: " + score;
 
-    // check if the current score is higher than the high score
+    // Check if the current score is higher than the high score
     if (score > highScore) {
         highScore = score;
         document.getElementById('highscore1').innerText = "High Score: " + highScore;
+        localStorage.setItem('highScore', highScore); // Save the new high score to local storage
     }
 
-    // increase the button's size by 1% for each click, up to a maximum of 50% increase
+    // Increase the button's size by 1% for each click, up to a maximum of 50% increase
     if (growth < 3) {
         growth += 0.01;
         document.getElementById('clicker-button1').style.transform = 'scale(' + growth + ')';
     }
 
-    // restart the timer if it's not already running
+    // Restart the timer if it's not already running
     if (!timer) {
         var timeLeft = 10;
         timer = setInterval(function() {
             document.getElementById('timer').innerText = "Time: " + timeLeft;
             timeLeft--;
-
+            
             if (timeLeft < 0) {
                 clearInterval(timer);
                 timer = null;
-                resetScore();
                 resetGrowth();
                 resetUpgrade();
             }
@@ -404,16 +520,16 @@ function resetScore() {
     document.getElementById('score1').innerText = "Score: " + score;
 }
 
-function resetGrowth(){
+function resetGrowth() {
     growth = 1.0;
 }
 
-function resetUpgrade(){
+function resetUpgrade() {
     upgradeMultiplier = 1.0;
 }
 
 function incrementNumber() {
-    return 1 * upgradeMultiplier; // the default increment is 1, this allows the upgrades to be applied
+    return 1 * upgradeMultiplier; // The default increment is 1, this allows the upgrades to be applied
 }
 
 function upgradeOne() {
@@ -427,6 +543,48 @@ function upgradeTwo() {
 function upgradeThree() {
     upgradeMultiplier = 2.5;
 }
+
+function saveScore() {
+    var name = document.getElementById('name-input').value;
+    
+
+    if (name.trim() === '') {
+        alert('Please enter your name.');
+        return;
+    }
+
+    var newScore = {
+        name: name,
+        score: score
+    };
+
+    scores.push(newScore);
+    localStorage.setItem('scores', JSON.stringify(scores));
+    displayScores();
+    document.getElementById('name-input').value = '';
+    resetScore();
+}
+
+function displayScores() {
+    var scoreTableBody = document.getElementById('score-table-body');
+    scoreTableBody.innerHTML = '';
+
+    for (var i = 0; i < scores.length; i++) {
+        var scoreRow = document.createElement('tr');
+        var nameCell = document.createElement('td');
+        var scoreCell = document.createElement('td');
+
+        nameCell.innerText = scores[i].name;
+        scoreCell.innerText = scores[i].score;
+
+        scoreRow.appendChild(nameCell);
+        scoreRow.appendChild(scoreCell);
+        scoreTableBody.appendChild(scoreRow);
+    }
+}
+
+// Initial display of scores
+displayScores();
 </script>
 </html>
 
