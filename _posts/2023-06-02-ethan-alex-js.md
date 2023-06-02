@@ -50,6 +50,12 @@ button:nth-child(2) {
 button:nth-child(3) {
     background-color: #80b3ff; /* Set a different background color for the third button */
 }
+#score1, #highscore1, #timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
 </style>
 <div id="container">
     <div id="score1">Score: 0</div>
@@ -134,4 +140,3 @@ function upgradeThree() {
 }
 </script>
 </html>
-
