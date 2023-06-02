@@ -32,15 +32,35 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+#container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange elements in a column */
+    align-items: center; /* Center align the elements horizontally */
+    justify-content: center; /* Center align the elements vertically */
+}
+button:nth-child(2) {
+    background-color: #ff8080; /* Set a different background color for the second button */
+}
+button:nth-child(3) {
+    background-color: #80b3ff; /* Set a different background color for the third button */
+}
+button:nth-child(4) {
+    background-color: #b3ffb3; /* Set a different background color for the fourth button */
+}
 </style>
 
-<div id="score1">Score: 0</div>
-<div id="highscore1">High Score: 0</div>
-<div id="timer">Time: 10</div>
-<button id="clicker-button1" onclick="incrementScore()"></button>
-<button onclick="upgradeOne()">1.5x Multiplier</button>
-<button onclick="upgradeTwo()">2.0x Multiplier</button>
-<button onclick="upgradeThree()">2.5x Multiplier</button>
+<div id="container">
+    <div id="score1">Score: 0</div>
+    <div id="highscore1">High Score: 0</div>
+    <div id="timer">Time: 10</div>
+    <div>
+        <button onclick="upgradeOne()">1.5x Multiplier</button>
+        <button onclick="upgradeTwo()">2.0x Multiplier</button>
+        <button onclick="upgradeThree()">2.5x Multiplier</button>
+        <button onclick="resetGrowth()">Reset Head</button>
+    </div>
+    <button id="clicker-button1" onclick="incrementScore()"></button>
+</div>
 
 <script>
 var score = 0;
@@ -84,6 +104,10 @@ function incrementScore() {
 function resetScore() {
     score = 0;
     document.getElementById('score1').innerText = "Score: " + score;
+}
+
+function resetGrowth(){
+    growth = 1.0;
 }
 
 function incrementNumber() {
