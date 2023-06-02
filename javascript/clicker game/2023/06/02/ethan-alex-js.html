@@ -9,8 +9,8 @@
 <meta property="og:title" content="Ethan Tran and Alex Kumar JavaScript Exit Mini-Game" />
 <meta name="author" content="Ethan Tran" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta name="description" content="Ethan Tran &amp; Alex Kumar: Monkey Clicker A JavaScript Cookie Clicker-type Game" />
+<meta property="og:description" content="Ethan Tran &amp; Alex Kumar: Monkey Clicker A JavaScript Cookie Clicker-type Game" />
 <link rel="canonical" href="https://muddydog25.github.io/fastpages_EthanT/javascript/clicker%20game/2023/06/02/ethan-alex-js.html" />
 <meta property="og:url" content="https://muddydog25.github.io/fastpages_EthanT/javascript/clicker%20game/2023/06/02/ethan-alex-js.html" />
 <meta property="og:site_name" content="EthanTran" />
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Ethan Tran and Alex Kumar JavaScript Exit Mini-Game" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ethan Tran"},"dateModified":"2023-06-02T00:00:00-05:00","datePublished":"2023-06-02T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Ethan Tran and Alex Kumar JavaScript Exit Mini-Game","mainEntityOfPage":{"@type":"WebPage","@id":"https://muddydog25.github.io/fastpages_EthanT/javascript/clicker%20game/2023/06/02/ethan-alex-js.html"},"url":"https://muddydog25.github.io/fastpages_EthanT/javascript/clicker%20game/2023/06/02/ethan-alex-js.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ethan Tran"},"dateModified":"2023-06-02T00:00:00-05:00","datePublished":"2023-06-02T00:00:00-05:00","description":"Ethan Tran &amp; Alex Kumar: Monkey Clicker A JavaScript Cookie Clicker-type Game","headline":"Ethan Tran and Alex Kumar JavaScript Exit Mini-Game","mainEntityOfPage":{"@type":"WebPage","@id":"https://muddydog25.github.io/fastpages_EthanT/javascript/clicker%20game/2023/06/02/ethan-alex-js.html"},"url":"https://muddydog25.github.io/fastpages_EthanT/javascript/clicker%20game/2023/06/02/ethan-alex-js.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastpages_EthanT/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://muddydog25.github.io/fastpages_EthanT/feed.xml" title="EthanTran" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages_EthanT/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,7 +71,12 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <html>
+        <h2 id="ethan-tran--alex-kumar-monkey-clicker">Ethan Tran &amp; Alex Kumar: Monkey Clicker</h2>
+<blockquote>
+  <p>A JavaScript Cookie Clicker-type Game</p>
+</blockquote>
+
+<html>
 <style>
 #clicker-button1 {
     width: 100px;
@@ -102,15 +107,17 @@ button {
     align-items: center; /* Center align the elements horizontally */
     justify-content: center; /* Center align the elements vertically */
 }
+
+button:nth-child(1) {
+    background-color: #b3ffb3; /* Set a different background color for the fourth button */
+}
 button:nth-child(2) {
     background-color: #ff8080; /* Set a different background color for the second button */
 }
 button:nth-child(3) {
     background-color: #80b3ff; /* Set a different background color for the third button */
 }
-button:nth-child(4) {
-    background-color: #b3ffb3; /* Set a different background color for the fourth button */
-}
+
 </style>
 
 <div id="container">
@@ -121,7 +128,6 @@ button:nth-child(4) {
         <button onclick="upgradeOne()">1.5x Multiplier</button>
         <button onclick="upgradeTwo()">2.0x Multiplier</button>
         <button onclick="upgradeThree()">2.5x Multiplier</button>
-        <button onclick="resetGrowth()">Reset Head</button>
     </div>
     <button id="clicker-button1" onclick="incrementScore()"></button>
 </div>
@@ -160,6 +166,7 @@ function incrementScore() {
                 clearInterval(timer);
                 timer = null;
                 resetScore();
+                resetGrowth();
             }
         }, 1000);
     }
@@ -191,6 +198,7 @@ function upgradeThree() {
 }
 </script>
 </html>
+
 
       </div>
     </main><footer class="site-footer h-card">
