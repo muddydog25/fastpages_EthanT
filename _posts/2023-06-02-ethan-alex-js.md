@@ -41,7 +41,6 @@ button {
     align-items: center; /* Center align the elements horizontally */
     justify-content: center; /* Center align the elements vertically */
 }
-
 button:nth-child(1) {
     background-color: #b3ffb3; /* Set a different background color for the fourth button */
 }
@@ -51,9 +50,7 @@ button:nth-child(2) {
 button:nth-child(3) {
     background-color: #80b3ff; /* Set a different background color for the third button */
 }
-
 </style>
-
 <div id="container">
     <div id="score1">Score: 0</div>
     <div id="highscore1">High Score: 0</div>
@@ -101,6 +98,7 @@ function incrementScore() {
                 timer = null;
                 resetScore();
                 resetGrowth();
+                resetUpgrade();
             }
         }, 1000);
     }
@@ -113,6 +111,10 @@ function resetScore() {
 
 function resetGrowth(){
     growth = 1.0;
+}
+
+function resetUpgrade(){
+    upgradeMultiplier = 1.0;
 }
 
 function incrementNumber() {
